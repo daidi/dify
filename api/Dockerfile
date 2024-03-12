@@ -6,7 +6,9 @@ LABEL maintainer="takatost@gmail.com"
 # install packages
 FROM base as packages
 
-RUN apt-get update \
+RUN sed -i "s/deb.debian.org/mirrors.aliyun.com/g" /etc/apt/sources.list.d/debian.sources \
+    && sed -i "s/security.debian.org/mirrors.aliyun.com/g" /etc/apt/sources.list.d/debian.sources \
+    && apt-get update \
     && apt-get install -y --no-install-recommends gcc g++ libc-dev libffi-dev libgmp-dev libmpfr-dev libmpc-dev
 
 COPY requirements.txt /requirements.txt
@@ -31,7 +33,9 @@ ENV TZ UTC
 
 WORKDIR /app/api
 
-RUN apt-get update \
+RUN sed -i "s/deb.debian.org/mirrors.aliyun.com/g" /etc/apt/sources.list.d/debian.sources \
+    && sed -i "s/security.debian.org/mirrors.aliyun.com/g" /etc/apt/sources.list.d/debian.sources \
+    && apt-get update \
     && apt-get install -y --no-install-recommends curl wget vim nodejs ffmpeg libgmp-dev libmpfr-dev libmpc-dev \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*

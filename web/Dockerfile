@@ -13,7 +13,7 @@ WORKDIR /app/web
 COPY package.json .
 COPY yarn.lock .
 
-RUN yarn install --frozen-lockfile
+RUN npm config set registry https://registry.npmmirror.com && yarn install --frozen-lockfile
 
 
 # build resources
