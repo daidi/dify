@@ -2,7 +2,8 @@
 FROM node:20.11-alpine3.19 AS base
 LABEL maintainer="takatost@gmail.com"
 
-RUN apk add --no-cache tzdata
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && \
+    apk add --no-cache tzdata
 
 
 # install packages
