@@ -10,7 +10,7 @@ from . import admin, apikey, extension, feature, setup, version
 from .app import (advanced_prompt_template, annotation, app, audio, completion, conversation, generator, message,
                   model_config, site, statistic)
 # Import auth controllers
-from .auth import activate, data_source_oauth, login, oauth
+from .auth import activate, data_source_oauth, login, oauth, register
 # Import billing controllers
 from .billing import billing
 # Import datasets controllers
