@@ -33,7 +33,7 @@ class RegisterApi(Resource):
                 provider=None
             )
         except Exception as e:
-            return {'error': str(e)}, 400
+            return {'code': 'register_fail', 'message': str(e)}, 400
 
         # Set interface language
         preferred_lang = request.accept_languages.best_match(languages)
