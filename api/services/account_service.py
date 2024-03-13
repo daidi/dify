@@ -125,6 +125,10 @@ class AccountService:
                        interface_theme: str = 'light',
                        timezone: str = 'America/New_York', ) -> Account:
         """create account"""
+        account = Account.query.filter_by(email=email).first()
+        if account:
+            raise AccountLoginError('email already exists.')
+
         account = Account()
         account.email = email
         account.name = name
