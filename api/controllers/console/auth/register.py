@@ -24,13 +24,16 @@ class RegisterApi(Resource):
         parser.add_argument('password', type=valid_password, required=True, nullable=False, location='json')
         args = parser.parse_args()
 
-        account = RegisterService.register(
-            email=args['email'],
-            name=args['name'],
-            password=args['password'],
-            open_id=None,
-            provider=None
-        )
+        try:
+            account = RegisterService.register(
+                email=args['email'],
+                name=args['name'],
+                password=args['password'],
+                open_id=None,
+                provider=None
+            )
+        except Exception as e:
+            return {'error': str(e)}
 
         # Set interface language
         preferred_lang = request.accept_languages.best_match(languages)
