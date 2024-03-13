@@ -72,18 +72,18 @@ class HostingConfiguration:
             trial_quota = TrialHostingQuota(
                 quota_limit=hosted_quota_limit,
                 restrict_models=[
-                    RestrictModel(model="gpt-4", base_model_name="gpt-4", model_type=ModelType.LLM),
-                    RestrictModel(model="gpt-4-32k", base_model_name="gpt-4-32k", model_type=ModelType.LLM),
-                    RestrictModel(model="gpt-4-1106-preview", base_model_name="gpt-4-1106-preview", model_type=ModelType.LLM),
-                    RestrictModel(model="gpt-4-vision-preview", base_model_name="gpt-4-vision-preview", model_type=ModelType.LLM),
-                    RestrictModel(model="gpt-35-turbo", base_model_name="gpt-35-turbo", model_type=ModelType.LLM),
-                    RestrictModel(model="gpt-35-turbo-1106", base_model_name="gpt-35-turbo-1106", model_type=ModelType.LLM),
-                    RestrictModel(model="gpt-35-turbo-instruct", base_model_name="gpt-35-turbo-instruct", model_type=ModelType.LLM),
-                    RestrictModel(model="gpt-35-turbo-16k", base_model_name="gpt-35-turbo-16k", model_type=ModelType.LLM),
-                    RestrictModel(model="text-davinci-003", base_model_name="text-davinci-003", model_type=ModelType.LLM),
-                    RestrictModel(model="text-embedding-ada-002", base_model_name="text-embedding-ada-002", model_type=ModelType.TEXT_EMBEDDING),
-                    RestrictModel(model="text-embedding-3-small", base_model_name="text-embedding-3-small", model_type=ModelType.TEXT_EMBEDDING),
-                    RestrictModel(model="text-embedding-3-large", base_model_name="text-embedding-3-large", model_type=ModelType.TEXT_EMBEDDING),
+                    # RestrictModel(model="gpt-4", base_model_name="gpt-4", model_type=ModelType.LLM),
+                    # RestrictModel(model="gpt-4-32k", base_model_name="gpt-4-32k", model_type=ModelType.LLM),
+                    # RestrictModel(model="gpt-4-1106-preview", base_model_name="gpt-4-1106-preview", model_type=ModelType.LLM),
+                    RestrictModel(model="gpt4-new", base_model_name="gpt-4-vision-preview", model_type=ModelType.LLM),
+                    RestrictModel(model="gpt35-new", base_model_name="gpt-35-turbo", model_type=ModelType.LLM),
+                    # RestrictModel(model="gpt-35-turbo-1106", base_model_name="gpt-35-turbo-1106", model_type=ModelType.LLM),
+                    RestrictModel(model="gpt35-instruct", base_model_name="gpt-35-turbo-instruct", model_type=ModelType.LLM),
+                    RestrictModel(model="gpt35-16", base_model_name="gpt-35-turbo-16k", model_type=ModelType.LLM),
+                    # RestrictModel(model="text-davinci-003", base_model_name="text-davinci-003", model_type=ModelType.LLM),
+                    RestrictModel(model="embedding", base_model_name="text-embedding-ada-002", model_type=ModelType.TEXT_EMBEDDING),
+                    RestrictModel(model="embedding-3-s", base_model_name="text-embedding-3-small", model_type=ModelType.TEXT_EMBEDDING),
+                    RestrictModel(model="embedding-3-l", base_model_name="text-embedding-3-large", model_type=ModelType.TEXT_EMBEDDING),
                 ]
             )
             quotas.append(trial_quota)
