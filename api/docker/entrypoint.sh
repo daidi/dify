@@ -22,7 +22,6 @@ else
       --worker-class ${SERVER_WORKER_CLASS:-gevent} \
       --timeout ${GUNICORN_TIMEOUT:-200} \
       --preload \
-      --reload \
       app:app
   fi
 fi
