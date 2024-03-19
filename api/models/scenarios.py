@@ -25,7 +25,7 @@ class Scenarios(db.Model):
     user_role = db.Column(db.String(255), nullable=False)
     user_goal = db.Column(db.String(512), nullable=False)
     user_tools = db.Column(db.JSON, nullable=False)
-    dataset_ids = db.Column(db.String(512), nullable=False)
+    dataset_ids = db.Column(db.JSON, nullable=False)
     language = db.Column(db.String(255), nullable=True)
     permission = db.Column(db.String(255), nullable=False,
                            server_default=db.text("'only_me'::character varying"))

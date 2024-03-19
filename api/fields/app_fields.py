@@ -150,17 +150,16 @@ app_site_fields = {
 }
 
 scene_fields = {
-    'app_id': fields.String,
-    'access_token': fields.String(attribute='code'),
-    'code': fields.String,
-    'title': fields.String,
-    'icon': fields.String,
-    'icon_background': fields.String,
+    'tenant_id': fields.String,
+    'name': fields.String,
     'description': fields.String,
-    'default_language': fields.String,
-    'customize_domain': fields.String,
-    'copyright': fields.String,
-    'privacy_policy': fields.String,
-    'customize_token_strategy': fields.String,
-    'prompt_public': fields.Boolean
+    'language': fields.String,
+    'dataset_ids': fields.List,
+    'interact_role': fields.String,
+    'interact_goal': fields.String,
+    'interact_tools': fields.List,
+    'interact_nums': fields.String,
+    'user_role': fields.String,
+    'user_goal': fields.String,
+    'user_tools': fields.List,
 }
