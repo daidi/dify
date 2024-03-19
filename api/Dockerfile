@@ -32,7 +32,6 @@ ENV OPENAI_API_BASE https://might.xiaoke.cn/v1
 ENV HOSTED_AZURE_OPENAI_ENABLED True
 ENV HOSTED_AZURE_OPENAI_API_KEY 59ea717c92cd4df79b715ae7f8baac3b
 ENV HOSTED_AZURE_OPENAI_API_BASE https://xk-us.openai.azure.com/
-ENV FLASK_ENV development
 
 
 EXPOSE 5001
@@ -57,5 +56,6 @@ RUN chmod +x /entrypoint.sh
 
 ARG COMMIT_SHA
 ENV COMMIT_SHA ${COMMIT_SHA}
+ENV FLASK_ENV development
 
 ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
