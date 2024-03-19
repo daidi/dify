@@ -157,9 +157,9 @@ scene_fields = {
     'dataset_ids': fields.List(fields.String),
     'interact_role': fields.String,
     'interact_goal': fields.String,
-    # 'interact_tools': fields.List(fields.String),
+    'interact_tools': fields.List(fields.String),
     'interact_nums': fields.String,
     'user_role': fields.String,
     'user_goal': fields.String,
-    # 'user_tools': fields.List(fields.String),
+    'user_tools': fields.List(fields.String),
 }

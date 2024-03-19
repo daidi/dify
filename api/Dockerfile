@@ -56,6 +56,5 @@ RUN chmod +x /entrypoint.sh
 
 ARG COMMIT_SHA
 ENV COMMIT_SHA ${COMMIT_SHA}
-ENV FLASK_ENV development
 
 ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
