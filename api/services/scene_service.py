@@ -41,13 +41,13 @@ class SceneService:
 
     @staticmethod
     def create_scene(tenant_id: str, account: Account, args: dict):
-        # check if dataset name already exists
-        if Scenarios.query.filter_by(name=args['name'], tenant_id=args['tenant_id']).first():
+        # check if scene name already exists
+        if Scenarios.query.filter_by(name=args['name'], tenant_id=tenant_id).first():
             raise SceneNameDuplicateError(f'Dataset with name {args["name"]} already exists.')
         scene = Scenarios(**args)
-        scene.created_by = args['account'].id
-        scene.updated_by = args['account'].id
-        scene.tenant_id = args['tenant_id']
+        scene.created_by = account.id
+        scene.updated_by = account.id
+        scene.tenant_id = tenant_id
         db.session.add(scene)
         db.session.commit()
         return scene
