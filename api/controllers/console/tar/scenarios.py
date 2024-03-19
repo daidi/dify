@@ -70,7 +70,7 @@ class ScenariosApi(Resource):
         parser.add_argument('interact_role', type=str, required=True, location='json')
         parser.add_argument('interact_goal', type=str, required=True, location='json')
         parser.add_argument('interact_tools', type=str, required=True, location='json', action='append')
-        parser.add_argument('user_tools', type=str, required=True, location='json', action='append')
+        parser.add_argument('user_tools', type=str, required=False, location='json', action='append', default=[])
         parser.add_argument('interact_nums', type=int, required=True, location='json')
         parser.add_argument('user_role', type=str, required=True, location='json')
         parser.add_argument('user_goal', type=str, required=True, location='json')
