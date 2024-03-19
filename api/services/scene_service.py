@@ -31,7 +31,7 @@ class SceneService:
 
     @staticmethod
     def get_scene(scene_id):
-        scene = SceneService.query.filter_by(
+        scene = Scenarios.query.filter_by(
             id=scene_id
         ).first()
         if scene is None:
