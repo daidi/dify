@@ -26,12 +26,12 @@ class ScenariosApi(Resource):
     def get(self):
         page = request.args.get('page', default=1, type=int)
         limit = request.args.get('limit', default=20, type=int)
-        provider = request.args.get('provider', default="vendor")
         scenes, total = SceneService.get_scenes(page, limit,
                                                 current_user.current_tenant_id, current_user)
 
+        data = marshal(scenes, scene_fields)
         response = {
-            'data': scenes,
+            'data': data,
             'has_more': len(scenes) == limit,
             'limit': limit,
             'total': total,
