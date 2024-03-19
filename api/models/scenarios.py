@@ -10,8 +10,11 @@ class Scenarios(db.Model):
     """Scenarios result/status."""
 
     __tablename__ = 'scenarios'
+    __table_args__ = (
+        db.PrimaryKeyConstraint('id', name='scenarios_pkey'),
+    )
 
-    id = db.Column(UUID, server_default=db.text('uuid_generate_v4()'))
+    id = db.Column(UUID, nullable=False,server_default=db.text('uuid_generate_v4()'))
     tenant_id = db.Column(UUID, nullable=False)
     name = db.Column(db.String(255), nullable=False)
     description = db.Column(db.Text, nullable=True)
