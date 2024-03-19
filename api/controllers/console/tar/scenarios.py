@@ -61,19 +61,19 @@ class ScenariosApi(Resource):
         tools = ['clipboard', 'hotkey', 'ocr', 'voice', 'mic']  # 可选的工具列表
 
         parser.add_argument('interact_tools', type=str, required=False, choices=tools, location='json', action='append')
-        parser.add_argument('user_tools', type=str, required=False, choices=tools, location='json', action='append')
+        parser.add_argument('user_tools', type=str, required=False, choices=tools, location='json', action='append', default=[])
 
+        parser.add_argument('id', type=str, required=False, location='json')
         parser.add_argument('name', type=str, required=True, location='json')
         parser.add_argument('description', type=str, required=True, location='json')
         parser.add_argument('language', type=str, required=True, location='json')
         parser.add_argument('dataset_ids', type=str, required=False, location='json', action='append', default=[])
         parser.add_argument('interact_role', type=str, required=True, location='json')
         parser.add_argument('interact_goal', type=str, required=True, location='json')
-        parser.add_argument('interact_tools', type=str, required=True, location='json', action='append')
-        parser.add_argument('user_tools', type=str, required=False, location='json', action='append', default=[])
         parser.add_argument('interact_nums', type=int, required=True, location='json')
         parser.add_argument('user_role', type=str, required=True, location='json')
         parser.add_argument('user_goal', type=str, required=True, location='json')
+        parser.add_argument('id', type=str, required=False, location='json')
         args = parser.parse_args()
 
         # 提取工具列表
@@ -92,7 +92,7 @@ class ScenariosApi(Resource):
             raise Forbidden()
 
         try:
-            scene = SceneService.create_scene(
+            scene = SceneService.create_or_update_scene(
                 tenant_id=current_user.current_tenant_id,
                 account=current_user,
                 args=args,
