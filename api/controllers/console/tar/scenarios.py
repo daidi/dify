@@ -100,7 +100,7 @@ class ScenariosApi(Resource):
         except services.errors.scene.SceneNameDuplicateError:
             raise SceneNameDuplicateError()
 
-        return marshal(scene, scene_fields), 201
+        return {}, 201
 
 
 api.add_resource(ScenariosApi, '/scenarios')
