@@ -43,7 +43,7 @@ from services.account_service import AccountService
 
 # DO NOT REMOVE BELOW
 from events import event_handlers
-from models import account, dataset, model, source, task, tool, tools, web
+from models import account, dataset, model, source, task, tool, tools, web, scenarios
 # DO NOT REMOVE ABOVE
 
 
@@ -51,7 +51,7 @@ warnings.simplefilter("ignore", ResourceWarning)
 
 # fix windows platform
 if os.name == "nt":
-    os.system('tzutil /s "UTC"')    
+    os.system('tzutil /s "UTC"')
 else:
     os.environ['TZ'] = 'UTC'
     time.tzset()
