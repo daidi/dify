@@ -40,7 +40,7 @@ class SceneService:
             return scene
 
     @staticmethod
-    def create_or_update_scene(tenant_id: str, account: Account, args: dict):
+    def create_or_update_scene(tenant_id: str, account: Account, args: dict, app_id: str):
         if args.get('id'):
             scene = SceneService.update_scene(args['id'], args, account)
         else:
@@ -48,6 +48,7 @@ class SceneService:
             if Scenarios.query.filter_by(name=args['name'], tenant_id=tenant_id).first():
                 raise SceneNameDuplicateError(f'Dataset with name {args["name"]} already exists.')
             scene = Scenarios(**args)
+            scene.app_id = app_id
             scene.created_by = account.id
             scene.updated_by = account.id
             scene.tenant_id = tenant_id

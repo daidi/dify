@@ -14,8 +14,10 @@ class Scenarios(db.Model):
         db.PrimaryKeyConstraint('id', name='scenarios_pkey'),
     )
 
-    id = db.Column(UUID, nullable=False,server_default=db.text('uuid_generate_v4()'))
+    id = db.Column(UUID, nullable=False, server_default=db.text('uuid_generate_v4()'))
     tenant_id = db.Column(UUID, nullable=False)
+    app_id = db.Column(UUID, nullable=False)
+    app_key = db.String(255, nullable=False),
     name = db.Column(db.String(255), nullable=False)
     description = db.Column(db.Text, nullable=True)
     interact_role = db.Column(db.String(255), nullable=False)
@@ -33,4 +35,3 @@ class Scenarios(db.Model):
     updated_by = db.Column(UUID, nullable=False)
     created_at = db.Column(db.DateTime, nullable=False, server_default=db.text('CURRENT_TIMESTAMP(0)'))
     updated_at = db.Column(db.DateTime, nullable=False, server_default=db.text('CURRENT_TIMESTAMP(0)'))
-

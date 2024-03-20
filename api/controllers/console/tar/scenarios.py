@@ -20,7 +20,8 @@ from events.app_event import app_was_created
 from extensions.ext_database import db
 from fields.app_fields import scene_fields
 from libs.login import login_required
-from models.model import App, AppModelConfig, Site
+from models.model import App, AppModelConfig, Site, ApiToken
+from models.scenarios import Scenarios
 from services.scene_service import SceneService
 
 
@@ -104,84 +105,94 @@ class ScenariosApi(Resource):
             raise Forbidden()
 
         # 创建app
-        try:
-            provider_manager = ProviderManager()
-            default_model_entity = provider_manager.get_default_model(
-                tenant_id=current_user.current_tenant_id,
-                model_type=ModelType.LLM
+        if args.get('id'):
+            scene = SceneService.update_scene(args['id'], args, current_user)
+            original_app_model_config: AppModelConfig = db.session.query(AppModelConfig).filter(
+                AppModelConfig.id == scene.app_id
+            ).first()
+            original_app_model_config.dataset_configs.datasets = [{"dataset": {"enabled": True, "id": id}} for id in
+                                                                  args['dataset_ids']]
+            original_app_model_config.pre_prompt = f"模拟{args['description']}场景，其中你扮演一名{args['user_role']}，你的目标是{args['user_goal']}。{args['interact_role']}（由我扮演）会提出问题，目标是{args['interact_goal']}。请根据这个场景回答我的问题。"
+            db.session.commit()
+
+        else:
+            model_config_template = model_templates['chat_default']
+
+            app = App(**model_config_template['app'])
+            app_model_config = AppModelConfig(**model_config_template['model_config'])
+
+            # get model provider
+            model_manager = ModelManager()
+            try:
+                model_instance = model_manager.get_default_model_instance(
+                    tenant_id=current_user.current_tenant_id,
+                    model_type=ModelType.LLM
+                )
+            except ProviderTokenNotInitError:
+                model_instance = None
+
+            if model_instance:
+                model_dict = app_model_config.model_dict
+                model_dict['provider'] = model_instance.provider
+                model_dict['name'] = model_instance.model
+                app_model_config.model = json.dumps(model_dict)
+
+            # set datasets
+            app_model_config.dataset_configs.datasets = [{"dataset": {"enabled": True, "id": id}} for id in
+                                                         args['dataset_ids']]
+            # set prompts
+            app_model_config.pre_prompt = f"模拟{args['description']}场景，其中你扮演一名{args['user_role']}，你的目标是{args['user_goal']}。{args['interact_role']}（由我扮演）会提出问题，目标是{args['interact_goal']}。请根据这个场景回答我的问题。"
+
+            app.name = '[auto]' + args['name']
+            app.mode = 'chat'
+            app.icon = "🤖"
+            app.icon_background = "#FFEAD5"
+            app.tenant_id = current_user.current_tenant_id
+
+            db.session.add(app)
+            db.session.flush()
+
+            app_model_config.app_id = app.id
+            db.session.add(app_model_config)
+            db.session.flush()
+
+            app.app_model_config_id = app_model_config.id
+
+            account = current_user
+
+            site = Site(
+                app_id=app.id,
+                title=app.name,
+                default_language=account.interface_language,
+                customize_token_strategy='not_allow',
+                code=Site.generate_code(16)
             )
-        except (ProviderTokenNotInitError, LLMBadRequestError):
-            default_model_entity = None
-        except Exception as e:
-            logging.exception(e)
-            default_model_entity = None
 
-        model_config_template = model_templates['chat_default']
+            db.session.add(site)
+            db.session.commit()
 
-        app = App(**model_config_template['app'])
-        app_model_config = AppModelConfig(**model_config_template['model_config'])
+            app_was_created.send(app)
 
-        # get model provider
-        model_manager = ModelManager()
-        try:
-            model_instance = model_manager.get_default_model_instance(
-                tenant_id=current_user.current_tenant_id,
-                model_type=ModelType.LLM
-            )
-        except ProviderTokenNotInitError:
-            model_instance = None
+            key = ApiToken.generate_api_key('app-', 24)
+            api_token = ApiToken()
+            setattr(api_token, 'app_id', app.id)
+            api_token.tenant_id = current_user.current_tenant_id
+            api_token.token = key
+            api_token.type = 'app'
+            db.session.add(api_token)
+            db.session.commit()
 
-        if model_instance:
-            model_dict = app_model_config.model_dict
-            model_dict['provider'] = model_instance.provider
-            model_dict['name'] = model_instance.model
-            app_model_config.model = json.dumps(model_dict)
-
-        # set datasets
-        app_model_config.dataset_configs.datasets = [{"dataset": {"enabled": True, "id": id}} for id in
-                                                     args['dataset_ids']]
-
-        # set prompts
-        app_model_config.pre_prompt = f"模拟{args['description']}场景，其中你扮演一名{args['user_role']}，你的目标是{args['user_goal']}。{args['interact_role']}（由我扮演）会提出问题，目标是{args['interact_goal']}。请根据这个场景回答我的问题。"
-
-        app.name = '[auto]' + args['name']
-        app.mode = 'chat'
-        app.icon = "🤖"
-        app.icon_background = "#FFEAD5"
-        app.tenant_id = current_user.current_tenant_id
-
-        db.session.add(app)
-        db.session.flush()
-
-        app_model_config.app_id = app.id
-        db.session.add(app_model_config)
-        db.session.flush()
-
-        app.app_model_config_id = app_model_config.id
-
-        account = current_user
-
-        site = Site(
-            app_id=app.id,
-            title=app.name,
-            default_language=account.interface_language,
-            customize_token_strategy='not_allow',
-            code=Site.generate_code(16)
-        )
-
-        db.session.add(site)
-        db.session.commit()
-
-        app_was_created.send(app)
-
-        try:
-            scene = SceneService.create_or_update_scene(
-                tenant_id=current_user.current_tenant_id,
-                account=current_user,
-                args=args,
-            )
-        except services.errors.scene.SceneNameDuplicateError:
-            raise SceneNameDuplicateError()
+            # check if scene name already exists
+            if Scenarios.query.filter_by(name=args['name'], tenant_id=current_user.current_tenant_id).first():
+                raise SceneNameDuplicateError(f'Dataset with name {args["name"]} already exists.')
+            scene = Scenarios(**args)
+            scene.app_id = app.id
+            scene.app_key = key
+            scene.created_by = account.id
+            scene.updated_by = account.id
+            scene.tenant_id = current_user.current_tenant_id
+            db.session.add(scene)
+            db.session.commit()
 
         return {}, 201
 
