@@ -107,18 +107,16 @@ class ScenariosApi(Resource):
         # 创建app
         if args.get('id'):
             scene = SceneService.update_scene(args['id'], args, current_user)
-            app = App.query(App).filter(
+            app: App = db.session.query(App).filter(
                 App.id == scene.app_id
             ).first()
             if app is None:
                 raise NotFound('App not found')
-
-            original_app_model_config = AppModelConfig.query(AppModelConfig).filter(
+            original_app_model_config: AppModelConfig = db.session.query(AppModelConfig).filter(
                 AppModelConfig.id == app.app_model_config_id
             ).first()
             if original_app_model_config is None:
                 raise NotFound('app_model_config not found')
-
             original_app_model_config.dataset_configs = json.dumps({
                 'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
                              args['dataset_ids']],
