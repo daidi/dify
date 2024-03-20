@@ -151,6 +151,8 @@ app_site_fields = {
 
 scene_fields = {
     'id': fields.String,
+    'app_id': fields.String,
+    'app_key': fields.String,
     'tenant_id': fields.String,
     'name': fields.String,
     'description': fields.String,
