@@ -110,8 +110,14 @@ class ScenariosApi(Resource):
             original_app_model_config: AppModelConfig = db.session.query(AppModelConfig).filter(
                 AppModelConfig.id == scene.app_id
             ).first()
-            original_app_model_config.dataset_configs.datasets = [{"dataset": {"enabled": True, "id": id}} for id in
-                                                                  args['dataset_ids']]
+            original_app_model_config.dataset_configs = {
+                'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
+                             args['dataset_ids']],
+                'reranking_model': {},
+                'retrieval_model': 'single',
+                'score_threshold': 0.5,
+                'top_k': 2,
+            }
             original_app_model_config.pre_prompt = f"模拟{args['description']}场景，其中你扮演一名{args['user_role']}，你的目标是{args['user_goal']}。{args['interact_role']}（由我扮演）会提出问题，目标是{args['interact_goal']}。请根据这个场景回答我的问题。"
             db.session.commit()
 
@@ -138,8 +144,14 @@ class ScenariosApi(Resource):
                 app_model_config.model = json.dumps(model_dict)
 
             # set datasets
-            app_model_config.dataset_configs.datasets = [{"dataset": {"enabled": True, "id": id}} for id in
-                                                         args['dataset_ids']]
+            app_model_config.dataset_configs = {
+                'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
+                             args['dataset_ids']],
+                'reranking_model': {},
+                'retrieval_model': 'single',
+                'score_threshold': 0.5,
+                'top_k': 2,
+            }
             # set prompts
             app_model_config.pre_prompt = f"模拟{args['description']}场景，其中你扮演一名{args['user_role']}，你的目标是{args['user_goal']}。{args['interact_role']}（由我扮演）会提出问题，目标是{args['interact_goal']}。请根据这个场景回答我的问题。"
 

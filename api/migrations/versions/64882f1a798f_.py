@@ -21,6 +21,8 @@ def upgrade():
     op.create_table('scenarios',
                     sa.Column('id', postgresql.UUID(), server_default=sa.text('uuid_generate_v4()'), nullable=False),
                     sa.Column('tenant_id', postgresql.UUID(), nullable=False),
+                    sa.Column('app_id', postgresql.UUID(), nullable=False),
+                    sa.Column('app_key', sa.String(length=255), nullable=False),
                     sa.Column('name', sa.String(length=255), nullable=False),
                     sa.Column('description', sa.Text(), nullable=True),
                     sa.Column('interact_role', sa.String(length=255), nullable=False),

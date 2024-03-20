@@ -17,7 +17,7 @@ class Scenarios(db.Model):
     id = db.Column(UUID, nullable=False, server_default=db.text('uuid_generate_v4()'))
     tenant_id = db.Column(UUID, nullable=False)
     app_id = db.Column(UUID, nullable=False)
-    app_key = db.Column(db.String(255), nullable=False),
+    app_key = db.Column(db.String(255), nullable=False)
     name = db.Column(db.String(255), nullable=False)
     description = db.Column(db.Text, nullable=True)
     interact_role = db.Column(db.String(255), nullable=False)
