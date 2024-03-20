@@ -112,6 +112,9 @@ class ScenariosApi(Resource):
             ).first()
             if app is None:
                 raise NotFound('App not found')
+
+            app.name = '[auto]' + args['name']
+
             original_app_model_config: AppModelConfig = db.session.query(AppModelConfig).filter(
                 AppModelConfig.id == app.app_model_config_id
             ).first()
@@ -126,6 +129,7 @@ class ScenariosApi(Resource):
                 'top_k': 2,
             })
             original_app_model_config.pre_prompt = f"模拟{args['description']}场景，其中你扮演一名{args['user_role']}，你的目标是{args['user_goal']}。{args['interact_role']}（由我扮演）会提出问题，目标是{args['interact_goal']}。请根据这个场景回答我的问题。"
+
             db.session.commit()
 
         else:
