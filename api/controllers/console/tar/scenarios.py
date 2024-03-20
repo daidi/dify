@@ -203,6 +203,7 @@ class ScenariosApi(Resource):
             scene.created_by = account.id
             scene.updated_by = account.id
             scene.tenant_id = current_user.current_tenant_id
+            scene.id = None
             db.session.add(scene)
             db.session.commit()
 
