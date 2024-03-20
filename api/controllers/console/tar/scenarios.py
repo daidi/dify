@@ -1,15 +1,26 @@
+import json
+import logging
+
 from flask import request
 from flask_login import current_user
 from flask_restful import Resource, reqparse, marshal
 from werkzeug.exceptions import Forbidden
 
 import services.errors.scene
+from constants.model_template import model_templates
 from controllers.console import api
 from controllers.console.setup import setup_required
 from controllers.console.tar.error import SceneNameDuplicateError
 from controllers.console.wraps import account_initialization_required
+from core.errors.error import ProviderTokenNotInitError, LLMBadRequestError
+from core.model_manager import ModelManager
+from core.model_runtime.entities.model_entities import ModelType
+from core.provider_manager import ProviderManager
+from events.app_event import app_was_created
+from extensions.ext_database import db
 from fields.app_fields import scene_fields
 from libs.login import login_required
+from models.model import App, AppModelConfig, Site
 from services.scene_service import SceneService
 
 
@@ -61,7 +72,8 @@ class ScenariosApi(Resource):
         tools = ['clipboard', 'hotkey', 'ocr', 'voice', 'mic']  # 可选的工具列表
 
         parser.add_argument('interact_tools', type=str, required=False, choices=tools, location='json', action='append')
-        parser.add_argument('user_tools', type=str, required=False, choices=tools, location='json', action='append', default=[])
+        parser.add_argument('user_tools', type=str, required=False, choices=tools, location='json', action='append',
+                            default=[])
 
         parser.add_argument('id', type=str, required=False, location='json')
         parser.add_argument('name', type=str, required=True, location='json')
@@ -90,6 +102,77 @@ class ScenariosApi(Resource):
         # The role of the current user in the ta table must be admin or owner
         if not current_user.is_admin_or_owner:
             raise Forbidden()
+
+        # 创建app
+        try:
+            provider_manager = ProviderManager()
+            default_model_entity = provider_manager.get_default_model(
+                tenant_id=current_user.current_tenant_id,
+                model_type=ModelType.LLM
+            )
+        except (ProviderTokenNotInitError, LLMBadRequestError):
+            default_model_entity = None
+        except Exception as e:
+            logging.exception(e)
+            default_model_entity = None
+
+        model_config_template = model_templates['chat_default']
+
+        app = App(**model_config_template['app'])
+        app_model_config = AppModelConfig(**model_config_template['model_config'])
+
+        # get model provider
+        model_manager = ModelManager()
+        try:
+            model_instance = model_manager.get_default_model_instance(
+                tenant_id=current_user.current_tenant_id,
+                model_type=ModelType.LLM
+            )
+        except ProviderTokenNotInitError:
+            model_instance = None
+
+        if model_instance:
+            model_dict = app_model_config.model_dict
+            model_dict['provider'] = model_instance.provider
+            model_dict['name'] = model_instance.model
+            app_model_config.model = json.dumps(model_dict)
+
+        # set datasets
+        app_model_config.dataset_configs.datasets = [{"dataset": {"enabled": True, "id": id}} for id in
+                                                     args['dataset_ids']]
+
+        # set prompts
+        app_model_config.pre_prompt = f"模拟{args['description']}场景，其中你扮演一名{args['user_role']}，你的目标是{args['user_goal']}。{args['interact_role']}（由我扮演）会提出问题，目标是{args['interact_goal']}。请根据这个场景回答我的问题。"
+
+        app.name = '[auto]' + args['name']
+        app.mode = 'chat'
+        app.icon = "🤖"
+        app.icon_background = "#FFEAD5"
+        app.tenant_id = current_user.current_tenant_id
+
+        db.session.add(app)
+        db.session.flush()
+
+        app_model_config.app_id = app.id
+        db.session.add(app_model_config)
+        db.session.flush()
+
+        app.app_model_config_id = app_model_config.id
+
+        account = current_user
+
+        site = Site(
+            app_id=app.id,
+            title=app.name,
+            default_language=account.interface_language,
+            customize_token_strategy='not_allow',
+            code=Site.generate_code(16)
+        )
+
+        db.session.add(site)
+        db.session.commit()
+
+        app_was_created.send(app)
 
         try:
             scene = SceneService.create_or_update_scene(
