@@ -2,10 +2,10 @@ Single-database configuration for Flask.
 
 ```cloud
 docker compose exec api /bin/bash
-flask db revision
+flask db revision --autogenerate -m "add meeting"
 ```
 
 ```local
 app.py 增加model
 ```
-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
+
