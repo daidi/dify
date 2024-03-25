@@ -1,1 +1,10 @@
 Single-database configuration for Flask.
+
+```cloud
+docker compose exec api /bin/bash
+flask db revision
+```
+
+```local
+
+```
