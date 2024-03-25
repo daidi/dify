@@ -43,7 +43,7 @@ from services.account_service import AccountService
 
 # DO NOT REMOVE BELOW
 from events import event_handlers
-from models import *
+from models import account, dataset, model, source, task, tool, tools, web, scenarios, meeting
 # DO NOT REMOVE ABOVE
 
 

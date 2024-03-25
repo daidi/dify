@@ -6,6 +6,6 @@ flask db revision
 ```
 
 ```local
-
+app.py 增加model
 ```
 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
