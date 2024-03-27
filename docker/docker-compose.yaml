@@ -327,6 +327,7 @@ services:
       - ./nginx/proxy.conf:/etc/nginx/proxy.conf
       - ./nginx/conf.d:/etc/nginx/conf.d
       - ./nginx/cert.d:/etc/nginx/cert.d
+      #- ./nginx/ssl:/etc/ssl
     depends_on:
       - api
       - web
