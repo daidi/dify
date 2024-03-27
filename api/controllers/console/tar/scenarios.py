@@ -72,7 +72,8 @@ class ScenariosApi(Resource):
 
         tools = ['clipboard', 'hotkey', 'ocr', 'voice', 'mic', 'input']  # 可选的工具列表
 
-        parser.add_argument('interact_tools', type=str, required=False, choices=tools, location='json', action='append')
+        parser.add_argument('interact_tools', type=str, required=False, choices=tools, location='json', action='append',
+                            default=[])
         parser.add_argument('user_tools', type=str, required=False, choices=tools, location='json', action='append',
                             default=[])
 
@@ -92,6 +93,8 @@ class ScenariosApi(Resource):
         # 提取工具列表
         interact_tools = args.get('interact_tools', [])
         user_tools = args.get('user_tools', [])
+
+        print(f"interact_tools:{interact_tools};user_tools:{user_tools}")
 
         # 检测是否存在重复工具
         overlap = set(interact_tools) & set(user_tools)
