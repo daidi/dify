@@ -462,6 +462,9 @@ class GenerateTaskPipeline:
         if self._conversation.mode == 'chat':
             response['conversation_id'] = self._conversation.id
 
+        if self._task_state.metadata:
+            response['metadata'] = self._get_response_metadata()
+
         return response
 
     def _handle_error(self, event: QueueErrorEvent) -> Exception:
@@ -510,7 +513,7 @@ class GenerateTaskPipeline:
         else:
             logging.error(e)
             data = {
-                'code': 'internal_server_error', 
+                'code': 'internal_server_error',
                 'message': 'Internal Server Error, please contact support.',
                 'status': 500
                 }
