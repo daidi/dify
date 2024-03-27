@@ -553,7 +553,7 @@ class GenerateTaskPipeline:
 
         # show usage
         if self._application_generate_entity.invoke_from in [InvokeFrom.DEBUGGER, InvokeFrom.SERVICE_API]:
-            metadata['usage'] = self._task_state.metadata['usage']
+            metadata['usage'] = self._task_state.metadata.get('usage', None)
 
         return metadata
 
