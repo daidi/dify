@@ -70,7 +70,7 @@ class ScenariosApi(Resource):
         #     user_tools: []
         # })
 
-        tools = ['clipboard', 'hotkey', 'ocr', 'voice', 'mic']  # 可选的工具列表
+        tools = ['clipboard', 'hotkey', 'ocr', 'voice', 'mic', 'input']  # 可选的工具列表
 
         parser.add_argument('interact_tools', type=str, required=False, choices=tools, location='json', action='append')
         parser.add_argument('user_tools', type=str, required=False, choices=tools, location='json', action='append',
