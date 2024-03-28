@@ -6,7 +6,7 @@ from werkzeug.exceptions import Forbidden
 from controllers.console import api
 from controllers.console.setup import setup_required
 from controllers.console.wraps import account_initialization_required
-from fields.app_fields import scene_fields
+from fields.app_fields import scene_fields, meeting_fields
 from libs.login import login_required
 from services.meeting_service import MeetingService
 
@@ -55,7 +55,7 @@ class MeetingApi(Resource):
 
         meeting = MeetingService.create_or_update_meeting(current_user.current_tenant_id, current_user, args)
 
-        return marshal(meeting, dataset_detail_fields), 201
+        return marshal(meeting, meeting_fields), 201
 
 
 api.add_resource(MeetingApi, '/meeting')
