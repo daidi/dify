@@ -40,7 +40,7 @@ class MeetingService:
             return meeting
 
     @staticmethod
-    def create_or_update_meeting(tenant_id: str, account: Account, args: dict, app_id: str):
+    def create_or_update_meeting(tenant_id: str, account: Account, args: dict):
         if args.get('id'):
             if args['status'] == '':
                 args['end_time'] = datetime.utcnow()

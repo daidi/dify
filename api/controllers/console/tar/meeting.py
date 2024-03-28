@@ -54,8 +54,7 @@ class MeetingApi(Resource):
         if not current_user.is_admin_or_owner:
             raise Forbidden()
 
-        meeting = MeetingService.create_or_update_meeting(current_user.current_tenant_id, current_user, args,
-                                                             current_user.current_app_id)
+        meeting = MeetingService.create_or_update_meeting(current_user.current_tenant_id, current_user, args)
 
         return {}, 201
 
