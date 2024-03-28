@@ -45,7 +45,6 @@ class MeetingApi(Resource):
         parser.add_argument('id', type=str, required=False, location='json')
         parser.add_argument('scene_id', type=str, required=True, location='json')
         parser.add_argument('scene_name', type=str, required=True, location='json')
-        parser.add_argument('description', type=str, required=False, location='json')
         parser.add_argument('conversations', type=str, required=False, location='json')
         parser.add_argument('type', type=str, required=True, location='json')
         args = parser.parse_args()
