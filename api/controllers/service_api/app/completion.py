@@ -133,10 +133,13 @@ class ChatApi(Resource):
         except ModelCurrentlyNotSupportError:
             raise ProviderModelCurrentlyNotSupportError()
         except InvokeError as e:
+            logging.error(e)
             raise CompletionRequestError(e.description)
         except ValueError as e:
+            logging.error(e)
             raise e
         except Exception as e:
+            logging.error(e)
             logging.exception("internal server error.")
             raise InternalServerError()
 
