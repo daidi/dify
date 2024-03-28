@@ -167,18 +167,31 @@ scene_fields = {
     'user_tools': fields.List(fields.String),
 }
 
+conversation_field = {
+    'id': fields.String,
+    'type': fields.String,
+    'tool': fields.String,
+    'role': fields.String,
+    'text': fields.String,
+    'startTime': fields.Integer,
+    'endTime': fields.Integer,
+    'definite': fields.Boolean,
+    'loading': fields.Boolean,
+    'status': fields.Integer,
+    'copilot': fields.String
+}
+
 meeting_fields = {
     'id': fields.String,
     'tenant_id': fields.String,
     'scene_id': fields.String,
     'scene_name': fields.String,
     'name': fields.String,
-    'conversations': fields.List(fields.Raw),
+    'conversations': fields.List(fields.Nested(conversation_field)),
     'type': fields.String,
     'status': fields.String,
     'start_time': TimestampField,
     'end_time': TimestampField,
     'audio_file': fields.String,
     'updated_at': TimestampField,
-
 }
