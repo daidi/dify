@@ -43,17 +43,17 @@ class MeetingService:
     def create_or_update_meeting(tenant_id: str, account: Account, args: dict):
         if args.get('id'):
             if args['status'] == '':
-                args['end_time'] = datetime.utcnow()
+                args['end_time'] = datetime.datetime.utcnow()
             meeting = MeetingService.update_meeting(args['id'], args, account)
         else:
             meeting = Meeting(**args)
             meeting.created_by = account.id
             meeting.updated_by = account.id
             meeting.tenant_id = tenant_id
-            meeting.updated_at = datetime.utcnow()
+            meeting.updated_at = datetime.datetime.utcnow()
             scene = SceneService.get_scene(meeting.scene_id)
 
-            now = datetime.now()
+            now = datetime.datetime.now()
             formatted_date = now.strftime("%Y年%m月%d日")
             meeting.name = f"{formatted_date}{scene.user_role}的{scene.name}"  # 后续AI覆盖
             db.session.add(meeting)
