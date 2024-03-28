@@ -6,7 +6,7 @@ from werkzeug.exceptions import Forbidden
 from controllers.console import api
 from controllers.console.setup import setup_required
 from controllers.console.wraps import account_initialization_required
-from fields.app_fields import scene_fields, meeting_fields
+from fields.app_fields import meeting_fields
 from libs.login import login_required
 from services.meeting_service import MeetingService
 
@@ -27,7 +27,7 @@ class MeetingApi(Resource):
         scenes, total = MeetingService.get_meetings(page, limit,
                                                     current_user.current_tenant_id, current_user)
 
-        data = marshal(scenes, scene_fields)
+        data = marshal(scenes, meeting_fields)
         response = {
             'data': data,
             'has_more': len(scenes) == limit,
