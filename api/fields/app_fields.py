@@ -166,3 +166,19 @@ scene_fields = {
     'user_goal': fields.String,
     'user_tools': fields.List(fields.String),
 }
+
+meeting_fields = {
+    'id': fields.String,
+    'tenant_id': fields.String,
+    'scene_id': fields.String,
+    'scene_name': fields.String,
+    'name': fields.String,
+    'conversations': fields.List(fields.Raw),
+    'type': fields.String,
+    'status': fields.String,
+    'start_time': TimestampField,
+    'end_time': TimestampField,
+    'audio_file': fields.String,
+    'updated_at': TimestampField,
+
+}

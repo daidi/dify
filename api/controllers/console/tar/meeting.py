@@ -55,7 +55,7 @@ class MeetingApi(Resource):
 
         meeting = MeetingService.create_or_update_meeting(current_user.current_tenant_id, current_user, args)
 
-        return meeting, 201
+        return marshal(meeting, dataset_detail_fields), 201
 
 
 api.add_resource(MeetingApi, '/meeting')
