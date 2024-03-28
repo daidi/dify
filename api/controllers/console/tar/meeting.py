@@ -1,29 +1,14 @@
-import json
-import logging
-
 from flask import request
 from flask_login import current_user
 from flask_restful import Resource, reqparse, marshal
-from werkzeug.exceptions import Forbidden, NotFound
+from werkzeug.exceptions import Forbidden
 
-import services.errors.scene
-from constants.model_template import model_templates
 from controllers.console import api
 from controllers.console.setup import setup_required
-from controllers.console.tar.error import SceneNameDuplicateError
 from controllers.console.wraps import account_initialization_required
-from core.errors.error import ProviderTokenNotInitError, LLMBadRequestError
-from core.model_manager import ModelManager
-from core.model_runtime.entities.model_entities import ModelType
-from core.provider_manager import ProviderManager
-from events.app_event import app_was_created
-from extensions.ext_database import db
 from fields.app_fields import scene_fields
 from libs.login import login_required
-from models.model import App, AppModelConfig, Site, ApiToken
-from models.scenarios import Scenarios
 from services.meeting_service import MeetingService
-from services.scene_service import SceneService
 
 
 def _validate_name(name):
@@ -61,10 +46,8 @@ class MeetingApi(Resource):
         parser.add_argument('scene_id', type=str, required=True, location='json')
         parser.add_argument('scene_name', type=str, required=True, location='json')
         parser.add_argument('description', type=str, required=False, location='json')
-        parser.add_argument('conversations', type=str, required=True, location='json')
+        parser.add_argument('conversations', type=str, required=False, location='json')
         parser.add_argument('type', type=str, required=True, location='json')
-        parser.add_argument('start_time', type=str, required=True, location='json')
-        parser.add_argument('end_time', type=str, required=True, location='json')
         args = parser.parse_args()
 
         # The role of the current user in the ta table must be admin or owner

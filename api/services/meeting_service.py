@@ -5,6 +5,7 @@ from extensions.ext_database import db
 from models.account import Account
 from models.meeting import Meeting
 from services.errors.account import NoPermissionError
+from services.scene_service import SceneService
 
 
 class MeetingService:
@@ -41,12 +42,20 @@ class MeetingService:
     @staticmethod
     def create_or_update_meeting(tenant_id: str, account: Account, args: dict, app_id: str):
         if args.get('id'):
+            if args['status'] == '':
+                args['end_time'] = datetime.utcnow()
             meeting = MeetingService.update_meeting(args['id'], args, account)
         else:
             meeting = Meeting(**args)
             meeting.created_by = account.id
             meeting.updated_by = account.id
             meeting.tenant_id = tenant_id
+            meeting.updated_at = datetime.utcnow()
+            scene = SceneService.get_scene(meeting.scene_id)
+
+            now = datetime.now()
+            formatted_date = now.strftime("%Y年%m月%d日")
+            meeting.name = f"{formatted_date}{scene.user_role}的{scene.name}"  # 后续AI覆盖
             db.session.add(meeting)
             db.session.commit()
         return meeting

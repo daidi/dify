@@ -23,13 +23,11 @@ class Meeting(db.Model):
     type = db.Column(db.String(255), nullable=False, server_default="copilot", comment="mock, real, copilot")
     status = db.Column(db.String(255), nullable=False, server_default="pending",
                        comment="ready, ongoing, analysis, done, failed")
-    start_time = db.Column(db.DateTime, nullable=False)
-    end_time = db.Column(db.DateTime, nullable=False)
-    duration = db.Column(db.Integer, nullable=False)
+    start_time = db.Column(db.DateTime, nullable=False, server_default=db.text('CURRENT_TIMESTAMP(0)'))
+    end_time = db.Column(db.DateTime, nullable=False, server_default=db.text('CURRENT_TIMESTAMP(0)'))
     permission = db.Column(db.String(255), nullable=False,
                            server_default=db.text("'only_me'::character varying"))
     audio_file = db.Column(db.String(655), nullable=True)
     created_by = db.Column(UUID, nullable=False)
     updated_by = db.Column(UUID, nullable=False)
-    created_at = db.Column(db.DateTime, nullable=False, server_default=db.text('CURRENT_TIMESTAMP(0)'))
     updated_at = db.Column(db.DateTime, nullable=False, server_default=db.text('CURRENT_TIMESTAMP(0)'))
