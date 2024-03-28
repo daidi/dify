@@ -19,7 +19,7 @@ class MeetingService:
             permission_filter = Meeting.permission == 'all_team_members'
         meetings = Meeting.query.filter(
             db.and_(Meeting.tenant_id == tenant_id, permission_filter)) \
-            .order_by(Meeting.created_at.desc()) \
+            .order_by(Meeting.start_time.desc()) \
             .paginate(
             page=page,
             per_page=per_page,
