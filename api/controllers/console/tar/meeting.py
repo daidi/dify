@@ -6,6 +6,7 @@ from werkzeug.exceptions import Forbidden
 from controllers.console import api
 from controllers.console.setup import setup_required
 from controllers.console.wraps import account_initialization_required
+from core.file.upload_file_parser import UploadFileParser
 from fields.app_fields import meeting_fields
 from libs.login import login_required
 from services.meeting_service import MeetingService
@@ -26,7 +27,8 @@ class MeetingApi(Resource):
         limit = request.args.get('limit', default=20, type=int)
         scenes, total = MeetingService.get_meetings(page, limit,
                                                     current_user.current_tenant_id, current_user)
-
+        if scenes['audio_file']:
+            scenes['audio_file'] = UploadFileParser.get_signed_temp_image_url({'id': scenes['audio_file']})
         data = marshal(scenes, meeting_fields)
         response = {
             'data': data,
