@@ -9,6 +9,7 @@ from controllers.console.wraps import account_initialization_required
 from core.file.upload_file_parser import UploadFileParser
 from fields.app_fields import meeting_fields
 from libs.login import login_required
+from models.model import UploadFile
 from services.meeting_service import MeetingService
 
 
@@ -29,7 +30,8 @@ class MeetingApi(Resource):
                                                       current_user.current_tenant_id, current_user)
         for meeting in meetings:
             if meeting.audio_file:
-                meeting.audio_file = UploadFileParser.get_signed_temp_image_url({'id': meeting.audio_file})
+                upload_file = UploadFile(id=meeting.audio_file)
+                meeting.audio_file = UploadFileParser.get_signed_temp_image_url(upload_file=upload_file)
 
         data = marshal(meetings, meeting_fields)
         response = {
