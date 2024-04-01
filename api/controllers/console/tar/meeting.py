@@ -50,6 +50,7 @@ class MeetingApi(Resource):
         parser.add_argument('conversations', type=str, required=False, location='json')
         parser.add_argument('status', type=str, required=False, location='json')
         parser.add_argument('type', type=str, required=False, location='json')
+        parser.add_argument('audio_file', type=str, required=False, location='json')
         args = parser.parse_args()
 
         # The role of the current user in the ta table must be admin or owner
