@@ -25,14 +25,15 @@ class MeetingApi(Resource):
     def get(self):
         page = request.args.get('page', default=1, type=int)
         limit = request.args.get('limit', default=20, type=int)
-        scenes, total = MeetingService.get_meetings(page, limit,
-                                                    current_user.current_tenant_id, current_user)
-        if scenes['audio_file']:
-            scenes['audio_file'] = UploadFileParser.get_signed_temp_image_url({'id': scenes['audio_file']})
-        data = marshal(scenes, meeting_fields)
+        meetings, total = MeetingService.get_meetings(page, limit,
+                                                      current_user.current_tenant_id, current_user)
+        for meeting in meetings:
+            if 'audio_file' in meeting and meeting['audio_file']:
+                meeting['audio_file'] = UploadFileParser.get_signed_temp_image_url({'id': meeting['audio_file']})
+        data = marshal(meetings, meeting_fields)
         response = {
             'data': data,
-            'has_more': len(scenes) == limit,
+            'has_more': len(meetings) == limit,
             'limit': limit,
             'total': total,
             'page': page
