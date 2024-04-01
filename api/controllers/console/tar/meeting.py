@@ -28,8 +28,9 @@ class MeetingApi(Resource):
         meetings, total = MeetingService.get_meetings(page, limit,
                                                       current_user.current_tenant_id, current_user)
         for meeting in meetings:
-            if 'audio_file' in meeting and meeting['audio_file']:
-                meeting['audio_file'] = UploadFileParser.get_signed_temp_image_url({'id': meeting['audio_file']})
+            if meeting.audio_file:
+                meeting.audio_file = UploadFileParser.get_signed_temp_image_url({'id': meeting.audio_file})
+
         data = marshal(meetings, meeting_fields)
         response = {
             'data': data,
