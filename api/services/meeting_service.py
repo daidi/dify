@@ -40,7 +40,7 @@ class MeetingService:
         if meeting is None:
             return None
         else:
-            logger.debug(meeting)
+            logger.info(meeting)
             return meeting
 
     @staticmethod
