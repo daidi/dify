@@ -1,3 +1,5 @@
+import json
+
 from flask import request
 from flask_login import current_user
 from flask_restful import Resource, reqparse, marshal
@@ -52,7 +54,7 @@ class MeetingListApi(Resource):
         parser.add_argument('id', type=str, required=False, location='json')
         parser.add_argument('scene_id', type=str, required=False, location='json')
         parser.add_argument('scene_name', type=str, required=False, location='json')
-        parser.add_argument('conversations', type=str, required=False, location='json')
+        parser.add_argument('conversations', type=json.loads, required=False, location='json')
         parser.add_argument('status', type=str, required=False, location='json')
         parser.add_argument('type', type=str, required=False, location='json')
         parser.add_argument('audio_file', type=str, required=False, location='json')
