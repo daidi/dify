@@ -79,7 +79,7 @@ config_type = os.getenv('EDITION', default='SELF_HOSTED')  # ce edition first
 
 
 def create_app(test_config=None) -> Flask:
-    app = DifyApp(__name__, static_folder="storage/upload_files", static_url_path='/static_file')
+    app = DifyApp(__name__, static_folder="storage/upload_files", static_url_path='/console/files')
 
     if test_config:
         app.config.from_object(test_config)
