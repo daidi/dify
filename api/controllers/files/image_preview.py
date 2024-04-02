@@ -55,7 +55,7 @@ class BinaryPreviewApi(Resource):
             raise UnsupportedFileTypeError()
 
         url_file = (current_app.config.get("CONSOLE_API_URL")
-                    + url_for('static', filename=filename.replace('upload_files/', '/')))
+                    + url_for('static', filename=filename.replace('upload_files/', '')))
 
         return redirect(url_file, code=302)
 
