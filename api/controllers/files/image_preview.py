@@ -1,4 +1,4 @@
-from flask import Response, request
+from flask import Response, request, url_for, redirect
 from flask_restful import Resource
 from werkzeug.exceptions import NotFound
 
@@ -31,7 +31,31 @@ class ImagePreviewApi(Resource):
             raise UnsupportedFileTypeError()
 
         return Response(generator, mimetype=mimetype)
-    
+
+
+class BinaryPreviewApi(Resource):
+    def get(self, file_id):
+        file_id = str(file_id)
+
+        timestamp = request.args.get('timestamp')
+        nonce = request.args.get('nonce')
+        sign = request.args.get('sign')
+
+        if not timestamp or not nonce or not sign:
+            return {'content': 'Invalid request.'}, 400
+
+        try:
+            filename, mimetype = FileService.get_bin_path(
+                file_id,
+                timestamp,
+                nonce,
+                sign
+            )
+        except services.errors.file.UnsupportedFileTypeError:
+            raise UnsupportedFileTypeError()
+
+        return redirect(url_for('static', filename=filename), code=302)
+
 
 class WorkspaceWebappLogoApi(Resource):
     def get(self, workspace_id):
@@ -54,6 +78,7 @@ class WorkspaceWebappLogoApi(Resource):
 
 
 api.add_resource(ImagePreviewApi, '/files/<uuid:file_id>/image-preview')
+api.add_resource(BinaryPreviewApi, '/files/<uuid:file_id>/binary-preview')
 api.add_resource(WorkspaceWebappLogoApi, '/files/workspaces/<uuid:workspace_id>/webapp-logo')
 
 

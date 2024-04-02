@@ -160,9 +160,31 @@ class FileService:
         if extension.lower() not in IMAGE_EXTENSIONS:
             raise UnsupportedFileTypeError()
 
-        generator = storage.load(upload_file.key, stream=extension != 'wav')
+        generator = storage.load(upload_file.key, stream=True)
 
         return generator, upload_file.mime_type
+
+    @staticmethod
+    def get_bin_path(file_id: str, timestamp: str, nonce: str, sign: str) -> tuple[Generator, str]:
+        result = UploadFileParser.verify_image_file_signature(file_id, timestamp, nonce, sign)
+        if not result:
+            raise NotFound("File not found or signature is invalid")
+
+        upload_file = db.session.query(UploadFile) \
+            .filter(UploadFile.id == file_id) \
+            .first()
+
+        if not upload_file:
+            raise NotFound("File not found or signature is invalid")
+
+        # extract text from file
+        extension = upload_file.extension
+        if extension.lower() not in IMAGE_EXTENSIONS:
+            raise UnsupportedFileTypeError()
+
+        generator = storage.ensure(upload_file.key)
+
+        return upload_file.key, upload_file.mime_type
 
     @staticmethod
     def get_public_image_preview(file_id: str) -> tuple[Generator, str]:

@@ -34,7 +34,7 @@ class MeetingService:
         for meeting in meetings:
             if meeting.audio_file:
                 upload_file = UploadFile(id=meeting.audio_file)
-                meeting.audio_file = UploadFileParser.get_signed_temp_image_url(upload_file=upload_file)
+                meeting.audio_file = UploadFileParser.get_signed_temp_bin_url(upload_file=upload_file)
 
         return meetings.items, meetings.total
 
@@ -48,7 +48,7 @@ class MeetingService:
         else:
             if meeting.audio_file:
                 upload_file = UploadFile(id=meeting.audio_file)
-                meeting.audio_file = UploadFileParser.get_signed_temp_image_url(upload_file=upload_file)
+                meeting.audio_file = UploadFileParser.get_signed_temp_bin_url(upload_file=upload_file)
             return meeting
 
     @staticmethod

@@ -54,6 +54,25 @@ class UploadFileParser:
         encoded_sign = base64.urlsafe_b64encode(sign).decode()
 
         return f"{image_preview_url}?timestamp={timestamp}&nonce={nonce}&sign={encoded_sign}"
+    @classmethod
+    def get_signed_temp_bin_url(cls, upload_file) -> str:
+        """
+        get signed url from upload file
+
+        :param upload_file: UploadFile object
+        :return:
+        """
+        base_url = current_app.config.get('FILES_URL')
+        image_preview_url = f'{base_url}/files/{upload_file.id}/image-preview'
+
+        timestamp = str(int(time.time()))
+        nonce = os.urandom(16).hex()
+        data_to_sign = f"binary-preview|{upload_file.id}|{timestamp}|{nonce}"
+        secret_key = current_app.config['SECRET_KEY'].encode()
+        sign = hmac.new(secret_key, data_to_sign.encode(), hashlib.sha256).digest()
+        encoded_sign = base64.urlsafe_b64encode(sign).decode()
+
+        return f"{image_preview_url}?timestamp={timestamp}&nonce={nonce}&sign={encoded_sign}"
 
     @classmethod
     def verify_image_file_signature(cls, upload_file_id: str, timestamp: str, nonce: str, sign: str) -> bool:

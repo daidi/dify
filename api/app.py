@@ -85,6 +85,8 @@ def create_app(test_config=None) -> Flask:
 
     app.secret_key = app.config['SECRET_KEY']
 
+    app.static_folder = "storage/upload_files"
+
     logging.basicConfig(level=app.config.get('LOG_LEVEL', 'INFO'))
 
     initialize_extensions(app)

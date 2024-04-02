@@ -100,6 +100,45 @@ class Storage:
 
         return data
 
+    def ensure(self, filename: str) -> bool:
+        if not self.folder or self.folder.endswith('/'):
+            filename = self.folder + filename
+        else:
+            filename = self.folder + '/' + filename
+
+        if os.path.exists(filename):
+            return True
+        folder = os.path.dirname(filename)
+        os.makedirs(folder, exist_ok=True)
+
+        if self.storage_type == 's3':
+            try:
+                with closing(self.client) as client:
+                    data = client.get_object(Bucket=self.bucket_name, Key=filename)['Body'].read()
+                    if not self.folder or self.folder.endswith('/'):
+                        filename = self.folder + filename
+                    else:
+                        filename = self.folder + '/' + filename
+            except ClientError as ex:
+                if ex.response['Error']['Code'] == 'NoSuchKey':
+                    raise FileNotFoundError("File not found")
+                else:
+                    raise
+
+            with open(os.path.join(os.getcwd(), filename), "wb") as f:
+                f.write(data)
+            return True
+        elif self.storage_type == 'azure-blob':
+            blob = self.client.get_container_client(container=self.bucket_name)
+            blob = blob.get_blob_client(blob=filename)
+            data = blob.download_blob().readall()
+
+            with open(os.path.join(os.getcwd(), filename), "wb") as f:
+                f.write(data)
+            return True
+
+        return False
+
     def load_stream(self, filename: str) -> Generator:
         def generate(filename: str = filename) -> Generator:
             if self.storage_type == 's3':
