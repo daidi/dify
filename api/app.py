@@ -4,12 +4,15 @@ from werkzeug.exceptions import Unauthorized
 
 if not os.environ.get("DEBUG") or os.environ.get("DEBUG").lower() != 'true':
     from gevent import monkey
+
     monkey.patch_all()
     # if os.environ.get("VECTOR_STORE") == 'milvus':
     import grpc.experimental.gevent
+
     grpc.experimental.gevent.init_gevent()
 
     import langchain
+
     langchain.verbose = True
 
 import json
@@ -44,6 +47,7 @@ from services.account_service import AccountService
 # DO NOT REMOVE BELOW
 from events import event_handlers
 from models import account, dataset, model, source, task, tool, tools, web, scenarios, meeting
+
 # DO NOT REMOVE ABOVE
 
 
@@ -60,12 +64,14 @@ else:
 class DifyApp(Flask):
     pass
 
+
 # -------------
 # Configuration
 # -------------
 
 
 config_type = os.getenv('EDITION', default='SELF_HOSTED')  # ce edition first
+
 
 # ----------------------------
 # Application Factory Function
@@ -85,9 +91,11 @@ def create_app(test_config=None) -> Flask:
 
     app.secret_key = app.config['SECRET_KEY']
 
-    app.static_folder = "storage/upload_files"
-
     logging.basicConfig(level=app.config.get('LOG_LEVEL', 'INFO'))
+
+    logging.info(os.path.abspath("storage/upload_files"))
+    app.static_folder = os.path.abspath("storage/upload_files")
+    # app.static_url_path = "static"
 
     initialize_extensions(app)
     register_blueprints(app)
@@ -194,7 +202,6 @@ def register_blueprints(app):
 app = create_app()
 celery = app.extensions["celery"]
 
-
 if app.config['TESTING']:
     print("App is running in TESTING mode")
 
@@ -253,6 +260,4 @@ def pool_stat():
 
 
 if __name__ == '__main__':
-    app.debug = True
-    app.logger.setLevel(logging.DEBUG)
     app.run(host='0.0.0.0', port=5001)
