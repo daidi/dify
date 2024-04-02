@@ -54,7 +54,7 @@ class BinaryPreviewApi(Resource):
         except services.errors.file.UnsupportedFileTypeError:
             raise UnsupportedFileTypeError()
 
-        return redirect(url_for('static', filename=filename), code=302)
+        return redirect(url_for('static', filename=filename.replace('upload_files/', '/')), code=302)
 
 
 class WorkspaceWebappLogoApi(Resource):

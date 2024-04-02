@@ -165,7 +165,7 @@ class FileService:
         return generator, upload_file.mime_type
 
     @staticmethod
-    def get_bin_path(file_id: str, timestamp: str, nonce: str, sign: str) -> tuple[Generator, str]:
+    def get_bin_path(file_id: str, timestamp: str, nonce: str, sign: str) -> tuple[str, str]:
         result = UploadFileParser.verify_image_file_signature(file_id, timestamp, nonce, sign)
         if not result:
             raise NotFound("File not found or signature is invalid")
