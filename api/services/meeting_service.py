@@ -41,6 +41,7 @@ class MeetingService:
             return None
         else:
             logger.info(meeting)
+            logger.info(meeting.conversations)
             return meeting
 
     @staticmethod
