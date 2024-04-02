@@ -79,7 +79,7 @@ config_type = os.getenv('EDITION', default='SELF_HOSTED')  # ce edition first
 
 
 def create_app(test_config=None) -> Flask:
-    app = DifyApp(__name__)
+    app = DifyApp(__name__, static_folder="storage/upload_files", static_url_path='/static_file')
 
     if test_config:
         app.config.from_object(test_config)
@@ -92,9 +92,6 @@ def create_app(test_config=None) -> Flask:
     app.secret_key = app.config['SECRET_KEY']
 
     logging.basicConfig(level=app.config.get('LOG_LEVEL', 'INFO'))
-
-    app.static_folder = os.path.abspath("storage/upload_files")
-    app.static_url_path = "files"
 
     initialize_extensions(app)
     register_blueprints(app)
