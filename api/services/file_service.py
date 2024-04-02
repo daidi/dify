@@ -160,7 +160,7 @@ class FileService:
         if extension.lower() not in IMAGE_EXTENSIONS:
             raise UnsupportedFileTypeError()
 
-        generator = storage.load(upload_file.key, stream=True)
+        generator = storage.load(upload_file.key, stream=extension != 'wav')
 
         return generator, upload_file.mime_type
 
