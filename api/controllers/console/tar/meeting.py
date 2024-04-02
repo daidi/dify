@@ -1,8 +1,9 @@
 from flask import request
 from flask_login import current_user
 from flask_restful import Resource, reqparse, marshal
-from werkzeug.exceptions import Forbidden
+from werkzeug.exceptions import Forbidden, NotFound
 
+import services
 from controllers.console import api
 from controllers.console.setup import setup_required
 from controllers.console.wraps import account_initialization_required
@@ -19,7 +20,7 @@ def _validate_name(name):
     return name
 
 
-class MeetingApi(Resource):
+class MeetingListApi(Resource):
     @setup_required
     @login_required
     @account_initialization_required
@@ -66,4 +67,23 @@ class MeetingApi(Resource):
         return marshal(meeting, meeting_fields), 201
 
 
-api.add_resource(MeetingApi, '/meeting')
+class MeetingApi(Resource):
+    @setup_required
+    @login_required
+    @account_initialization_required
+    def get(self, meeting_id):
+        meeting_id_str = str(meeting_id)
+        meeting = MeetingService.get_meeting(meeting_id_str)
+        if meeting is None:
+            raise NotFound("Dataset not found.")
+        try:
+            MeetingService.check_meeting_permission(
+                meeting, current_user)
+        except services.errors.account.NoPermissionError as e:
+            raise Forbidden(str(e))
+        data = marshal(meeting, meeting_fields)
+        return data, 200
+
+
+api.add_resource(MeetingListApi, '/meeting')
+api.add_resource(MeetingApi, '/meeting/<uuid:meeting_id>')
