@@ -8,6 +8,8 @@ from models.meeting import Meeting
 from services.errors.account import NoPermissionError
 from services.scene_service import SceneService
 
+logger = logging.getLogger(__name__)
+
 
 class MeetingService:
 
@@ -38,7 +40,7 @@ class MeetingService:
         if meeting is None:
             return None
         else:
-            meeting.conversations = json.loads(meeting.conversations)
+            logger.debug(meeting)
             return meeting
 
     @staticmethod
