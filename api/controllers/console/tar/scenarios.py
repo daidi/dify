@@ -23,6 +23,7 @@ from libs.login import login_required
 from models.model import App, AppModelConfig, Site, ApiToken
 from models.scenarios import Scenarios
 from services.scene_service import SceneService
+from services.tar_service import TarService
 
 
 def _validate_name(name):
@@ -107,115 +108,37 @@ class ScenariosApi(Resource):
         if not current_user.is_admin_or_owner:
             raise Forbidden()
 
+        copilot_prompt = f"模拟{args['description']}场景，其中你扮演一名{args['user_role']}，你的目标是{args['user_goal']}。{args['interact_role']}（由我扮演）会提出问题，目标是{args['interact_goal']}。请根据这个场景回答我的问题。"
+        mock_prompt = f"模拟{args['description']}场景，其中我扮演一名{args['user_role']}，我的目标是{args['user_goal']}。{args['interact_role']}（由你扮演）会提出问题，目标是{args['interact_goal']}。请根据这个场景回答我的问题。"
+        summary_prompt = "下面是一段对话，请总结这段对话：\n{{query}}"
+
         # 创建app
         if args.get('id'):
             scene = SceneService.update_scene(args['id'], args, current_user)
-            app: App = db.session.query(App).filter(
-                App.id == scene.app_id
-            ).first()
-            if app is None:
-                raise NotFound('App not found')
-
-            app.name = '[auto]' + args['name']
-
-            original_app_model_config: AppModelConfig = db.session.query(AppModelConfig).filter(
-                AppModelConfig.id == app.app_model_config_id
-            ).first()
-            if original_app_model_config is None:
-                raise NotFound('app_model_config not found')
-            original_app_model_config.dataset_configs = json.dumps({
-                'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
-                             args['dataset_ids']],
-                'reranking_model': {},
-                'retrieval_model': 'single',
-                'score_threshold': 0.5,
-                'top_k': 2,
-            })
-            original_app_model_config.pre_prompt = f"模拟{args['description']}场景，其中你扮演一名{args['user_role']}，你的目标是{args['user_goal']}。{args['interact_role']}（由我扮演）会提出问题，目标是{args['interact_goal']}。请根据这个场景回答我的问题。"
-
-            db.session.commit()
+            TarService.update_app(scene.copilot_id, '[auto]' + args['name'], copilot_prompt, args['dataset_ids'])
+            TarService.update_app(scene.mock_id, '[auto]' + args['name'], mock_prompt, args['dataset_ids'])
+            TarService.update_app(scene.summary_id, '[auto]' + args['name'], summary_prompt, args['dataset_ids'])
 
         else:
-            model_config_template = model_templates['chat_default']
-
-            app = App(**model_config_template['app'])
-            app_model_config = AppModelConfig(**model_config_template['model_config'])
-
-            # get model provider
-            model_manager = ModelManager()
-            try:
-                model_instance = model_manager.get_default_model_instance(
-                    tenant_id=current_user.current_tenant_id,
-                    model_type=ModelType.LLM
-                )
-            except ProviderTokenNotInitError:
-                model_instance = None
-
-            if model_instance:
-                model_dict = app_model_config.model_dict
-                model_dict['provider'] = model_instance.provider
-                model_dict['name'] = model_instance.model
-                app_model_config.model = json.dumps(model_dict)
-
-            # set datasets
-            app_model_config.dataset_configs = json.dumps({
-                'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
-                             args['dataset_ids']],
-                'reranking_model': {},
-                'retrieval_model': 'single',
-                'score_threshold': 0.5,
-                'top_k': 2,
-            })
-            # set prompts
-            app_model_config.pre_prompt = f"模拟{args['description']}场景，其中你扮演一名{args['user_role']}，你的目标是{args['user_goal']}。{args['interact_role']}（由我扮演）会提出问题，目标是{args['interact_goal']}。请根据这个场景回答我的问题。"
-
-            app.name = '[auto]' + args['name']
-            app.mode = 'chat'
-            app.icon = "🤖"
-            app.icon_background = "#FFEAD5"
-            app.tenant_id = current_user.current_tenant_id
-
-            db.session.add(app)
-            db.session.flush()
-
-            app_model_config.app_id = app.id
-            db.session.add(app_model_config)
-            db.session.flush()
-
-            app.app_model_config_id = app_model_config.id
-
-            account = current_user
-
-            site = Site(
-                app_id=app.id,
-                title=app.name,
-                default_language=account.interface_language,
-                customize_token_strategy='not_allow',
-                code=Site.generate_code(16)
-            )
-
-            db.session.add(site)
-            db.session.commit()
-
-            app_was_created.send(app)
-
-            key = ApiToken.generate_api_key('app-', 24)
-            api_token = ApiToken()
-            setattr(api_token, 'app_id', app.id)
-            api_token.tenant_id = current_user.current_tenant_id
-            api_token.token = key
-            api_token.type = 'app'
-            db.session.add(api_token)
-            db.session.commit()
+            app_1, api_token_1 = TarService.create_app('[copilot]' + args['name'], copilot_prompt, args['dataset_ids'],
+                                                       'chat')
+            app_2, api_token_2 = TarService.create_app('[mock]' + args['name'], mock_prompt, args['dataset_ids'],
+                                                       'chat')
+            app_3, api_token_3 = TarService.create_app('[summary]' + args['name'], summary_prompt, args['dataset_ids'],
+                                                       'completion')
 
             # check if scene name already exists
             if Scenarios.query.filter_by(name=args['name'], tenant_id=current_user.current_tenant_id).first():
                 raise SceneNameDuplicateError(f'Dataset with name {args["name"]} already exists.')
             scene = Scenarios(**args)
-            scene.app_id = app.id
-            scene.app_key = key
-            scene.created_by = account.id
-            scene.updated_by = account.id
+            scene.copilot_id = app_1.id
+            scene.copilot_key = api_token_1.token
+            scene.mock_id = app_2.id
+            scene.mock_key = api_token_2.token
+            scene.summary_id = app_3.id
+            scene.summary_key = api_token_3.token
+            scene.created_by = current_user.id
+            scene.updated_by = current_user.id
             scene.tenant_id = current_user.current_tenant_id
             scene.id = None
             db.session.add(scene)
