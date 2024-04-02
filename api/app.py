@@ -93,9 +93,8 @@ def create_app(test_config=None) -> Flask:
 
     logging.basicConfig(level=app.config.get('LOG_LEVEL', 'INFO'))
 
-    logging.info(os.path.abspath("storage/upload_files"))
     app.static_folder = os.path.abspath("storage/upload_files")
-    # app.static_url_path = "static"
+    app.static_url_path = "files"
 
     initialize_extensions(app)
     register_blueprints(app)
