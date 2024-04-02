@@ -1,4 +1,4 @@
-from flask import Response, request, url_for, redirect
+from flask import Response, request, url_for, redirect, current_app
 from flask_restful import Resource
 from werkzeug.exceptions import NotFound
 
@@ -54,7 +54,10 @@ class BinaryPreviewApi(Resource):
         except services.errors.file.UnsupportedFileTypeError:
             raise UnsupportedFileTypeError()
 
-        return redirect(url_for('static', filename=filename.replace('upload_files/', '/')), code=302)
+        url_file = (current_app.config.get("CONSOLE_API_URL")
+                    + url_for('static', filename=filename.replace('upload_files/', '/')))
+
+        return redirect(url_file, code=302)
 
 
 class WorkspaceWebappLogoApi(Resource):
