@@ -186,6 +186,7 @@ meeting_fields = {
     'tenant_id': fields.String,
     'scene_id': fields.String,
     'scene_name': fields.String,
+    'scene': scene_fields,
     'name': fields.String,
     'conversations': fields.List(fields.Nested(conversation_field)),
     'type': fields.String,
