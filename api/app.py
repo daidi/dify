@@ -193,6 +193,8 @@ def register_blueprints(app):
          )
     app.register_blueprint(files_bp)
 
+    CORS(app, resources={r"/console/files/*": {"origins": "*"}})
+
 
 # create app
 app = create_app()
