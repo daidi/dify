@@ -75,12 +75,13 @@ class MeetingApi(Resource):
         meeting_id_str = str(meeting_id)
         meeting = MeetingService.get_meeting(meeting_id_str)
         if meeting is None:
-            raise NotFound("Dataset not found.")
+            raise NotFound("Meeting not found.")
         try:
             MeetingService.check_meeting_permission(
                 meeting, current_user)
         except services.errors.account.NoPermissionError as e:
             raise Forbidden(str(e))
+        print(meeting.conversations)
         data = marshal(meeting, meeting_fields)
         return data, 200
 
