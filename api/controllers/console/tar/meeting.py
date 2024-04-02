@@ -31,10 +31,6 @@ class MeetingListApi(Resource):
         limit = request.args.get('limit', default=20, type=int)
         meetings, total = MeetingService.get_meetings(page, limit,
                                                       current_user.current_tenant_id, current_user)
-        for meeting in meetings:
-            if meeting.audio_file:
-                upload_file = UploadFile(id=meeting.audio_file)
-                meeting.audio_file = UploadFileParser.get_signed_temp_image_url(upload_file=upload_file)
 
         data = marshal(meetings, meeting_fields)
         response = {

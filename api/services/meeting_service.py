@@ -2,9 +2,11 @@ import datetime
 import json
 import logging
 
+from core.file.upload_file_parser import UploadFileParser
 from extensions.ext_database import db
 from models.account import Account
 from models.meeting import Meeting
+from models.model import UploadFile
 from services.errors.account import NoPermissionError
 from services.scene_service import SceneService
 
@@ -29,6 +31,10 @@ class MeetingService:
             max_per_page=100,
             error_out=False
         )
+        for meeting in meetings:
+            if meeting.audio_file:
+                upload_file = UploadFile(id=meeting.audio_file)
+                meeting.audio_file = UploadFileParser.get_signed_temp_image_url(upload_file=upload_file)
 
         return meetings.items, meetings.total
 
@@ -40,6 +46,9 @@ class MeetingService:
         if meeting is None:
             return None
         else:
+            if meeting.audio_file:
+                upload_file = UploadFile(id=meeting.audio_file)
+                meeting.audio_file = UploadFileParser.get_signed_temp_image_url(upload_file=upload_file)
             return meeting
 
     @staticmethod
