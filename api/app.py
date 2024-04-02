@@ -193,7 +193,13 @@ def register_blueprints(app):
          )
     app.register_blueprint(files_bp)
 
-    CORS(app, resources={r"/console/files/*": {"origins": "*"}})
+    CORS(app,
+         resources={
+             r"/console/files/*": {"origins": app.config['CONSOLE_CORS_ALLOW_ORIGINS']}},
+         supports_credentials=True,
+         allow_headers=['Content-Type', 'Authorization'],
+         methods=['GET', 'PUT', 'POST', 'DELETE', 'OPTIONS', 'PATCH'],
+         expose_headers=['X-Version', 'X-Env'])
 
 
 # create app
