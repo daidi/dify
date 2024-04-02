@@ -63,11 +63,11 @@ class UploadFileParser:
         :return:
         """
         base_url = current_app.config.get('FILES_URL')
-        image_preview_url = f'{base_url}/files/{upload_file.id}/image-preview'
+        image_preview_url = f'{base_url}/files/{upload_file.id}/binary-preview'
 
         timestamp = str(int(time.time()))
         nonce = os.urandom(16).hex()
-        data_to_sign = f"binary-preview|{upload_file.id}|{timestamp}|{nonce}"
+        data_to_sign = f"image-preview|{upload_file.id}|{timestamp}|{nonce}"
         secret_key = current_app.config['SECRET_KEY'].encode()
         sign = hmac.new(secret_key, data_to_sign.encode(), hashlib.sha256).digest()
         encoded_sign = base64.urlsafe_b64encode(sign).decode()
