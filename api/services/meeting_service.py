@@ -1,4 +1,5 @@
 import datetime
+import json
 import logging
 
 from extensions.ext_database import db
@@ -37,6 +38,7 @@ class MeetingService:
         if meeting is None:
             return None
         else:
+            meeting.conversations = json.loads(meeting.conversations)
             return meeting
 
     @staticmethod

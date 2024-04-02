@@ -81,7 +81,6 @@ class MeetingApi(Resource):
                 meeting, current_user)
         except services.errors.account.NoPermissionError as e:
             raise Forbidden(str(e))
-        print(meeting.conversations)
         data = marshal(meeting, meeting_fields)
         return data, 200
 
