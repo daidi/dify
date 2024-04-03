@@ -25,6 +25,7 @@ from libs.password import compare_password, hash_password, valid_password
 from libs.rsa import generate_key_pair
 from models.account import *
 from models.model import AppModelConfig, App, Site, ApiToken
+from services.app_model_config_service import AppModelConfigService
 from services.errors.account import (
     AccountAlreadyInTenantError,
     AccountLoginError,
@@ -121,10 +122,13 @@ class TarService:
     @staticmethod
     def update_app(app_id: str, name: str, prompt: str, dataset_ids: list):
         app: App = db.session.query(App).filter(
-            App.id == app_id
+            App.id == app_id,
+            App.tenant_id == current_user.current_tenant_id,
+            App.status == 'normal'
         ).first()
         if app is None:
             raise NotFound('App not found')
+
         app.name = name
 
         original_app_model_config: AppModelConfig = db.session.query(AppModelConfig).filter(
@@ -142,4 +146,6 @@ class TarService:
                          }})
         original_app_model_config.pre_prompt = prompt
 
+        db.session.add(app)
+        db.session.add(original_app_model_config)
         db.session.commit()
