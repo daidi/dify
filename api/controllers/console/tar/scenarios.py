@@ -82,7 +82,7 @@ class ScenariosApi(Resource):
         parser.add_argument('name', type=str, required=True, location='json')
         parser.add_argument('description', type=str, required=True, location='json')
         parser.add_argument('language', type=str, required=True, location='json')
-        parser.add_argument('dataset_ids', type=str, required=False, location='json', action='append', default=[])
+        parser.add_argument('dataset_ids', type=list, required=False, location='json', action='append', default=[])
         parser.add_argument('interact_role', type=str, required=True, location='json')
         parser.add_argument('interact_goal', type=str, required=True, location='json')
         parser.add_argument('interact_nums', type=int, required=True, location='json')
