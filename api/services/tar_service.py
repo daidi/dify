@@ -80,6 +80,7 @@ class TarService:
         })
         # set prompts
         app_model_config.pre_prompt = prompt
+        app_model_config.retriever_resource.enabled = True
 
         app.name = name
         app.mode = mode
@@ -147,6 +148,7 @@ class TarService:
             'top_k': 2
         })
         original_app_model_config.pre_prompt = prompt
+        original_app_model_config.retriever_resource.enabled = True
 
         db.session.add(app)
         db.session.add(original_app_model_config)
