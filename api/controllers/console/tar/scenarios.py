@@ -107,8 +107,6 @@ class ScenariosApi(Resource):
         # 创建app
         if args.get('id'):
             scene = SceneService.update_scene(args['id'], args, current_user)
-            logger.info(type(args['dataset_ids']))
-            logger.info(args['dataset_ids'])
             TarService.update_app(scene.copilot_id, '[auto]' + args['name'], copilot_prompt, args['dataset_ids'])
             TarService.update_app(scene.mock_id, '[auto]' + args['name'], mock_prompt, args['dataset_ids'])
             TarService.update_app(scene.summary_id, '[auto]' + args['name'], summary_prompt, args['dataset_ids'])

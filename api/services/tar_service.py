@@ -70,7 +70,7 @@ class TarService:
 
         # set datasets
         app_model_config.dataset_configs = json.dumps({
-            'datasets': {'dataset': [{"dataset": {"enabled": True, "id": id}} for id in
+            'datasets': {'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
                                      dataset_ids],
                          'reranking_model': {},
                          'retrieval_model': 'single',
@@ -137,7 +137,7 @@ class TarService:
         if original_app_model_config is None:
             raise NotFound('app_model_config not found')
         original_app_model_config.dataset_configs = json.dumps({
-            'datasets': {'dataset': [{"dataset": {"enabled": True, "id": id}} for id in
+            'datasets': {'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
                                      dataset_ids],
                          'reranking_model': {},
                          'retrieval_model': 'single',
