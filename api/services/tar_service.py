@@ -71,12 +71,13 @@ class TarService:
         # set datasets
         app_model_config.dataset_configs = json.dumps({
             'datasets': {'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
-                                     dataset_ids],
-                         'reranking_model': {},
-                         'retrieval_model': 'single',
-                         'score_threshold': 0.5,
-                         'top_k': 2,
-                         }})
+                                      dataset_ids]
+                         },
+            'reranking_model': {},
+            'retrieval_model': 'single',
+            'score_threshold': 0.5,
+            'top_k': 2,
+        })
         # set prompts
         app_model_config.pre_prompt = prompt
 
@@ -138,12 +139,13 @@ class TarService:
             raise NotFound('app_model_config not found')
         original_app_model_config.dataset_configs = json.dumps({
             'datasets': {'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
-                                     dataset_ids],
-                         'reranking_model': {},
-                         'retrieval_model': 'single',
-                         'score_threshold': 0.5,
-                         'top_k': 2,
-                         }})
+                                      dataset_ids],
+                         },
+            'reranking_model': {},
+            'retrieval_model': 'single',
+            'score_threshold': 0.5,
+            'top_k': 2
+        })
         original_app_model_config.pre_prompt = prompt
 
         db.session.add(app)
