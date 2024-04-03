@@ -1,30 +1,22 @@
-import json
 import logging
 
 from flask import request
 from flask_login import current_user
 from flask_restful import Resource, reqparse, marshal
-from werkzeug.exceptions import Forbidden, NotFound
+from werkzeug.exceptions import Forbidden
 
-import services.errors.scene
-from constants.model_template import model_templates
 from controllers.console import api
 from controllers.console.setup import setup_required
 from controllers.console.tar.error import SceneNameDuplicateError
 from controllers.console.wraps import account_initialization_required
-from core.errors.error import ProviderTokenNotInitError, LLMBadRequestError
-from core.model_manager import ModelManager
-from core.model_runtime.entities.model_entities import ModelType
-from core.provider_manager import ProviderManager
-from events.app_event import app_was_created
 from extensions.ext_database import db
 from fields.app_fields import scene_fields
 from libs.login import login_required
-from models.model import App, AppModelConfig, Site, ApiToken
 from models.scenarios import Scenarios
 from services.scene_service import SceneService
 from services.tar_service import TarService
 
+logger = logging.getLogger(__name__)
 
 def _validate_name(name):
     if not name or len(name) < 1 or len(name) > 40:
@@ -115,8 +107,8 @@ class ScenariosApi(Resource):
         # 创建app
         if args.get('id'):
             scene = SceneService.update_scene(args['id'], args, current_user)
-            logging.info(type(args['dataset_ids']))
-            logging.info(args['dataset_ids'])
+            logger.info(type(args['dataset_ids']))
+            logger.info(args['dataset_ids'])
             TarService.update_app(scene.copilot_id, '[auto]' + args['name'], copilot_prompt, args['dataset_ids'])
             TarService.update_app(scene.mock_id, '[auto]' + args['name'], mock_prompt, args['dataset_ids'])
             TarService.update_app(scene.summary_id, '[auto]' + args['name'], summary_prompt, args['dataset_ids'])
