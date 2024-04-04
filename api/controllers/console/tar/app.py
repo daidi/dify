@@ -1,22 +1,22 @@
+import json
+import time
+
+from aliyunsdkcore.client import AcsClient
+from aliyunsdkcore.request import CommonRequest
 from flask import request, redirect, current_app
 from flask_restful import Resource
 
 from controllers.console import api
 from controllers.console.setup import setup_required
 from controllers.console.wraps import account_initialization_required
+from extensions.ext_redis import redis_client
 from libs.login import login_required
-import os
-import time
-import json
-from aliyunsdkcore.client import AcsClient
-from aliyunsdkcore.request import CommonRequest
-
 from services.tts import get_tts_url
 
 cache_key = "aliyun_token"
 
 
-def get_token_from_cache(redis_client):
+def get_token_from_cache():
     """
     从Redis缓存中获取令牌。
     """
@@ -24,7 +24,7 @@ def get_token_from_cache(redis_client):
     return json.loads(token_info) if token_info else None
 
 
-def save_token_to_cache(redis_client, token_info, expire_in):
+def save_token_to_cache(token_info, expire_in):
     """
     将令牌存储到Redis缓存中。
     这里的expire_in是令牌的有效期，单位秒。
@@ -61,13 +61,13 @@ def request_new_token():
     }
 
 
-def get_token(redis_client):
+def get_token():
     """
     获取令牌。首先尝试从Redis缓存中获取，如果没有找到或令牌已过期，
     则向服务器请求新的令牌，并将其保存到Redis缓存中。
     """
     # 尝试从缓存中获取令牌
-    token_info = get_token_from_cache(redis_client)
+    token_info = get_token_from_cache()
     if token_info and token_info['expireTime'] > time.time():
         # 检查令牌是否过期
         return token_info['token']
@@ -77,7 +77,7 @@ def get_token(redis_client):
         # 计算令牌的有效期
         expire_in = int(token_info['expireTime']) - int(time.time())
         # 存储新的令牌到缓存中
-        save_token_to_cache(redis_client, token_info, expire_in)
+        save_token_to_cache(token_info, expire_in)
         return token_info['token']
 
 
