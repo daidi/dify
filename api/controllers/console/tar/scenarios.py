@@ -100,9 +100,9 @@ class ScenariosApi(Resource):
         if not current_user.is_admin_or_owner:
             raise Forbidden()
 
-        copilot_prompt = f"模拟{args['description']}场景，其中你扮演一名{args['user_role']}，你的目标是{args['user_goal']}。{args['interact_role']}（由我扮演）会提出问题，目标是{args['interact_goal']}。请根据这个场景回答我的问题。"
-        mock_prompt = f"模拟{args['description']}场景，其中我扮演一名{args['user_role']}，我的目标是{args['user_goal']}。{args['interact_role']}（由你扮演）会提出问题，目标是{args['interact_goal']}。请根据这个场景回答我的问题。"
-        summary_prompt = "下面是一段对话，请总结这段对话：\n{{query}}"
+        copilot_prompt = f"模拟{args['description']}场景，你扮演一名{args['user_role']}，你的目标是{args['user_goal']}。用户是{args['interact_role']}，用户希望{args['interact_goal']}。请根据这个场景与用户进行交流。"
+        mock_prompt = f"模拟{args['description']}场景，你扮演一名{args['interact_role']}，我的目标是{args['interact_goal']}。用户是{args['user_role']}，用户希望{args['interact_goal']}。请根据这个场景与用户进行交流。"
+        summary_prompt = "你可以重新组织和输出混乱复杂的会议记录，并根据当前状态、遇到的问题和提出的解决方案撰写会议纪要。你只负责会议记录方面的问题，不回答其他。\n会议内容：{{query}}"
 
         # 创建app
         if args.get('id'):
