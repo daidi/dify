@@ -90,13 +90,13 @@ class TarAppTtsApi(Resource):
         token = get_token()
         url = get_tts_url(token, text)
 
-        return redirect(url, code=302)
+        # return redirect(url, code=302)
 
-        # response = {
-        #     'url': url
-        # }
-        #
-        # return response, 200
+        response = {
+            'url': url
+        }
+
+        return response, 200
 
 
 api.add_resource(TarAppTtsApi, '/tar/app/tts')
