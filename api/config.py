@@ -225,7 +225,7 @@ class Config:
         self.SMTP_USERNAME = get_env('SMTP_USERNAME')
         self.SMTP_PASSWORD = get_env('SMTP_PASSWORD')
         self.SMTP_USE_TLS = get_bool_env('SMTP_USE_TLS')
-        
+
         # ------------------------
         # Workpace Configurations.
         # ------------------------
@@ -303,6 +303,12 @@ class Config:
         self.API_COMPRESSION_ENABLED = get_bool_env('API_COMPRESSION_ENABLED')
         self.TOOL_ICON_CACHE_MAX_AGE = get_env('TOOL_ICON_CACHE_MAX_AGE')
 
+
+        # ------------------------
+        # Tar Configurations.
+        # ------------------------
+        self.ALIYUN_AK_ID=get_env('ALIYUN_AK_ID')
+        self.ALIYUN_AK_SECRET=get_env('ALIYUN_AK_SECRET')
 
 class CloudEditionConfig(Config):
 

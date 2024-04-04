@@ -136,6 +136,8 @@ services:
     # uncomment to expose dify-api port to host
     # ports:
     #   - "5001:5001"
+    env_file:
+      - tar.env # 指定外部环境变量文件
 
   # worker service
   # The Celery worker for processing the queue.
@@ -219,6 +221,8 @@ services:
     volumes:
       # Mount the storage directory to the container, for storing user files.
       - ./volumes/app/storage:/app/api/storage
+    env_file:
+      - tar.env # 指定外部环境变量文件
 
   # Frontend web application.
   web:

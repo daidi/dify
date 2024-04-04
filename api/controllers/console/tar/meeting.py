@@ -1,5 +1,3 @@
-import json
-
 from flask import request
 from flask_login import current_user
 from flask_restful import Resource, reqparse, marshal
@@ -9,10 +7,8 @@ import services
 from controllers.console import api
 from controllers.console.setup import setup_required
 from controllers.console.wraps import account_initialization_required
-from core.file.upload_file_parser import UploadFileParser
 from fields.app_fields import meeting_fields
 from libs.login import login_required
-from models.model import UploadFile
 from services.meeting_service import MeetingService
 
 
