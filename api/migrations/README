@@ -9,3 +9,8 @@ flask db revision --autogenerate -m "modify meeting"
 app.py 增加model
 ```
 
+merge confilct
+```local
+flask db heads
+flask db merge xxx xxx
+```
