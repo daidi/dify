@@ -12,7 +12,7 @@ from sqlalchemy import func
 from werkzeug.exceptions import Forbidden, NotFound
 
 from constants.languages import language_timezone_mapping, languages
-from constants.model_template import model_templates
+from constants.model_template import default_app_templates
 from core.errors.error import ProviderTokenNotInitError
 from core.model_manager import ModelManager
 from core.model_runtime.entities.model_entities import ModelType
@@ -47,7 +47,7 @@ class TarService:
 
     @staticmethod
     def create_app(name: str, prompt: str, dataset_ids: list, mode: str) -> tuple[App, ApiToken]:
-        model_config_template = model_templates[mode + '_default']
+        model_config_template = default_app_templates[mode + '_default']
 
         app = App(**model_config_template['app'])
         app_model_config = AppModelConfig(**model_config_template['model_config'])
