@@ -203,3 +203,7 @@ and fill in variables, with a welcome sentence, and keep TLDR.
 
 << OUTPUT >>
 """
+
+MEETING_SUMMARY_TEMPLATE="""
+
+"""
