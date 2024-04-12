@@ -16,6 +16,10 @@ COPY yarn.lock .
 
 RUN npm config set registry https://registry.npmmirror.com && yarn install --frozen-lockfile
 
+# if you located in China, you can use taobao registry to speed up
+# RUN yarn install --frozen-lockfile --registry https://registry.npm.taobao.org/
+
+
 
 # build resources
 FROM base as builder

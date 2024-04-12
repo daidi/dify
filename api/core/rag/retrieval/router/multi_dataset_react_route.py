@@ -1,20 +1,20 @@
 from collections.abc import Generator, Sequence
-from typing import Optional, Union
-
-from langchain import PromptTemplate
-from langchain.agents.structured_chat.base import HUMAN_MESSAGE_TEMPLATE
-from langchain.agents.structured_chat.prompt import PREFIX, SUFFIX
-from langchain.schema import AgentAction
+from typing import Union
 
 from core.app.entities.app_invoke_entities import ModelConfigWithCredentialsEntity
 from core.model_manager import ModelInstance
 from core.model_runtime.entities.llm_entities import LLMUsage
 from core.model_runtime.entities.message_entities import PromptMessage, PromptMessageRole, PromptMessageTool
 from core.prompt.advanced_prompt_transform import AdvancedPromptTransform
-from core.prompt.entities.advanced_prompt_entities import ChatModelMessage
-from core.rag.retrieval.agent.output_parser.structured_chat import StructuredChatOutputParser
-from core.workflow.nodes.knowledge_retrieval.entities import KnowledgeRetrievalNodeData
+from core.prompt.entities.advanced_prompt_entities import ChatModelMessage, CompletionModelPromptTemplate
+from core.rag.retrieval.output_parser.react_output import ReactAction
+from core.rag.retrieval.output_parser.structured_chat import StructuredChatOutputParser
 from core.workflow.nodes.llm.llm_node import LLMNode
+
+PREFIX = """Respond to the human as helpfully and accurately as possible. You have access to the following tools:"""
+
+SUFFIX = """Begin! Reminder to ALWAYS respond with a valid json blob of a single action. Use tools if necessary. Respond directly if appropriate. Format is Action:```$JSON_BLOB```then Observation:.
+Thought:"""
 
 FORMAT_INSTRUCTIONS = """Use a json blob to specify a tool by providing an action key (tool name) and an action_input key (tool input).
 The nouns in the format of "Thought", "Action", "Action Input", "Final Answer" must be expressed in English.
@@ -55,11 +55,10 @@ class ReactMultiDatasetRouter:
             self,
             query: str,
             dataset_tools: list[PromptMessageTool],
-            node_data: KnowledgeRetrievalNodeData,
             model_config: ModelConfigWithCredentialsEntity,
             model_instance: ModelInstance,
             user_id: str,
-            tenant_id: str,
+            tenant_id: str
 
     ) -> Union[str, None]:
         """Given input, decided what to do.
@@ -72,7 +71,8 @@ class ReactMultiDatasetRouter:
             return dataset_tools[0].name
 
         try:
-            return self._react_invoke(query=query, node_data=node_data, model_config=model_config, model_instance=model_instance,
+            return self._react_invoke(query=query, model_config=model_config,
+                                      model_instance=model_instance,
                                       tools=dataset_tools, user_id=user_id, tenant_id=tenant_id)
         except Exception as e:
             return None
@@ -80,7 +80,6 @@ class ReactMultiDatasetRouter:
     def _react_invoke(
             self,
             query: str,
-            node_data: KnowledgeRetrievalNodeData,
             model_config: ModelConfigWithCredentialsEntity,
             model_instance: ModelInstance,
             tools: Sequence[PromptMessageTool],
@@ -88,7 +87,6 @@ class ReactMultiDatasetRouter:
             tenant_id: str,
             prefix: str = PREFIX,
             suffix: str = SUFFIX,
-            human_message_template: str = HUMAN_MESSAGE_TEMPLATE,
             format_instructions: str = FORMAT_INSTRUCTIONS,
     ) -> Union[str, None]:
         if model_config.mode == "chat":
@@ -97,7 +95,6 @@ class ReactMultiDatasetRouter:
                 tools=tools,
                 prefix=prefix,
                 suffix=suffix,
-                human_message_template=human_message_template,
                 format_instructions=format_instructions,
             )
         else:
@@ -105,7 +102,6 @@ class ReactMultiDatasetRouter:
                 tools=tools,
                 prefix=prefix,
                 format_instructions=format_instructions,
-                input_variables=None
             )
         stop = ['Observation:']
         # handle invoke result
@@ -121,7 +117,7 @@ class ReactMultiDatasetRouter:
             model_config=model_config
         )
         result_text, usage = self._invoke_llm(
-            node_data=node_data,
+            completion_param=model_config.parameters,
             model_instance=model_instance,
             prompt_messages=prompt_messages,
             stop=stop,
@@ -129,18 +125,18 @@ class ReactMultiDatasetRouter:
             tenant_id=tenant_id
         )
         output_parser = StructuredChatOutputParser()
-        agent_decision = output_parser.parse(result_text)
-        if isinstance(agent_decision, AgentAction):
-            return agent_decision.tool
+        react_decision = output_parser.parse(result_text)
+        if isinstance(react_decision, ReactAction):
+            return react_decision.tool
         return None
 
-    def _invoke_llm(self, node_data: KnowledgeRetrievalNodeData,
+    def _invoke_llm(self, completion_param: dict,
                     model_instance: ModelInstance,
                     prompt_messages: list[PromptMessage],
-                    stop: list[str], user_id: str, tenant_id: str) -> tuple[str, LLMUsage]:
+                    stop: list[str], user_id: str, tenant_id: str
+                    ) -> tuple[str, LLMUsage]:
         """
             Invoke large language model
-            :param node_data: node data
             :param model_instance: model instance
             :param prompt_messages: prompt messages
             :param stop: stop
@@ -148,7 +144,7 @@ class ReactMultiDatasetRouter:
         """
         invoke_result = model_instance.invoke_llm(
             prompt_messages=prompt_messages,
-            model_parameters=node_data.single_retrieval_config.model.completion_params,
+            model_parameters=completion_param,
             stop=stop,
             stream=True,
             user=user_id,
@@ -198,12 +194,12 @@ class ReactMultiDatasetRouter:
             tools: Sequence[PromptMessageTool],
             prefix: str = PREFIX,
             suffix: str = SUFFIX,
-            human_message_template: str = HUMAN_MESSAGE_TEMPLATE,
             format_instructions: str = FORMAT_INSTRUCTIONS,
     ) -> list[ChatModelMessage]:
         tool_strings = []
         for tool in tools:
-            tool_strings.append(f"{tool.name}: {tool.description}, args: {{'query': {{'title': 'Query', 'description': 'Query for the dataset to be used to retrieve the dataset.', 'type': 'string'}}}}")
+            tool_strings.append(
+                f"{tool.name}: {tool.description}, args: {{'query': {{'title': 'Query', 'description': 'Query for the dataset to be used to retrieve the dataset.', 'type': 'string'}}}}")
         formatted_tools = "\n".join(tool_strings)
         unique_tool_names = set(tool.name for tool in tools)
         tool_names = ", ".join('"' + name + '"' for name in unique_tool_names)
@@ -227,16 +223,13 @@ class ReactMultiDatasetRouter:
             tools: Sequence[PromptMessageTool],
             prefix: str = PREFIX,
             format_instructions: str = FORMAT_INSTRUCTIONS,
-            input_variables: Optional[list[str]] = None,
-    ) -> PromptTemplate:
+    ) -> CompletionModelPromptTemplate:
         """Create prompt in the style of the zero shot agent.
 
         Args:
             tools: List of tools the agent will have access to, used to format the
                 prompt.
             prefix: String to put before the list of tools.
-            input_variables: List of input variables the final prompt will expect.
-
         Returns:
             A PromptTemplate with the template assembled from the pieces here.
         """
@@ -249,6 +242,4 @@ Thought: {agent_scratchpad}
         tool_names = ", ".join([tool.name for tool in tools])
         format_instructions = format_instructions.format(tool_names=tool_names)
         template = "\n\n".join([prefix, tool_strings, format_instructions, suffix])
-        if input_variables is None:
-            input_variables = ["input", "agent_scratchpad"]
-        return PromptTemplate(template=template, input_variables=input_variables)
+        return CompletionModelPromptTemplate(text=template)

@@ -13,9 +13,9 @@ RUN sed -i "s/deb.debian.org/mirrors.aliyun.com/g" /etc/apt/sources.list.d/debia
 
 COPY requirements.txt /requirements.txt
 
-RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple \
-    && pip install -U pip \
-    && pip install --prefix=/pkg -r requirements.txt
+RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install --prefix=/pkg -r requirements.txt
 
 # production stage
 FROM base AS production
