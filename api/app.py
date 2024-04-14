@@ -213,27 +213,29 @@ if app.config['TESTING']:
     print("App is running in TESTING mode")
 
 
+logger = logging.getLogger(__name__)
+
 @socketio.on('connect')
 def connect():
-    print('Connected')
+    logger.info('Connected')
     emit('broadcast', {'data': 'Connected'}, broadcast=True)
 
 
 @socketio.on('disconnect')
 def disconnect():
-    print('Disconnected')
+    logger.info('Disconnected')
     emit('broadcast', {'data': 'Disconnected'}, broadcast=True)
 
 
 @socketio.on('message')
 def handle_message(message):
-    print('received message: ' + message)
+    logger.info('received message: ' + message)
     emit('broadcast', {'data': message['data']}, broadcast=True)
 
 
 @socketio.on_error()
 def error(e):
-    print('Error', e)
+    logger.error('Error', e)
 
 
 @app.after_request
@@ -291,4 +293,4 @@ def pool_stat():
 
 if __name__ == '__main__':
     # app.run(host='0.0.0.0', port=5001)
-    socketio.run(app, host='0.0.0.0', port=5001)
+    socketio.run(app, host='0.0.0.0', port=5001, debug=True)
