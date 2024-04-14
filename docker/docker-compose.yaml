@@ -360,3 +360,9 @@ services:
     ports:
       - "80:80"
       - "443:443"
+  webapp:
+    build: ../webapp
+    restart: always
+    env_file:
+      - webapp.env # 指定外部环境变量文件
+
