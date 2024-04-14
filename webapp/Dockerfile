@@ -4,7 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN yarn install
+RUN npm config set registry https://registry.npmmirror.com && yarn install
+# RUN yarn install
 RUN yarn build
 
 EXPOSE 3000
