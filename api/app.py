@@ -207,13 +207,13 @@ def register_blueprints(app):
 # create app
 app = create_app()
 celery = app.extensions["celery"]
-socketio = SocketIO(app, cors_allowed_origins="*")  # 创建socketio对象
+
+logger = logging.getLogger(__name__)
+socketio = SocketIO(app, cors_allowed_origins="*", logger=logger)  # 创建socketio对象
 
 if app.config['TESTING']:
     print("App is running in TESTING mode")
 
-
-logger = logging.getLogger(__name__)
 
 @socketio.on('connect')
 def connect():

@@ -86,5 +86,5 @@ xlrd~=2.0.1
 
 # tar app
 aliyun-python-sdk-core==2.13.3
-flask_socketio
+flask_socketio==5.3.6
 gevent-websocket
