@@ -357,9 +357,11 @@ services:
     depends_on:
       - api
       - web
+      - webapp
     ports:
       - "80:80"
       - "443:443"
+
   webapp:
     build: ../webapp
     restart: always
