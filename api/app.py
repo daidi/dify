@@ -44,10 +44,11 @@ from extensions.ext_login import login_manager
 from libs.passport import PassportService
 from services.account_service import AccountService
 
+from flask_socketio import SocketIO, emit, send
+
 # DO NOT REMOVE BELOW
 from events import event_handlers
-from models import account, dataset, model, source, task, tool, tools, web , scenarios, meeting
-
+from models import account, dataset, model, source, task, tool, tools, web, scenarios, meeting
 
 # DO NOT REMOVE ABOVE
 
@@ -206,9 +207,25 @@ def register_blueprints(app):
 # create app
 app = create_app()
 celery = app.extensions["celery"]
+socketio = SocketIO(app, cors_allowed_origins="*")  # 创建socketio对象
 
 if app.config['TESTING']:
     print("App is running in TESTING mode")
+
+
+# 增加事件处理器
+@socketio.on('connect')
+def handle_connect():
+    print('Client connected')
+
+
+@socketio.on('message')  # 当服务器从客户端接收到'message'事件时触发
+def handle_message(message):
+    print('received message: ' + message)
+    # 使用send函数进行广播, 所有连接到服务器的客户端都会收到这个消息
+    # send(message, broadcast=True)
+    # 或者，你可以使用emit函数来广播一个名为'my response'的事件，所有的客户端可以接收这个事件
+    emit('new_text', message, broadcast=True)
 
 
 @app.after_request
@@ -265,4 +282,5 @@ def pool_stat():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5001)
+    # app.run(host='0.0.0.0', port=5001)
+    socketio.run(app, host='0.0.0.0', port=5001)
