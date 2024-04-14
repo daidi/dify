@@ -233,6 +233,12 @@ def handle_message(message):
     emit('broadcast', {'data': message['data']}, broadcast=True)
 
 
+@socketio.on('new_text')
+def handle_my_event(data):
+    # 使用 `emit` 函数广播事件到所有连接的客户端
+    emit('new_text', data, broadcast=True)
+
+
 @socketio.on_error()
 def error(e):
     logger.error('Error', e)
