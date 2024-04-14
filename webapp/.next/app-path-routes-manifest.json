@@ -1,0 +1,10 @@
+{
+  "/page": "/",
+  "/api/chat-messages/route": "/api/chat-messages",
+  "/api/conversations/route": "/api/conversations",
+  "/api/file-upload/route": "/api/file-upload",
+  "/api/messages/route": "/api/messages",
+  "/api/parameters/route": "/api/parameters",
+  "/api/conversations/[conversationId]/name/route": "/api/conversations/[conversationId]/name",
+  "/api/messages/[messageId]/feedbacks/route": "/api/messages/[messageId]/feedbacks"
+}
