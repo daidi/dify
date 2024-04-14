@@ -22,6 +22,6 @@ else
       --worker-class ${SERVER_WORKER_CLASS:-gevent} \
       --timeout ${GUNICORN_TIMEOUT:-200} \
       --preload \
-      app:app
+      app:socketio
   fi
 fi
