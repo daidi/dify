@@ -1,1 +1,3934 @@
-self.__RSC_MANIFEST={"ssrModuleMapping":{"99":{"*":{"id":"83751","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"":{"id":"83751","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"default":{"id":"83751","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false}},"406":{"*":{"id":"64599","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"":{"id":"64599","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"default":{"id":"64599","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false}},"2348":{"*":{"id":"43167","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"":{"id":"43167","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"default":{"id":"43167","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"RedirectErrorBoundary":{"id":"43167","name":"RedirectErrorBoundary","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"RedirectBoundary":{"id":"43167","name":"RedirectBoundary","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"redirect":{"id":"43167","name":"redirect","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"redirectType":{"id":"43167","name":"redirectType","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"reset":{"id":"43167","name":"reset","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"router":{"id":"43167","name":"router","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"value":{"id":"43167","name":"value","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false}},"3055":{"*":{"id":"54765","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"":{"id":"54765","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"default":{"id":"54765","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"ErrorBoundaryHandler":{"id":"54765","name":"ErrorBoundaryHandler","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"ErrorBoundary":{"id":"54765","name":"ErrorBoundary","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"error":{"id":"54765","name":"error","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"https":{"id":"54765","name":"https","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"fontFamily":{"id":"54765","name":"fontFamily","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"height":{"id":"54765","name":"height","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"textAlign":{"id":"54765","name":"textAlign","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"display":{"id":"54765","name":"display","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"flexDirection":{"id":"54765","name":"flexDirection","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"alignItems":{"id":"54765","name":"alignItems","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"justifyContent":{"id":"54765","name":"justifyContent","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"desc":{"id":"54765","name":"desc","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"text":{"id":"54765","name":"text","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"fontSize":{"id":"54765","name":"fontSize","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"fontWeight":{"id":"54765","name":"fontWeight","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"lineHeight":{"id":"54765","name":"lineHeight","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"margin":{"id":"54765","name":"margin","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"reset":{"id":"54765","name":"reset","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"style":{"id":"54765","name":"style","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"\"Digest":{"id":"54765","name":"\"Digest","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"errorComponent":{"id":"54765","name":"errorComponent","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"errorStyles":{"id":"54765","name":"errorStyles","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"value":{"id":"54765","name":"value","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false}},"6847":{"*":{"id":"41143","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"":{"id":"41143","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"default":{"id":"41143","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"ToastContext":{"id":"41143","name":"ToastContext","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"ToastProvider":{"id":"41143","name":"ToastProvider","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"useToastContext":{"id":"41143","name":"useToastContext","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"imageUpload":{"id":"41143","name":"imageUpload","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"MediaType":{"id":"41143","name":"MediaType","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"EditIconSolid":{"id":"41143","name":"EditIconSolid","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"PortalToFollowElem":{"id":"41143","name":"PortalToFollowElem","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"PortalToFollowElemContent":{"id":"41143","name":"PortalToFollowElemContent","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"PortalToFollowElemTrigger":{"id":"41143","name":"PortalToFollowElemTrigger","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"usePortalToFollowElem":{"id":"41143","name":"usePortalToFollowElem","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"usePortalToFollowElemContext":{"id":"41143","name":"usePortalToFollowElemContext","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"PanelTitle":{"id":"41143","name":"PanelTitle","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"VarOpBtnGroup":{"id":"41143","name":"VarOpBtnGroup","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"AppInfoComp":{"id":"41143","name":"AppInfoComp","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"ChatBtn":{"id":"41143","name":"ChatBtn","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"EditBtn":{"id":"41143","name":"EditBtn","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"FootLogo":{"id":"41143","name":"FootLogo","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"PromptTemplate":{"id":"41143","name":"PromptTemplate","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"StarIcon":{"id":"41143","name":"StarIcon","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"SimpleSelect":{"id":"41143","name":"SimpleSelect","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"ImageGalleryTest":{"id":"41143","name":"ImageGalleryTest","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"changeLanguage":{"id":"41143","name":"changeLanguage","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false}},"7858":{"*":{"id":"89222","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"":{"id":"89222","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"default":{"id":"89222","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"getServerActionDispatcher":{"id":"89222","name":"getServerActionDispatcher","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"urlToUrlWithoutFlightMarker":{"id":"89222","name":"urlToUrlWithoutFlightMarker","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"TODO-APP":{"id":"89222","name":"TODO-APP","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"__NA":{"id":"89222","name":"__NA","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"location":{"id":"89222","name":"location","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"\"http":{"id":"89222","name":"\"http","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"searchParams":{"id":"89222","name":"searchParams","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"pathname":{"id":"89222","name":"pathname","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"type":{"id":"89222","name":"type","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"cache":{"id":"89222","name":"cache","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"status":{"id":"89222","name":"status","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"data":{"id":"89222","name":"data","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"subTreeData":{"id":"89222","name":"subTreeData","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"parallelRoutes":{"id":"89222","name":"parallelRoutes","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"mutable":{"id":"89222","name":"mutable","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"isExternalUrl":{"id":"89222","name":"isExternalUrl","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"locationSearch":{"id":"89222","name":"locationSearch","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"back":{"id":"89222","name":"back","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"forward":{"id":"89222","name":"forward","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"prefetch":{"id":"89222","name":"prefetch","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"kind":{"id":"89222","name":"kind","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"replace":{"id":"89222","name":"replace","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"push":{"id":"89222","name":"push","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"refresh":{"id":"89222","name":"refresh","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"origin":{"id":"89222","name":"origin","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"fastRefresh":{"id":"89222","name":"fastRefresh","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"router":{"id":"89222","name":"router","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"(eg":{"id":"89222","name":"(eg","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"url":{"id":"89222","name":"url","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"tree":{"id":"89222","name":"tree","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"notFound":{"id":"89222","name":"notFound","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"notFoundStyles":{"id":"89222","name":"notFoundStyles","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"asNotFound":{"id":"89222","name":"asNotFound","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"pushRef":{"id":"89222","name":"pushRef","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"canonicalUrl":{"id":"89222","name":"canonicalUrl","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"sync":{"id":"89222","name":"sync","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"value":{"id":"89222","name":"value","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"childNodes":{"id":"89222","name":"childNodes","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"assetPrefix":{"id":"89222","name":"assetPrefix","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"errorComponent":{"id":"89222","name":"errorComponent","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false}},"9457":{"*":{"id":"5192","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"":{"id":"5192","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"default":{"id":"5192","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false}},"9544":{"*":{"id":"78301","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"":{"id":"78301","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"default":{"id":"78301","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false}}},"edgeSSRModuleMapping":{},"cssFiles":{"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\page":["static/css/2079c816ebd24bc9.css"],"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\layout":["static/css/08d5469ab689fc5e.css"]},"clientModules":{"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js":{"id":"7858","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js":{"id":"7858","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#":{"id":"7858","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#":{"id":"7858","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#default":{"id":"7858","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#default":{"id":"7858","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#getServerActionDispatcher":{"id":"7858","name":"getServerActionDispatcher","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#getServerActionDispatcher":{"id":"7858","name":"getServerActionDispatcher","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#urlToUrlWithoutFlightMarker":{"id":"7858","name":"urlToUrlWithoutFlightMarker","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#urlToUrlWithoutFlightMarker":{"id":"7858","name":"urlToUrlWithoutFlightMarker","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#TODO-APP":{"id":"7858","name":"TODO-APP","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#TODO-APP":{"id":"7858","name":"TODO-APP","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#__NA":{"id":"7858","name":"__NA","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#__NA":{"id":"7858","name":"__NA","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#location":{"id":"7858","name":"location","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#location":{"id":"7858","name":"location","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#\"http":{"id":"7858","name":"\"http","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#\"http":{"id":"7858","name":"\"http","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#searchParams":{"id":"7858","name":"searchParams","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#searchParams":{"id":"7858","name":"searchParams","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#pathname":{"id":"7858","name":"pathname","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#pathname":{"id":"7858","name":"pathname","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#type":{"id":"7858","name":"type","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#type":{"id":"7858","name":"type","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#cache":{"id":"7858","name":"cache","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#cache":{"id":"7858","name":"cache","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#status":{"id":"7858","name":"status","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#status":{"id":"7858","name":"status","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#data":{"id":"7858","name":"data","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#data":{"id":"7858","name":"data","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#subTreeData":{"id":"7858","name":"subTreeData","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#subTreeData":{"id":"7858","name":"subTreeData","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#parallelRoutes":{"id":"7858","name":"parallelRoutes","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#parallelRoutes":{"id":"7858","name":"parallelRoutes","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#mutable":{"id":"7858","name":"mutable","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#mutable":{"id":"7858","name":"mutable","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#isExternalUrl":{"id":"7858","name":"isExternalUrl","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#isExternalUrl":{"id":"7858","name":"isExternalUrl","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#locationSearch":{"id":"7858","name":"locationSearch","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#locationSearch":{"id":"7858","name":"locationSearch","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#back":{"id":"7858","name":"back","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#back":{"id":"7858","name":"back","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#forward":{"id":"7858","name":"forward","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#forward":{"id":"7858","name":"forward","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#prefetch":{"id":"7858","name":"prefetch","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#prefetch":{"id":"7858","name":"prefetch","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#kind":{"id":"7858","name":"kind","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#kind":{"id":"7858","name":"kind","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#replace":{"id":"7858","name":"replace","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#replace":{"id":"7858","name":"replace","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#push":{"id":"7858","name":"push","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#push":{"id":"7858","name":"push","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#refresh":{"id":"7858","name":"refresh","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#refresh":{"id":"7858","name":"refresh","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#origin":{"id":"7858","name":"origin","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#origin":{"id":"7858","name":"origin","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#fastRefresh":{"id":"7858","name":"fastRefresh","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#fastRefresh":{"id":"7858","name":"fastRefresh","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#router":{"id":"7858","name":"router","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#router":{"id":"7858","name":"router","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#(eg":{"id":"7858","name":"(eg","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#(eg":{"id":"7858","name":"(eg","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#url":{"id":"7858","name":"url","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#url":{"id":"7858","name":"url","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#tree":{"id":"7858","name":"tree","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#tree":{"id":"7858","name":"tree","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#notFound":{"id":"7858","name":"notFound","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#notFound":{"id":"7858","name":"notFound","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#notFoundStyles":{"id":"7858","name":"notFoundStyles","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#notFoundStyles":{"id":"7858","name":"notFoundStyles","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#asNotFound":{"id":"7858","name":"asNotFound","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#asNotFound":{"id":"7858","name":"asNotFound","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#pushRef":{"id":"7858","name":"pushRef","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#pushRef":{"id":"7858","name":"pushRef","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#canonicalUrl":{"id":"7858","name":"canonicalUrl","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#canonicalUrl":{"id":"7858","name":"canonicalUrl","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#sync":{"id":"7858","name":"sync","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#sync":{"id":"7858","name":"sync","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#value":{"id":"7858","name":"value","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#value":{"id":"7858","name":"value","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#childNodes":{"id":"7858","name":"childNodes","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#childNodes":{"id":"7858","name":"childNodes","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#assetPrefix":{"id":"7858","name":"assetPrefix","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#assetPrefix":{"id":"7858","name":"assetPrefix","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#errorComponent":{"id":"7858","name":"errorComponent","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#errorComponent":{"id":"7858","name":"errorComponent","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js":{"id":"3055","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js":{"id":"3055","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#":{"id":"3055","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#":{"id":"3055","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#default":{"id":"3055","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#default":{"id":"3055","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#ErrorBoundaryHandler":{"id":"3055","name":"ErrorBoundaryHandler","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#ErrorBoundaryHandler":{"id":"3055","name":"ErrorBoundaryHandler","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#ErrorBoundary":{"id":"3055","name":"ErrorBoundary","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#ErrorBoundary":{"id":"3055","name":"ErrorBoundary","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#error":{"id":"3055","name":"error","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#error":{"id":"3055","name":"error","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#https":{"id":"3055","name":"https","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#https":{"id":"3055","name":"https","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#fontFamily":{"id":"3055","name":"fontFamily","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#fontFamily":{"id":"3055","name":"fontFamily","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#height":{"id":"3055","name":"height","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#height":{"id":"3055","name":"height","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#textAlign":{"id":"3055","name":"textAlign","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#textAlign":{"id":"3055","name":"textAlign","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#display":{"id":"3055","name":"display","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#display":{"id":"3055","name":"display","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#flexDirection":{"id":"3055","name":"flexDirection","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#flexDirection":{"id":"3055","name":"flexDirection","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#alignItems":{"id":"3055","name":"alignItems","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#alignItems":{"id":"3055","name":"alignItems","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#justifyContent":{"id":"3055","name":"justifyContent","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#justifyContent":{"id":"3055","name":"justifyContent","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#desc":{"id":"3055","name":"desc","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#desc":{"id":"3055","name":"desc","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#text":{"id":"3055","name":"text","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#text":{"id":"3055","name":"text","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#fontSize":{"id":"3055","name":"fontSize","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#fontSize":{"id":"3055","name":"fontSize","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#fontWeight":{"id":"3055","name":"fontWeight","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#fontWeight":{"id":"3055","name":"fontWeight","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#lineHeight":{"id":"3055","name":"lineHeight","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#lineHeight":{"id":"3055","name":"lineHeight","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#margin":{"id":"3055","name":"margin","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#margin":{"id":"3055","name":"margin","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#reset":{"id":"3055","name":"reset","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#reset":{"id":"3055","name":"reset","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#style":{"id":"3055","name":"style","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#style":{"id":"3055","name":"style","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#\"Digest":{"id":"3055","name":"\"Digest","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#\"Digest":{"id":"3055","name":"\"Digest","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#errorComponent":{"id":"3055","name":"errorComponent","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#errorComponent":{"id":"3055","name":"errorComponent","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#errorStyles":{"id":"3055","name":"errorStyles","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#errorStyles":{"id":"3055","name":"errorStyles","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#value":{"id":"3055","name":"value","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#value":{"id":"3055","name":"value","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\layout-router.js":{"id":"9544","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js":{"id":"9544","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\layout-router.js#":{"id":"9544","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js#":{"id":"9544","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\layout-router.js#default":{"id":"9544","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js#default":{"id":"9544","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js":{"id":"2348","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js":{"id":"2348","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#":{"id":"2348","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#":{"id":"2348","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#default":{"id":"2348","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#default":{"id":"2348","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#RedirectErrorBoundary":{"id":"2348","name":"RedirectErrorBoundary","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#RedirectErrorBoundary":{"id":"2348","name":"RedirectErrorBoundary","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#RedirectBoundary":{"id":"2348","name":"RedirectBoundary","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#RedirectBoundary":{"id":"2348","name":"RedirectBoundary","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#redirect":{"id":"2348","name":"redirect","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#redirect":{"id":"2348","name":"redirect","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#redirectType":{"id":"2348","name":"redirectType","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#redirectType":{"id":"2348","name":"redirectType","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#reset":{"id":"2348","name":"reset","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#reset":{"id":"2348","name":"reset","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#router":{"id":"2348","name":"router","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#router":{"id":"2348","name":"router","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#value":{"id":"2348","name":"value","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#value":{"id":"2348","name":"value","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js":{"id":"99","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js":{"id":"99","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js#":{"id":"99","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js#":{"id":"99","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js#default":{"id":"99","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js#default":{"id":"99","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js":{"id":"406","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js":{"id":"406","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js#":{"id":"406","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js#":{"id":"406","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js#default":{"id":"406","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js#default":{"id":"406","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js":{"id":"9457","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js":{"id":"9457","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js#":{"id":"9457","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js#":{"id":"9457","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js#default":{"id":"9457","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js#default":{"id":"9457","name":"default","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js":{"id":"6996","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js":{"id":"6996","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#":{"id":"6996","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#":{"id":"6996","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#CacheStates":{"id":"6996","name":"CacheStates","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#CacheStates":{"id":"6996","name":"CacheStates","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#AppRouterContext":{"id":"6996","name":"AppRouterContext","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#AppRouterContext":{"id":"6996","name":"AppRouterContext","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#LayoutRouterContext":{"id":"6996","name":"LayoutRouterContext","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#LayoutRouterContext":{"id":"6996","name":"LayoutRouterContext","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#GlobalLayoutRouterContext":{"id":"6996","name":"GlobalLayoutRouterContext","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#GlobalLayoutRouterContext":{"id":"6996","name":"GlobalLayoutRouterContext","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#TemplateContext":{"id":"6996","name":"TemplateContext","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#TemplateContext":{"id":"6996","name":"TemplateContext","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js":{"id":"9297","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js":{"id":"9297","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#":{"id":"9297","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#":{"id":"9297","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#SearchParamsContext":{"id":"9297","name":"SearchParamsContext","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#SearchParamsContext":{"id":"9297","name":"SearchParamsContext","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#PathnameContext":{"id":"9297","name":"PathnameContext","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#PathnameContext":{"id":"9297","name":"PathnameContext","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js":{"id":"190","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js":{"id":"190","name":"*","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#":{"id":"190","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#":{"id":"190","name":"","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#ServerInsertedHTMLContext":{"id":"190","name":"ServerInsertedHTMLContext","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#ServerInsertedHTMLContext":{"id":"190","name":"ServerInsertedHTMLContext","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#useServerInsertedHTML":{"id":"190","name":"useServerInsertedHTML","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#useServerInsertedHTML":{"id":"190","name":"useServerInsertedHTML","chunks":["272:static/chunks/webpack-eeb6125e1e35e2c6.js","667:static/chunks/2443530c-0374deeae662ab26.js","139:static/chunks/139-0396d30465d1ac7e.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\katex\\dist\\katex.min.css#":{"id":"2790","name":"default","chunks":["static/css/2079c816ebd24bc9.css"]},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\react-tooltip\\dist\\react-tooltip.css#":{"id":"1657","name":"default","chunks":["static/css/2079c816ebd24bc9.css"]},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\loading\\style.css#":{"id":"null","name":"default","chunks":["static/css/2079c816ebd24bc9.css"]},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\app-icon\\style.module.css#":{"id":"null","name":"default","chunks":["static/css/2079c816ebd24bc9.css"]},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-gallery\\style.module.css#":{"id":"null","name":"default","chunks":["static/css/2079c816ebd24bc9.css"]},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\loading-anim\\style.module.css#":{"id":"null","name":"default","chunks":["static/css/2079c816ebd24bc9.css"]},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\style.module.css#":{"id":"null","name":"default","chunks":["static/css/2079c816ebd24bc9.css"]},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\value-panel\\style.module.css#":{"id":"null","name":"default","chunks":["static/css/2079c816ebd24bc9.css"]},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\style.module.css#":{"id":"null","name":"default","chunks":["static/css/2079c816ebd24bc9.css"]},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\index.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\index.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\index.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\toast\\index.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\toast\\index.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\toast\\index.tsx#ToastContext":{"id":"6847","name":"ToastContext","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\toast\\index.tsx#ToastProvider":{"id":"6847","name":"ToastProvider","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\toast\\index.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\toast\\index.tsx#useToastContext":{"id":"6847","name":"useToastContext","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\index.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\index.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\index.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-uploader\\uploader.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-uploader\\uploader.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-uploader\\uploader.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\index.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\index.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\index.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-uploader\\utils.ts":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-uploader\\utils.ts#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-uploader\\utils.ts#imageUpload":{"id":"6847","name":"imageUpload","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\hooks\\use-breakpoints.ts":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\hooks\\use-breakpoints.ts#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\hooks\\use-breakpoints.ts#MediaType":{"id":"6847","name":"MediaType","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\hooks\\use-breakpoints.ts#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\app-unavailable.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\app-unavailable.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\app-unavailable.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\answer\\index.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\answer\\index.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\answer\\index.tsx#EditIconSolid":{"id":"6847","name":"EditIconSolid","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\answer\\index.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\question\\index.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\question\\index.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\question\\index.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\tooltip\\index.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\tooltip\\index.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\tooltip\\index.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\portal-to-follow-elem\\index.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\portal-to-follow-elem\\index.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\portal-to-follow-elem\\index.tsx#PortalToFollowElem":{"id":"6847","name":"PortalToFollowElem","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\portal-to-follow-elem\\index.tsx#PortalToFollowElemContent":{"id":"6847","name":"PortalToFollowElemContent","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\portal-to-follow-elem\\index.tsx#PortalToFollowElemTrigger":{"id":"6847","name":"PortalToFollowElemTrigger","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\portal-to-follow-elem\\index.tsx#usePortalToFollowElem":{"id":"6847","name":"usePortalToFollowElem","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\portal-to-follow-elem\\index.tsx#usePortalToFollowElemContext":{"id":"6847","name":"usePortalToFollowElemContext","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\tooltip-plus\\index.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\tooltip-plus\\index.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\tooltip-plus\\index.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\value-panel\\index.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\value-panel\\index.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\value-panel\\index.tsx#PanelTitle":{"id":"6847","name":"PanelTitle","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\value-panel\\index.tsx#VarOpBtnGroup":{"id":"6847","name":"VarOpBtnGroup","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\value-panel\\index.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx#AppInfoComp":{"id":"6847","name":"AppInfoComp","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx#ChatBtn":{"id":"6847","name":"ChatBtn","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx#EditBtn":{"id":"6847","name":"EditBtn","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx#FootLogo":{"id":"6847","name":"FootLogo","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx#PromptTemplate":{"id":"6847","name":"PromptTemplate","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx#StarIcon":{"id":"6847","name":"StarIcon","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\select\\index.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\select\\index.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\select\\index.tsx#SimpleSelect":{"id":"6847","name":"SimpleSelect","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\select\\index.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\tool.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\tool.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\tool.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\index.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\index.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\index.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-gallery\\index.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-gallery\\index.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-gallery\\index.tsx#ImageGalleryTest":{"id":"6847","name":"ImageGalleryTest","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-gallery\\index.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\i18n\\i18next-config.ts":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\i18n\\i18next-config.ts#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\i18n\\i18next-config.ts#changeLanguage":{"id":"6847","name":"changeLanguage","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\i18n\\i18next-config.ts#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\loading-anim\\index.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\loading-anim\\index.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\loading-anim\\index.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\panel.tsx":{"id":"6847","name":"*","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\panel.tsx#":{"id":"6847","name":"","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\panel.tsx#default":{"id":"6847","name":"default","chunks":["774:static/chunks/framework-28ccde3ca37212a0.js","659:static/chunks/80c5adb7-f871f9a03bf7d39c.js","93:static/chunks/93-3583ac65525b5898.js","931:static/chunks/app/page-605a22fd50643ab1.js"],"async":false},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\styles\\globals.css#":{"id":"null","name":"default","chunks":["static/css/08d5469ab689fc5e.css"]},"C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\styles\\markdown.scss#":{"id":"null","name":"default","chunks":["static/css/08d5469ab689fc5e.css"]}}}
+self.__RSC_MANIFEST={
+  "ssrModuleMapping": {
+    "(app-client)/./node_modules/next/dist/client/components/app-router.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "*",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "default",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "getServerActionDispatcher": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "getServerActionDispatcher",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "urlToUrlWithoutFlightMarker": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "urlToUrlWithoutFlightMarker",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "TODO-APP": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "TODO-APP",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "__NA": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "__NA",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "location": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "location",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "\"http": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "\"http",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "searchParams": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "searchParams",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "pathname": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "pathname",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "type": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "type",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "cache": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "cache",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "status": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "status",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "data": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "data",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "subTreeData": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "subTreeData",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "parallelRoutes": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "parallelRoutes",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "mutable": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "mutable",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "isExternalUrl": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "isExternalUrl",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "locationSearch": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "locationSearch",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "back": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "back",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "forward": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "forward",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "prefetch": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "prefetch",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "kind": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "kind",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "replace": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "replace",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "push": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "push",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "refresh": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "refresh",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "origin": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "origin",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "fastRefresh": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "fastRefresh",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "router": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "router",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "(eg": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "(eg",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "url": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "url",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "tree": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "tree",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "notFound": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "notFound",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "notFoundStyles": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "notFoundStyles",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "asNotFound": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "asNotFound",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "pushRef": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "pushRef",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "canonicalUrl": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "canonicalUrl",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "sync": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "sync",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "value": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "value",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "childNodes": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "childNodes",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "assetPrefix": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "assetPrefix",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "errorComponent": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "errorComponent",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/error-boundary.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "*",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "default",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "ErrorBoundaryHandler": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "ErrorBoundaryHandler",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "ErrorBoundary": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "ErrorBoundary",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "error": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "error",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "https": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "https",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "fontFamily": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "fontFamily",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "height": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "height",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "textAlign": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "textAlign",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "display": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "display",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "flexDirection": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "flexDirection",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "alignItems": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "alignItems",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "justifyContent": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "justifyContent",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "desc": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "desc",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "text": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "text",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "fontSize": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "fontSize",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "fontWeight": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "fontWeight",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "lineHeight": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "lineHeight",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "margin": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "margin",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "reset": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "reset",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "style": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "style",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "\"Digest": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "\"Digest",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "errorComponent": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "errorComponent",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "errorStyles": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "errorStyles",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "value": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "value",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "*",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "default",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "RedirectErrorBoundary": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "RedirectErrorBoundary",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "RedirectBoundary": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "RedirectBoundary",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "redirect": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "redirect",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "redirectType": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "redirectType",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "reset": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "reset",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "router": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "router",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "value": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "value",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+        "name": "*",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+        "name": "",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+        "name": "default",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/layout-router.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/layout-router.js",
+        "name": "*",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/layout-router.js",
+        "name": "",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/layout-router.js",
+        "name": "default",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+        "name": "*",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+        "name": "",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+        "name": "default",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+        "name": "*",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+        "name": "",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+        "name": "default",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/app-unavailable.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/app-unavailable.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/app-unavailable.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/app-unavailable.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/base/image-gallery/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/base/image-gallery/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/base/image-gallery/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "ImageGalleryTest": {
+        "id": "(sc_client)/./app/components/base/image-gallery/index.tsx",
+        "name": "ImageGalleryTest",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/base/image-gallery/index.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/base/image-uploader/uploader.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/base/image-uploader/uploader.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/base/image-uploader/uploader.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/base/image-uploader/uploader.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/base/image-uploader/utils.ts": {
+      "*": {
+        "id": "(sc_client)/./app/components/base/image-uploader/utils.ts",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/base/image-uploader/utils.ts",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "imageUpload": {
+        "id": "(sc_client)/./app/components/base/image-uploader/utils.ts",
+        "name": "imageUpload",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/base/portal-to-follow-elem/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/base/portal-to-follow-elem/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/base/portal-to-follow-elem/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "PortalToFollowElem": {
+        "id": "(sc_client)/./app/components/base/portal-to-follow-elem/index.tsx",
+        "name": "PortalToFollowElem",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "PortalToFollowElemContent": {
+        "id": "(sc_client)/./app/components/base/portal-to-follow-elem/index.tsx",
+        "name": "PortalToFollowElemContent",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "PortalToFollowElemTrigger": {
+        "id": "(sc_client)/./app/components/base/portal-to-follow-elem/index.tsx",
+        "name": "PortalToFollowElemTrigger",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "usePortalToFollowElem": {
+        "id": "(sc_client)/./app/components/base/portal-to-follow-elem/index.tsx",
+        "name": "usePortalToFollowElem",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "usePortalToFollowElemContext": {
+        "id": "(sc_client)/./app/components/base/portal-to-follow-elem/index.tsx",
+        "name": "usePortalToFollowElemContext",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/base/select/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/base/select/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/base/select/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "SimpleSelect": {
+        "id": "(sc_client)/./app/components/base/select/index.tsx",
+        "name": "SimpleSelect",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/base/select/index.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/base/toast/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/base/toast/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/base/toast/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "ToastContext": {
+        "id": "(sc_client)/./app/components/base/toast/index.tsx",
+        "name": "ToastContext",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "ToastProvider": {
+        "id": "(sc_client)/./app/components/base/toast/index.tsx",
+        "name": "ToastProvider",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/base/toast/index.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "useToastContext": {
+        "id": "(sc_client)/./app/components/base/toast/index.tsx",
+        "name": "useToastContext",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/base/tooltip-plus/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/base/tooltip-plus/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/base/tooltip-plus/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/base/tooltip-plus/index.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/base/tooltip/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/base/tooltip/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/base/tooltip/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/base/tooltip/index.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/chat/answer/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/chat/answer/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/chat/answer/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "EditIconSolid": {
+        "id": "(sc_client)/./app/components/chat/answer/index.tsx",
+        "name": "EditIconSolid",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/chat/answer/index.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/chat/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/chat/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/chat/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/chat/index.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/chat/loading-anim/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/chat/loading-anim/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/chat/loading-anim/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/chat/loading-anim/index.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/chat/question/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/chat/question/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/chat/question/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/chat/question/index.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/chat/thought/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/chat/thought/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/chat/thought/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/chat/thought/index.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/chat/thought/panel.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/chat/thought/panel.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/chat/thought/panel.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/chat/thought/panel.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/chat/thought/tool.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/chat/thought/tool.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/chat/thought/tool.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/chat/thought/tool.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/index.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/value-panel/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/value-panel/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/value-panel/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "PanelTitle": {
+        "id": "(sc_client)/./app/components/value-panel/index.tsx",
+        "name": "PanelTitle",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "VarOpBtnGroup": {
+        "id": "(sc_client)/./app/components/value-panel/index.tsx",
+        "name": "VarOpBtnGroup",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/value-panel/index.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/welcome/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/welcome/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/welcome/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/components/welcome/index.tsx",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/components/welcome/massive-component.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/components/welcome/massive-component.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/components/welcome/massive-component.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "AppInfoComp": {
+        "id": "(sc_client)/./app/components/welcome/massive-component.tsx",
+        "name": "AppInfoComp",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "ChatBtn": {
+        "id": "(sc_client)/./app/components/welcome/massive-component.tsx",
+        "name": "ChatBtn",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "EditBtn": {
+        "id": "(sc_client)/./app/components/welcome/massive-component.tsx",
+        "name": "EditBtn",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "FootLogo": {
+        "id": "(sc_client)/./app/components/welcome/massive-component.tsx",
+        "name": "FootLogo",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "PromptTemplate": {
+        "id": "(sc_client)/./app/components/welcome/massive-component.tsx",
+        "name": "PromptTemplate",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "StarIcon": {
+        "id": "(sc_client)/./app/components/welcome/massive-component.tsx",
+        "name": "StarIcon",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./hooks/use-breakpoints.ts": {
+      "*": {
+        "id": "(sc_client)/./hooks/use-breakpoints.ts",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./hooks/use-breakpoints.ts",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "MediaType": {
+        "id": "(sc_client)/./hooks/use-breakpoints.ts",
+        "name": "MediaType",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./hooks/use-breakpoints.ts",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./i18n/i18next-config.ts": {
+      "*": {
+        "id": "(sc_client)/./i18n/i18next-config.ts",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./i18n/i18next-config.ts",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "changeLanguage": {
+        "id": "(sc_client)/./i18n/i18next-config.ts",
+        "name": "changeLanguage",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./i18n/i18next-config.ts",
+        "name": "default",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
+    }
+  },
+  "edgeSSRModuleMapping": {},
+  "cssFiles": {
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\page": [
+      "static/css/app/page.css"
+    ],
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\layout": [
+      "static/css/app/layout.css"
+    ]
+  },
+  "clientModules": {
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "default",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "default",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#getServerActionDispatcher": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "getServerActionDispatcher",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#getServerActionDispatcher": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "getServerActionDispatcher",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#urlToUrlWithoutFlightMarker": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "urlToUrlWithoutFlightMarker",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#urlToUrlWithoutFlightMarker": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "urlToUrlWithoutFlightMarker",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#TODO-APP": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "TODO-APP",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#TODO-APP": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "TODO-APP",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#__NA": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "__NA",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#__NA": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "__NA",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#location": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "location",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#location": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "location",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#\"http": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "\"http",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#\"http": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "\"http",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#searchParams": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "searchParams",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#searchParams": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "searchParams",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#pathname": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "pathname",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#pathname": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "pathname",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#type": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "type",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#type": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "type",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#cache": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "cache",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#cache": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "cache",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#status": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "status",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#status": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "status",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#data": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "data",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#data": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "data",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#subTreeData": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "subTreeData",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#subTreeData": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "subTreeData",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#parallelRoutes": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "parallelRoutes",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#parallelRoutes": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "parallelRoutes",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#mutable": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "mutable",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#mutable": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "mutable",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#isExternalUrl": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "isExternalUrl",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#isExternalUrl": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "isExternalUrl",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#locationSearch": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "locationSearch",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#locationSearch": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "locationSearch",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#back": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "back",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#back": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "back",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#forward": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "forward",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#forward": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "forward",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#prefetch": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "prefetch",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#prefetch": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "prefetch",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#kind": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "kind",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#kind": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "kind",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#replace": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "replace",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#replace": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "replace",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#push": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "push",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#push": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "push",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#refresh": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "refresh",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#refresh": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "refresh",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#origin": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "origin",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#origin": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "origin",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#fastRefresh": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "fastRefresh",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#fastRefresh": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "fastRefresh",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#router": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "router",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#router": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "router",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#(eg": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "(eg",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#(eg": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "(eg",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#url": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "url",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#url": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "url",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#tree": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "tree",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#tree": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "tree",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#notFound": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "notFound",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#notFound": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "notFound",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#notFoundStyles": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "notFoundStyles",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#notFoundStyles": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "notFoundStyles",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#asNotFound": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "asNotFound",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#asNotFound": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "asNotFound",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#pushRef": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "pushRef",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#pushRef": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "pushRef",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#canonicalUrl": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "canonicalUrl",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#canonicalUrl": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "canonicalUrl",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#sync": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "sync",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#sync": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "sync",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#value": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "value",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#value": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "value",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#childNodes": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "childNodes",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#childNodes": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "childNodes",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#assetPrefix": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "assetPrefix",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#assetPrefix": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "assetPrefix",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\app-router.js#errorComponent": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "errorComponent",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#errorComponent": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "errorComponent",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "default",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "default",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#ErrorBoundaryHandler": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "ErrorBoundaryHandler",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#ErrorBoundaryHandler": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "ErrorBoundaryHandler",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#ErrorBoundary": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "ErrorBoundary",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#ErrorBoundary": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "ErrorBoundary",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#error": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "error",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#error": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "error",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#https": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "https",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#https": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "https",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#fontFamily": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "fontFamily",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#fontFamily": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "fontFamily",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#height": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "height",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#height": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "height",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#textAlign": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "textAlign",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#textAlign": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "textAlign",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#display": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "display",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#display": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "display",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#flexDirection": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "flexDirection",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#flexDirection": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "flexDirection",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#alignItems": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "alignItems",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#alignItems": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "alignItems",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#justifyContent": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "justifyContent",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#justifyContent": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "justifyContent",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#desc": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "desc",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#desc": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "desc",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#text": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "text",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#text": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "text",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#fontSize": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "fontSize",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#fontSize": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "fontSize",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#fontWeight": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "fontWeight",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#fontWeight": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "fontWeight",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#lineHeight": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "lineHeight",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#lineHeight": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "lineHeight",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#margin": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "margin",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#margin": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "margin",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#reset": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "reset",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#reset": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "reset",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#style": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "style",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#style": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "style",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#\"Digest": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "\"Digest",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#\"Digest": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "\"Digest",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#errorComponent": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "errorComponent",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#errorComponent": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "errorComponent",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#errorStyles": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "errorStyles",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#errorStyles": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "errorStyles",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\error-boundary.js#value": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "value",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#value": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "value",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "default",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "default",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#RedirectErrorBoundary": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "RedirectErrorBoundary",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#RedirectErrorBoundary": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "RedirectErrorBoundary",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#RedirectBoundary": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "RedirectBoundary",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#RedirectBoundary": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "RedirectBoundary",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#redirect": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "redirect",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#redirect": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "redirect",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#redirectType": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "redirectType",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#redirectType": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "redirectType",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#reset": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "reset",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#reset": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "reset",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#router": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "router",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#router": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "router",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#value": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "value",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#value": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+      "name": "value",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+      "name": "",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+      "name": "",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+      "name": "default",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+      "name": "default",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#CacheStates": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "CacheStates",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#CacheStates": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "CacheStates",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#AppRouterContext": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "AppRouterContext",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#AppRouterContext": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "AppRouterContext",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#LayoutRouterContext": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "LayoutRouterContext",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#LayoutRouterContext": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "LayoutRouterContext",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#GlobalLayoutRouterContext": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "GlobalLayoutRouterContext",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#GlobalLayoutRouterContext": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "GlobalLayoutRouterContext",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#TemplateContext": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "TemplateContext",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#TemplateContext": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "TemplateContext",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#SearchParamsContext": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "SearchParamsContext",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#SearchParamsContext": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "SearchParamsContext",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#PathnameContext": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "PathnameContext",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#PathnameContext": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "PathnameContext",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "*",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#ServerInsertedHTMLContext": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "ServerInsertedHTMLContext",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#ServerInsertedHTMLContext": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "ServerInsertedHTMLContext",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#useServerInsertedHTML": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "useServerInsertedHTML",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#useServerInsertedHTML": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "useServerInsertedHTML",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\layout-router.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\layout-router.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\loading\\style.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/page.css"
+      ]
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\katex\\dist\\katex.min.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/page.css"
+      ]
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\node_modules\\react-tooltip\\dist\\react-tooltip.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/page.css"
+      ]
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\app-icon\\style.module.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/page.css"
+      ]
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-gallery\\style.module.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/page.css"
+      ]
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\loading-anim\\style.module.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/page.css"
+      ]
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\style.module.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/page.css"
+      ]
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\value-panel\\style.module.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/page.css"
+      ]
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\style.module.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/page.css"
+      ]
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\app-unavailable.tsx": {
+      "id": "(app-client)/./app/components/app-unavailable.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\app-unavailable.tsx#": {
+      "id": "(app-client)/./app/components/app-unavailable.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\app-unavailable.tsx#default": {
+      "id": "(app-client)/./app/components/app-unavailable.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-gallery\\index.tsx": {
+      "id": "(app-client)/./app/components/base/image-gallery/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-gallery\\index.tsx#": {
+      "id": "(app-client)/./app/components/base/image-gallery/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-gallery\\index.tsx#ImageGalleryTest": {
+      "id": "(app-client)/./app/components/base/image-gallery/index.tsx",
+      "name": "ImageGalleryTest",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-gallery\\index.tsx#default": {
+      "id": "(app-client)/./app/components/base/image-gallery/index.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-uploader\\uploader.tsx": {
+      "id": "(app-client)/./app/components/base/image-uploader/uploader.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-uploader\\uploader.tsx#": {
+      "id": "(app-client)/./app/components/base/image-uploader/uploader.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-uploader\\uploader.tsx#default": {
+      "id": "(app-client)/./app/components/base/image-uploader/uploader.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-uploader\\utils.ts": {
+      "id": "(app-client)/./app/components/base/image-uploader/utils.ts",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-uploader\\utils.ts#": {
+      "id": "(app-client)/./app/components/base/image-uploader/utils.ts",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\image-uploader\\utils.ts#imageUpload": {
+      "id": "(app-client)/./app/components/base/image-uploader/utils.ts",
+      "name": "imageUpload",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\portal-to-follow-elem\\index.tsx": {
+      "id": "(app-client)/./app/components/base/portal-to-follow-elem/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\portal-to-follow-elem\\index.tsx#": {
+      "id": "(app-client)/./app/components/base/portal-to-follow-elem/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\portal-to-follow-elem\\index.tsx#PortalToFollowElem": {
+      "id": "(app-client)/./app/components/base/portal-to-follow-elem/index.tsx",
+      "name": "PortalToFollowElem",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\portal-to-follow-elem\\index.tsx#PortalToFollowElemContent": {
+      "id": "(app-client)/./app/components/base/portal-to-follow-elem/index.tsx",
+      "name": "PortalToFollowElemContent",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\portal-to-follow-elem\\index.tsx#PortalToFollowElemTrigger": {
+      "id": "(app-client)/./app/components/base/portal-to-follow-elem/index.tsx",
+      "name": "PortalToFollowElemTrigger",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\portal-to-follow-elem\\index.tsx#usePortalToFollowElem": {
+      "id": "(app-client)/./app/components/base/portal-to-follow-elem/index.tsx",
+      "name": "usePortalToFollowElem",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\portal-to-follow-elem\\index.tsx#usePortalToFollowElemContext": {
+      "id": "(app-client)/./app/components/base/portal-to-follow-elem/index.tsx",
+      "name": "usePortalToFollowElemContext",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\select\\index.tsx": {
+      "id": "(app-client)/./app/components/base/select/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\select\\index.tsx#": {
+      "id": "(app-client)/./app/components/base/select/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\select\\index.tsx#SimpleSelect": {
+      "id": "(app-client)/./app/components/base/select/index.tsx",
+      "name": "SimpleSelect",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\select\\index.tsx#default": {
+      "id": "(app-client)/./app/components/base/select/index.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\toast\\index.tsx": {
+      "id": "(app-client)/./app/components/base/toast/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\toast\\index.tsx#": {
+      "id": "(app-client)/./app/components/base/toast/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\toast\\index.tsx#ToastContext": {
+      "id": "(app-client)/./app/components/base/toast/index.tsx",
+      "name": "ToastContext",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\toast\\index.tsx#ToastProvider": {
+      "id": "(app-client)/./app/components/base/toast/index.tsx",
+      "name": "ToastProvider",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\toast\\index.tsx#default": {
+      "id": "(app-client)/./app/components/base/toast/index.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\toast\\index.tsx#useToastContext": {
+      "id": "(app-client)/./app/components/base/toast/index.tsx",
+      "name": "useToastContext",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\tooltip-plus\\index.tsx": {
+      "id": "(app-client)/./app/components/base/tooltip-plus/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\tooltip-plus\\index.tsx#": {
+      "id": "(app-client)/./app/components/base/tooltip-plus/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\tooltip-plus\\index.tsx#default": {
+      "id": "(app-client)/./app/components/base/tooltip-plus/index.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\tooltip\\index.tsx": {
+      "id": "(app-client)/./app/components/base/tooltip/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\tooltip\\index.tsx#": {
+      "id": "(app-client)/./app/components/base/tooltip/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\base\\tooltip\\index.tsx#default": {
+      "id": "(app-client)/./app/components/base/tooltip/index.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\answer\\index.tsx": {
+      "id": "(app-client)/./app/components/chat/answer/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\answer\\index.tsx#": {
+      "id": "(app-client)/./app/components/chat/answer/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\answer\\index.tsx#EditIconSolid": {
+      "id": "(app-client)/./app/components/chat/answer/index.tsx",
+      "name": "EditIconSolid",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\answer\\index.tsx#default": {
+      "id": "(app-client)/./app/components/chat/answer/index.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\index.tsx": {
+      "id": "(app-client)/./app/components/chat/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\index.tsx#": {
+      "id": "(app-client)/./app/components/chat/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\index.tsx#default": {
+      "id": "(app-client)/./app/components/chat/index.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\loading-anim\\index.tsx": {
+      "id": "(app-client)/./app/components/chat/loading-anim/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\loading-anim\\index.tsx#": {
+      "id": "(app-client)/./app/components/chat/loading-anim/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\loading-anim\\index.tsx#default": {
+      "id": "(app-client)/./app/components/chat/loading-anim/index.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\question\\index.tsx": {
+      "id": "(app-client)/./app/components/chat/question/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\question\\index.tsx#": {
+      "id": "(app-client)/./app/components/chat/question/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\question\\index.tsx#default": {
+      "id": "(app-client)/./app/components/chat/question/index.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\index.tsx": {
+      "id": "(app-client)/./app/components/chat/thought/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\index.tsx#": {
+      "id": "(app-client)/./app/components/chat/thought/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\index.tsx#default": {
+      "id": "(app-client)/./app/components/chat/thought/index.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\panel.tsx": {
+      "id": "(app-client)/./app/components/chat/thought/panel.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\panel.tsx#": {
+      "id": "(app-client)/./app/components/chat/thought/panel.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\panel.tsx#default": {
+      "id": "(app-client)/./app/components/chat/thought/panel.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\tool.tsx": {
+      "id": "(app-client)/./app/components/chat/thought/tool.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\tool.tsx#": {
+      "id": "(app-client)/./app/components/chat/thought/tool.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\chat\\thought\\tool.tsx#default": {
+      "id": "(app-client)/./app/components/chat/thought/tool.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\index.tsx": {
+      "id": "(app-client)/./app/components/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\index.tsx#": {
+      "id": "(app-client)/./app/components/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\index.tsx#default": {
+      "id": "(app-client)/./app/components/index.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\value-panel\\index.tsx": {
+      "id": "(app-client)/./app/components/value-panel/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\value-panel\\index.tsx#": {
+      "id": "(app-client)/./app/components/value-panel/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\value-panel\\index.tsx#PanelTitle": {
+      "id": "(app-client)/./app/components/value-panel/index.tsx",
+      "name": "PanelTitle",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\value-panel\\index.tsx#VarOpBtnGroup": {
+      "id": "(app-client)/./app/components/value-panel/index.tsx",
+      "name": "VarOpBtnGroup",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\value-panel\\index.tsx#default": {
+      "id": "(app-client)/./app/components/value-panel/index.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\index.tsx": {
+      "id": "(app-client)/./app/components/welcome/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\index.tsx#": {
+      "id": "(app-client)/./app/components/welcome/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\index.tsx#default": {
+      "id": "(app-client)/./app/components/welcome/index.tsx",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx": {
+      "id": "(app-client)/./app/components/welcome/massive-component.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx#": {
+      "id": "(app-client)/./app/components/welcome/massive-component.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx#AppInfoComp": {
+      "id": "(app-client)/./app/components/welcome/massive-component.tsx",
+      "name": "AppInfoComp",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx#ChatBtn": {
+      "id": "(app-client)/./app/components/welcome/massive-component.tsx",
+      "name": "ChatBtn",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx#EditBtn": {
+      "id": "(app-client)/./app/components/welcome/massive-component.tsx",
+      "name": "EditBtn",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx#FootLogo": {
+      "id": "(app-client)/./app/components/welcome/massive-component.tsx",
+      "name": "FootLogo",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx#PromptTemplate": {
+      "id": "(app-client)/./app/components/welcome/massive-component.tsx",
+      "name": "PromptTemplate",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\components\\welcome\\massive-component.tsx#StarIcon": {
+      "id": "(app-client)/./app/components/welcome/massive-component.tsx",
+      "name": "StarIcon",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\hooks\\use-breakpoints.ts": {
+      "id": "(app-client)/./hooks/use-breakpoints.ts",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\hooks\\use-breakpoints.ts#": {
+      "id": "(app-client)/./hooks/use-breakpoints.ts",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\hooks\\use-breakpoints.ts#MediaType": {
+      "id": "(app-client)/./hooks/use-breakpoints.ts",
+      "name": "MediaType",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\hooks\\use-breakpoints.ts#default": {
+      "id": "(app-client)/./hooks/use-breakpoints.ts",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\i18n\\i18next-config.ts": {
+      "id": "(app-client)/./i18n/i18next-config.ts",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\i18n\\i18next-config.ts#": {
+      "id": "(app-client)/./i18n/i18next-config.ts",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\i18n\\i18next-config.ts#changeLanguage": {
+      "id": "(app-client)/./i18n/i18next-config.ts",
+      "name": "changeLanguage",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\i18n\\i18next-config.ts#default": {
+      "id": "(app-client)/./i18n/i18next-config.ts",
+      "name": "default",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\styles\\globals.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/layout.css"
+      ]
+    },
+    "C:\\Users\\Dorothy\\Documents\\GitHub\\dify\\webapp\\app\\styles\\markdown.scss#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/layout.css"
+      ]
+    }
+  }
+}
