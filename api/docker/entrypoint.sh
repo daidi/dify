@@ -16,13 +16,14 @@ else
   if [[ "${DEBUG}" == "true" ]]; then
     flask run --host=${DIFY_BIND_ADDRESS:-0.0.0.0} --port=${DIFY_PORT:-5001} --debug
   else
-    gunicorn \
-      --bind "${DIFY_BIND_ADDRESS:-0.0.0.0}:${DIFY_PORT:-5001}" \
-      --workers ${SERVER_WORKER_AMOUNT:-1} \
-      --worker-class geventwebsocket.gunicorn.workers.GeventWebSocketWorker \
+#    gunicorn \
+#      --bind "${DIFY_BIND_ADDRESS:-0.0.0.0}:${DIFY_PORT:-5001}" \
+#      --workers ${SERVER_WORKER_AMOUNT:-1} \
 #      --worker-class ${SERVER_WORKER_CLASS:-gevent} \
-      --timeout ${GUNICORN_TIMEOUT:-200} \
-      --preload \
-      app:app
+#      --timeout ${GUNICORN_TIMEOUT:-200} \
+#      --preload \
+#      app:app
+    gunicorn --bind 0.0.0.0:5001 -k geventwebsocket.gunicorn.workers.GeventWebSocketWorker -w 1 app:app
+
   fi
 fi
