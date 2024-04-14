@@ -207,7 +207,7 @@ def register_blueprints(app):
 # create app
 app = create_app()
 celery = app.extensions["celery"]
-socketio = SocketIO(app, cors_allowed_origins="*")  # 创建socketio对象
+socketio = SocketIO(app, cors_allowed_origins="*", path='/console/ws')  # 创建socketio对象
 
 if app.config['TESTING']:
     print("App is running in TESTING mode")
@@ -283,4 +283,4 @@ def pool_stat():
 
 if __name__ == '__main__':
     # app.run(host='0.0.0.0', port=5001)
-    socketio.run(app, host='0.0.0.0', port=5001, path='/console/ws')
+    socketio.run(app, host='0.0.0.0', port=5001)
