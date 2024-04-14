@@ -213,19 +213,27 @@ if app.config['TESTING']:
     print("App is running in TESTING mode")
 
 
-# 增加事件处理器
 @socketio.on('connect')
-def handle_connect():
-    print('Client connected')
+def connect():
+    print('Connected')
+    emit('broadcast', {'data': 'Connected'}, broadcast=True)
 
 
-@socketio.on('message')  # 当服务器从客户端接收到'message'事件时触发
+@socketio.on('disconnect')
+def disconnect():
+    print('Disconnected')
+    emit('broadcast', {'data': 'Disconnected'}, broadcast=True)
+
+
+@socketio.on('message')
 def handle_message(message):
     print('received message: ' + message)
-    # 使用send函数进行广播, 所有连接到服务器的客户端都会收到这个消息
-    # send(message, broadcast=True)
-    # 或者，你可以使用emit函数来广播一个名为'my response'的事件，所有的客户端可以接收这个事件
-    emit('new_text', message, broadcast=True)
+    emit('broadcast', {'data': message['data']}, broadcast=True)
+
+
+@socketio.on_error()
+def error(e):
+    print('Error', e)
 
 
 @app.after_request
