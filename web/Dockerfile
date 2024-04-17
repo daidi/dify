@@ -2,8 +2,11 @@
 FROM node:20.11-alpine3.19 AS base
 LABEL maintainer="takatost@gmail.com"
 
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && \
-    apk add --no-cache tzdata
+
+# if you located in China, you can use aliyun mirror to speed up
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+
+RUN apk add --no-cache tzdata
 
 
 # install packages
@@ -14,12 +17,10 @@ WORKDIR /app/web
 COPY package.json .
 COPY yarn.lock .
 
-RUN npm config set registry https://registry.npmmirror.com && yarn install --frozen-lockfile
-
 # if you located in China, you can use taobao registry to speed up
-# RUN yarn install --frozen-lockfile --registry https://registry.npm.taobao.org/
+RUN yarn install --frozen-lockfile --registry https://registry.npmmirror.com/
 
-
+# RUN yarn install --frozen-lockfile
 
 # build resources
 FROM base as builder
