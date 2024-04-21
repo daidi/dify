@@ -11,14 +11,7 @@ import Toast from '@/app/components/base/toast'
 import Sidebar from '@/app/components/sidebar'
 import ConfigSence from '@/app/components/config-scence'
 import Header from '@/app/components/header'
-import {
-  fetchAppParams,
-  fetchChatList,
-  fetchConversations,
-  generationConversationName,
-  sendChatMessage,
-  updateFeedback,
-} from '@/service'
+import { fetchAppParams, fetchChatList, fetchConversations, generationConversationName, sendChatMessage, updateFeedback } from '@/service'
 import type { ConversationItem, Feedbacktype, IChatItem, PromptConfig, VisionFile, VisionSettings } from '@/types/app'
 import { Resolution, TransferMethod } from '@/types/app'
 import Chat from '@/app/components/chat'
@@ -387,11 +380,7 @@ const Main: FC = () => {
       getAbortController: (abortController) => {
         setAbortController(abortController)
       },
-      onData: (message: string, isFirstMessage: boolean, {
-        conversationId: newConversationId,
-        messageId,
-        taskId,
-      }: any) => {
+      onData: (message: string, isFirstMessage: boolean, { conversationId: newConversationId, messageId, taskId }: any) => {
         if (!isAgentMode) {
           responseItem.content = responseItem.content + message
         }
@@ -569,13 +558,11 @@ const Main: FC = () => {
     )
   }
 
-  if (appUnavailable) {
-    return <AppUnavailable isUnknwonReason={isUnknwonReason}
-      errMessage={!hasSetAppConfig ? 'Please set APP_ID and API_KEY in config/index.tsx' : ''}/>
-  }
+  if (appUnavailable)
+    return <AppUnavailable isUnknwonReason={isUnknwonReason} errMessage={!hasSetAppConfig ? 'Please set APP_ID and API_KEY in config/index.tsx' : ''} />
 
   if (!APP_ID || !APP_INFO || !promptConfig)
-    return <Loading type='app'/>
+    return <Loading type='app' />
 
   return (
     <div className='bg-gray-100'>
@@ -614,8 +601,7 @@ const Main: FC = () => {
 
           {
             hasSetInputs && (
-              <div
-                className='relative grow h-[200px] pc:w-[794px] max-w-full mobile:w-full pb-[66px] mx-auto mb-3.5 overflow-hidden'>
+              <div className='relative grow h-[200px] pc:w-[794px] max-w-full mobile:w-full pb-[66px] mx-auto mb-3.5 overflow-hidden'>
                 <div className='h-full overflow-y-auto' ref={chatListDomRef}>
                   <Chat
                     chatList={chatList}

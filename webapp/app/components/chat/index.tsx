@@ -1,21 +1,21 @@
 'use client'
-import type {FC} from 'react'
-import React, {useEffect, useRef} from 'react'
+import type { FC } from 'react'
+import React, { useEffect, useRef } from 'react'
 import cn from 'classnames'
-import {useTranslation} from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import Textarea from 'rc-textarea'
 import {io} from 'socket.io-client'
 import s from './style.module.css'
 import Answer from './answer'
 import Question from './question'
-import type {FeedbackFunc, Feedbacktype} from './type'
-import type {VisionFile, VisionSettings} from '@/types/app'
-import {TransferMethod} from '@/types/app'
+import type { FeedbackFunc, Feedbacktype } from './type'
+import type { VisionFile, VisionSettings } from '@/types/app'
+import { TransferMethod } from '@/types/app'
 import Tooltip from '@/app/components/base/tooltip'
 import Toast from '@/app/components/base/toast'
 import ChatImageUploader from '@/app/components/base/image-uploader/chat-image-uploader'
 import ImageList from '@/app/components/base/image-uploader/image-list'
-import {useImageFiles} from '@/app/components/base/image-uploader/hooks'
+import { useImageFiles } from '@/app/components/base/image-uploader/hooks'
 
 export type IChatProps = {
   chatList: IChatItem[]
@@ -58,20 +58,19 @@ export type IChatItem = {
 }
 
 const Chat: FC<IChatProps> = ({
-                                chatList,
-                                feedbackDisabled = false,
-                                isHideSendInput = false,
-                                onFeedback,
-                                checkCanSend,
-                                onSend = () => {
-                                },
-                                useCurrentUserAvatar,
-                                isResponsing,
-                                controlClearQuery,
-                                visionConfig,
-                              }) => {
-  const {t} = useTranslation()
-  const {notify} = Toast
+  chatList,
+  feedbackDisabled = false,
+  isHideSendInput = false,
+  onFeedback,
+  checkCanSend,
+  onSend = () => { },
+  useCurrentUserAvatar,
+  isResponsing,
+  controlClearQuery,
+  visionConfig,
+}) => {
+  const { t } = useTranslation()
+  const { notify } = Toast
   const isUseInputMethod = useRef(false)
 
   const [query, setQuery] = React.useState('')
@@ -81,7 +80,7 @@ const Chat: FC<IChatProps> = ({
   }
 
   const logError = (message: string) => {
-    notify({type: 'error', message, duration: 3000})
+    notify({ type: 'error', message, duration: 3000 })
   }
 
   const valid = () => {
@@ -201,7 +200,7 @@ const Chat: FC<IChatProps> = ({
                         onUpload={onUpload}
                         disabled={files.length >= visionConfig.number_limits}
                       />
-                      <div className='mx-1 w-[1px] h-4 bg-black/5'/>
+                      <div className='mx-1 w-[1px] h-4 bg-black/5' />
                     </div>
                     <div className='pl-[52px]'>
                       <ImageList
@@ -227,8 +226,7 @@ const Chat: FC<IChatProps> = ({
                 autoSize
               />
               <div className="absolute bottom-2 right-2 flex items-center h-8">
-                <div
-                  className={`${s.count} mr-4 h-5 leading-5 text-sm bg-gray-50 text-gray-500`}>{query.trim().length}</div>
+                <div className={`${s.count} mr-4 h-5 leading-5 text-sm bg-gray-50 text-gray-500`}>{query.trim().length}</div>
                 <Tooltip
                   selector='send-tip'
                   htmlContent={
