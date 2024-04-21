@@ -121,6 +121,19 @@ const Chat: FC<IChatProps> = ({
         setQuery('')
     }
   }
+  const queryQueue = [];
+
+  const processQueue = () => {
+    if (queryQueue.length > 0) {
+      const data = queryQueue.shift();
+      setQuery(data.query);
+      onSend(data.query, []);
+      if (!isResponsing)
+        setQuery('');
+      // 递归调用自己以处理队列中的下一个查询
+      processQueue();
+    }
+  };
 
   useEffect(() => {
     const socket = io('https://idomy.cn')
@@ -131,11 +144,10 @@ const Chat: FC<IChatProps> = ({
 
     socket.on('new_text', (data) => {
       console.log('Received new_text data:', data)
-      setQuery(data.query)
-      // handleSend()
-      onSend(data.query, [])
-      if (!isResponsing)
-        setQuery('')
+      // 将新的查询添加到队列的末尾
+      queryQueue.push(data);
+      // 处理队列中的查询
+      processQueue();
     })
 
     // 注意使用 useEffect 的 cleanup 函数来在组件卸载时断开 WebSocket 连接
