@@ -130,10 +130,14 @@ const Chat: FC<IChatProps> = ({
       onSend(data.query, []);
       if (!isResponsing)
         setQuery('');
-      // 递归调用自己以处理队列中的下一个查询
-      processQueue();
     }
   };
+
+  useEffect(() => {
+    if (!isResponsing) {
+      processQueue();
+    }
+  }, [isResponsing]);
 
   useEffect(() => {
     const socket = io('https://idomy.cn')
