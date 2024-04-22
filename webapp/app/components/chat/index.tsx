@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import cn from 'classnames'
 import { useTranslation } from 'react-i18next'
 import Textarea from 'rc-textarea'
-import { io } from 'socket.io-client'
+import {io} from 'socket.io-client'
 import s from './style.module.css'
 import Answer from './answer'
 import Question from './question'
@@ -121,6 +121,44 @@ const Chat: FC<IChatProps> = ({
         setQuery('')
     }
   }
+  const queryQueue = [];
+
+  const processQueue = () => {
+    if (queryQueue.length > 0) {
+      const data = queryQueue.shift();
+      setQuery(data.query);
+      onSend(data.query, []);
+      if (!isResponsing)
+        setQuery('');
+    }
+  };
+
+  useEffect(() => {
+    if (!isResponsing) {
+      processQueue();
+    }
+  }, [isResponsing]);
+
+  useEffect(() => {
+    const socket = io('https://idomy.cn')
+
+    socket.on('connect', () => {
+      console.log('Connected to WebSocket server')
+    })
+
+    socket.on('new_text', (data) => {
+      console.log('Received new_text data:', data)
+      // 将新的查询添加到队列的末尾
+      queryQueue.push(data);
+      // 处理队列中的查询
+      processQueue();
+    })
+
+    // 注意使用 useEffect 的 cleanup 函数来在组件卸载时断开 WebSocket 连接
+    return () => {
+      socket.disconnect()
+    }
+  }, [])
 
   const handleKeyUp = (e: any) => {
     if (e.code === 'Enter') {

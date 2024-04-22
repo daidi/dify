@@ -411,7 +411,6 @@ const Main: FC = () => {
         })
       },
       async onCompleted(hasError?: boolean) {
-        processQueue()
         if (hasError)
           return
 
@@ -530,36 +529,6 @@ const Main: FC = () => {
       },
     })
   }
-
-  const queryQueue: any[] = []
-
-  const processQueue = () => {
-    if (queryQueue.length > 0) {
-      const data = queryQueue.shift()
-      handleSend(data)
-    }
-  }
-
-  useEffect(() => {
-    const socket = io('https://idomy.cn')
-
-    socket.on('connect', () => {
-      console.log('Connected to WebSocket server')
-    })
-
-    socket.on('new_text', (data) => {
-      console.log('Received new_text data:', data)
-      // 将新的查询添加到队列的末尾
-      queryQueue.push(data)
-      // 处理队列中的查询
-      processQueue()
-    })
-
-    // 注意使用 useEffect 的 cleanup 函数来在组件卸载时断开 WebSocket 连接
-    return () => {
-      socket.disconnect()
-    }
-  }, [])
 
   const handleFeedback = async (messageId: string, feedback: Feedbacktype) => {
     await updateFeedback({ url: `/messages/${messageId}/feedbacks`, body: { rating: feedback.rating } })
