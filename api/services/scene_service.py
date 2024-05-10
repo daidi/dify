@@ -88,17 +88,12 @@ class SceneService:
 
     @staticmethod
     def check_scene_permission(scene, user):
-        logging.info(str(scene.tenant_id))
-        logging.info(user.current_tenant_id)
-        logging.info(json.dumps(str(scene.tenant_id)))
-        logging.info(json.dumps(user.current_tenant_id))
-        logging.info(str(scene.tenant_id)==user.current_tenant_id)
         if str(scene.tenant_id) != user.current_tenant_id:
             logging.debug(
                 f'User {user.id} does not have permission to access scene {scene.id} tenant')
             raise NoPermissionError(
                 'You do not have permission to access this scene.')
-        if scene.permission == 'only_me' and scene.created_by != user.id:
+        if scene.permission == 'only_me' and str(scene.created_by) != user.id:
             logging.debug(
                 f'User {user.id} does not have permission to access scene {scene.id}')
             raise NoPermissionError(
