@@ -94,7 +94,7 @@ class TarService:
         app_template = default_app_templates[app_mode]
         default_model_config = app_template.get('model_config')
         default_model_config = default_model_config.copy() if default_model_config else None
-        default_model_config["dataset_configs"] = json.dumps({
+        default_model_config["dataset_configs"] = {
             'datasets': {'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
                                       dataset_ids],
                          },
@@ -102,10 +102,10 @@ class TarService:
             'retrieval_model': 'single',
             'score_threshold': 0.5,
             'top_k': 2
-        })
+        }
         default_model_config["pre_prompt"] = prompt
-        default_model_config["retriever_resource"] = json.dumps({
+        default_model_config["retriever_resource"] = {
             'enabled': True
-        })
+        }
 
         modify_app_model_config(app_model, default_model_config)
