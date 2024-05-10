@@ -9,6 +9,7 @@ from controllers.console.app.model_config import modify_app_model_config
 from models.account import *
 from models.model import App, ApiToken, AppMode
 from services.app_service import AppService
+from services.tag_service import TagService
 
 
 class TarService:
@@ -63,6 +64,12 @@ class TarService:
         db.session.add(api_token)
         db.session.commit()
 
+        TagService.save_tag_binding({
+            'tag_ids': ["12586740-2e21-4254-a7e6-015add650657"],
+            'target_id': app.id,
+            'type': 'app'
+        })
+
         return app, api_token
 
     @staticmethod
@@ -113,3 +120,9 @@ class TarService:
         }
 
         modify_app_model_config(app_model, default_model_config)
+
+        TagService.save_tag_binding({
+            'tag_ids': ["12586740-2e21-4254-a7e6-015add650657"],
+            'target_id': app_id,
+            'type': 'app'
+        })
