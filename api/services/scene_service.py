@@ -60,6 +60,7 @@ class SceneService:
     def update_scene(scene_id, data, user):
         filtered_data = {k: v for k, v in data.items() if v is not None or k == 'description'}
         scene = SceneService.get_scene(scene_id)
+        print(scene)
         SceneService.check_scene_permission(scene, user)
 
         filtered_data['updated_by'] = user.id
