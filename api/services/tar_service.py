@@ -1,50 +1,12 @@
-import base64
-import logging
-import secrets
-import uuid
-from datetime import datetime, timedelta
-from hashlib import sha256
-from typing import Any, Optional, cast
-
-from flask import current_app
 from flask_login import current_user
-from sqlalchemy import func
-from werkzeug.exceptions import Forbidden, NotFound, BadRequest
+from werkzeug.exceptions import Forbidden, BadRequest
 
-from constants.languages import language_timezone_mapping, languages
 from constants.model_template import default_app_templates
 from controllers.console.app.error import AppNotFoundError
 from controllers.console.app.model_config import modify_app_model_config
-from core.errors.error import ProviderTokenNotInitError, LLMBadRequestError
-from core.model_manager import ModelManager
-from core.model_runtime.entities.model_entities import ModelType, ModelPropertyKey
-from core.model_runtime.model_providers.__base.large_language_model import LargeLanguageModel
-from events.app_event import app_was_created
-from events.tenant_event import tenant_was_created
-from extensions.ext_redis import redis_client
-from libs.helper import get_remote_ip
-from libs.passport import PassportService
-from libs.password import compare_password, hash_password, valid_password
-from libs.rsa import generate_key_pair
 from models.account import *
-from models.model import AppModelConfig, App, Site, ApiToken, AppMode
-from services.app_model_config_service import AppModelConfigService
+from models.model import App, ApiToken, AppMode
 from services.app_service import AppService
-from services.errors.account import (
-    AccountAlreadyInTenantError,
-    AccountLoginError,
-    AccountNotLinkTenantError,
-    AccountRegisterError,
-    CannotOperateSelfError,
-    CurrentPasswordIncorrectError,
-    InvalidActionError,
-    LinkAccountIntegrateError,
-    MemberNotInTenantError,
-    NoPermissionError,
-    RoleAlreadyAssignedError,
-    TenantNotFound,
-)
-from tasks.mail_invite_member_task import send_invite_member_mail_task
 
 
 class TarService:
@@ -66,7 +28,7 @@ class TarService:
 
         # get app detail
         app_model = db.session.query(App).filter(App.id == "a67aedae-91d4-45de-8372-63af6671710d").first()
-        if not app_model or not app_model.is_public:
+        if not app_model:
             raise BadRequest("basemodel error ,contact admin for more info")
 
         app_model.dataset_configs = json.dumps({
