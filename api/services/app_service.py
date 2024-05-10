@@ -281,7 +281,8 @@ class AppService:
             }
         else:
             app_model_config = app.app_model_config
-            app_model_config.update(model_config)
+            for key, value in model_config.items():
+                setattr(app_model_config, key, value)
             export_data['model_config'] = app_model_config.to_dict()
 
         return yaml.dump(export_data)
