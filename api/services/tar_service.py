@@ -1,3 +1,5 @@
+import logging
+
 from flask_login import current_user
 from werkzeug.exceptions import Forbidden, BadRequest
 
@@ -32,7 +34,7 @@ class TarService:
             raise BadRequest("basemodel error ,contact admin for more info")
 
         app_model_config = {}
-        app_model_config.dataset_configs = json.dumps({
+        app_model_config["dataset_configs"] = json.dumps({
             'datasets': {'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
                                       dataset_ids]
                          },
@@ -42,8 +44,8 @@ class TarService:
             'top_k': 2,
         })
         # set prompts
-        app_model_config.pre_prompt = prompt
-        app_model_config.retriever_resource = json.dumps({
+        app_model_config["pre_prompt"] = prompt
+        app_model_config["retriever_resource"] = json.dumps({
             'enabled': True
         })
 
@@ -94,6 +96,7 @@ class TarService:
         # app_template = default_app_templates[app_mode]
         # default_model_config = app_template.get('model_config')
         default_model_config = app_model.app_model_config.to_dict()
+        logging.info(default_model_config)
         # default_model_config = default_model_config.copy() if default_model_config else None
         default_model_config["dataset_configs"] = {
             'datasets': {'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
