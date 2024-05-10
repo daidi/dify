@@ -18,6 +18,7 @@ from services.tar_service import TarService
 
 logger = logging.getLogger(__name__)
 
+
 def _validate_name(name):
     if not name or len(name) < 1 or len(name) > 40:
         raise ValueError('Name must be between 1 to 40 characters.')

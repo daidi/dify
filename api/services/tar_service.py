@@ -4,18 +4,21 @@ import secrets
 import uuid
 from datetime import datetime, timedelta
 from hashlib import sha256
-from typing import Any, Optional
+from typing import Any, Optional, cast
 
 from flask import current_app
 from flask_login import current_user
 from sqlalchemy import func
-from werkzeug.exceptions import Forbidden, NotFound
+from werkzeug.exceptions import Forbidden, NotFound, BadRequest
 
 from constants.languages import language_timezone_mapping, languages
 from constants.model_template import default_app_templates
-from core.errors.error import ProviderTokenNotInitError
+from controllers.console.app.error import AppNotFoundError
+from controllers.console.app.model_config import modify_app_model_config
+from core.errors.error import ProviderTokenNotInitError, LLMBadRequestError
 from core.model_manager import ModelManager
-from core.model_runtime.entities.model_entities import ModelType
+from core.model_runtime.entities.model_entities import ModelType, ModelPropertyKey
+from core.model_runtime.model_providers.__base.large_language_model import LargeLanguageModel
 from events.app_event import app_was_created
 from events.tenant_event import tenant_was_created
 from extensions.ext_redis import redis_client
@@ -24,8 +27,9 @@ from libs.passport import PassportService
 from libs.password import compare_password, hash_password, valid_password
 from libs.rsa import generate_key_pair
 from models.account import *
-from models.model import AppModelConfig, App, Site, ApiToken
+from models.model import AppModelConfig, App, Site, ApiToken, AppMode
 from services.app_model_config_service import AppModelConfigService
+from services.app_service import AppService
 from services.errors.account import (
     AccountAlreadyInTenantError,
     AccountLoginError,
@@ -47,29 +51,25 @@ class TarService:
 
     @staticmethod
     def create_app(name: str, prompt: str, dataset_ids: list, mode: str) -> tuple[App, ApiToken]:
-        model_config_template = default_app_templates[mode + '_default']
+        args = {
+            'name': name,
+            'description': '自动创建应用，请勿修改',
+            'mode': mode,  # 需要在 ALLOW_CREATE_APP_MODES 中的一个
+            'icon': "🤖",
+            'icon_background': "#FFEAD5",
+            'data': ''
+        }
 
-        app = App(**model_config_template['app'])
-        app_model_config = AppModelConfig(**model_config_template['model_config'])
+        if not current_user.is_admin_or_owner:
+            raise Forbidden()
+        app_service = AppService()
 
-        # get model provider
-        model_manager = ModelManager()
-        try:
-            model_instance = model_manager.get_default_model_instance(
-                tenant_id=current_user.current_tenant_id,
-                model_type=ModelType.LLM
-            )
-        except ProviderTokenNotInitError:
-            model_instance = None
+        # get app detail
+        app_model = db.session.query(App).filter(App.id == "a67aedae-91d4-45de-8372-63af6671710d").first()
+        if not app_model or not app_model.is_public:
+            raise BadRequest("basemodel error ,contact admin for more info")
 
-        if model_instance:
-            model_dict = app_model_config.model_dict
-            model_dict['provider'] = model_instance.provider
-            model_dict['name'] = model_instance.model
-            app_model_config.model = json.dumps(model_dict)
-
-        # set datasets
-        app_model_config.dataset_configs = json.dumps({
+        app_model.dataset_configs = json.dumps({
             'datasets': {'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
                                       dataset_ids]
                          },
@@ -79,38 +79,15 @@ class TarService:
             'top_k': 2,
         })
         # set prompts
-        app_model_config.pre_prompt = prompt
-        app_model_config.retriever_resource = json.dumps({
+        app_model.pre_prompt = prompt
+        app_model.retriever_resource = json.dumps({
             'enabled': True
         })
 
-        app.name = name
-        app.mode = mode
-        app.icon = "🤖"
-        app.icon_background = "#FFEAD5"
-        app.tenant_id = current_user.current_tenant_id
+        args['data'] = app_service.export_app(app_model)
 
-        db.session.add(app)
-        db.session.flush()
-
-        app_model_config.app_id = app.id
-        db.session.add(app_model_config)
-        db.session.flush()
-
-        app.app_model_config_id = app_model_config.id
-
-        site = Site(
-            app_id=app.id,
-            title=app.name,
-            default_language=current_user.interface_language,
-            customize_token_strategy='not_allow',
-            code=Site.generate_code(16)
-        )
-
-        db.session.add(site)
-        db.session.commit()
-
-        app_was_created.send(app)
+        # app = app_service.create_app(current_user.current_tenant_id, args, current_user)
+        app = app_service.import_app(current_user.current_tenant_id, args['data'], args, current_user)
 
         key = ApiToken.generate_api_key('app-', 24)
         api_token = ApiToken()
@@ -125,22 +102,36 @@ class TarService:
 
     @staticmethod
     def update_app(app_id: str, name: str, prompt: str, dataset_ids: list):
-        app: App = db.session.query(App).filter(
+        # 更新基础信息
+        args = {
+            'name': name,
+            'description': '自动创建应用，请勿修改',
+            'icon': "🤖",
+            'icon_background': "#FFEAD5",
+        }
+
+        app_model = db.session.query(App).filter(
             App.id == app_id,
             App.tenant_id == current_user.current_tenant_id,
             App.status == 'normal'
         ).first()
-        if app is None:
-            raise NotFound('App not found')
 
-        app.name = name
+        if not app_model:
+            raise AppNotFoundError()
 
-        original_app_model_config: AppModelConfig = db.session.query(AppModelConfig).filter(
-            AppModelConfig.id == app.app_model_config_id
-        ).first()
-        if original_app_model_config is None:
-            raise NotFound('app_model_config not found')
-        original_app_model_config.dataset_configs = json.dumps({
+        app_mode = AppMode.value_of(app_model.mode)
+        if app_mode == AppMode.CHANNEL:
+            raise AppNotFoundError()
+
+        app_service = AppService()
+        app_model = app_service.update_app(app_model, args)
+
+        # 更新模型配置
+        app_mode = AppMode.value_of(app_model.mode)
+        app_template = default_app_templates[app_mode]
+        default_model_config = app_template.get('model_config')
+        default_model_config = default_model_config.copy() if default_model_config else None
+        default_model_config.dataset_configs = json.dumps({
             'datasets': {'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
                                       dataset_ids],
                          },
@@ -149,11 +140,9 @@ class TarService:
             'score_threshold': 0.5,
             'top_k': 2
         })
-        original_app_model_config.pre_prompt = prompt
-        original_app_model_config.retriever_resource = json.dumps({
+        default_model_config.pre_prompt = prompt
+        default_model_config.retriever_resource = json.dumps({
             'enabled': True
         })
 
-        db.session.add(app)
-        db.session.add(original_app_model_config)
-        db.session.commit()
+        modify_app_model_config(app_model, default_model_config)
