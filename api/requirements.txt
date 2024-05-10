@@ -83,6 +83,8 @@ pydantic~=1.10.0
 pgvecto-rs==0.1.4
 firecrawl-py==0.0.5
 oss2==2.15.0
+pgvector==0.2.5
+
 # tar app
 aliyun-python-sdk-core~=2.15.1
 flask_socketio~=5.3.6
