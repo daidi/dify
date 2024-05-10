@@ -89,6 +89,8 @@ class SceneService:
     def check_scene_permission(scene, user):
         logging.info(f'Checking permission for user {user.current_tenant_id} to access scene {scene.tenant_id}')
         if scene.tenant_id != user.current_tenant_id:
+            logging.info(scene.tenant_id)
+            logging.info(user.current_tenant_id)
             logging.info(
                 f'User {user.id} does not have permission to access scene {scene.id}')
             raise NoPermissionError(
