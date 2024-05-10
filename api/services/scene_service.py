@@ -87,7 +87,7 @@ class SceneService:
 
     @staticmethod
     def check_scene_permission(scene, user):
-        logging.info(f'Checking permission for user {user.id} to access scene {scene.id}')
+        logging.info(f'Checking permission for user {user.current_tenant_id} to access scene {scene.tenant_id}')
         if scene.tenant_id != user.current_tenant_id:
             logging.info(
                 f'User {user.id} does not have permission to access scene {scene.id}')
