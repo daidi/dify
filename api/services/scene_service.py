@@ -1,4 +1,5 @@
 import datetime
+import json
 import logging
 
 from extensions.ext_database import db
@@ -87,6 +88,10 @@ class SceneService:
 
     @staticmethod
     def check_scene_permission(scene, user):
+        logging.info(str(scene.tenant_id))
+        logging.info(user.current_tenant_id)
+        logging.info(json.dumps(str(scene.tenant_id)))
+        logging.info(json.dumps(user.current_tenant_id))
         if str(scene.tenant_id) != user.current_tenant_id:
             logging.debug(
                 f'User {user.id} does not have permission to access scene {scene.id}')
