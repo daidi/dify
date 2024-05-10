@@ -31,7 +31,8 @@ class TarService:
         if not app_model:
             raise BadRequest("basemodel error ,contact admin for more info")
 
-        app_model.dataset_configs = json.dumps({
+        app_model_config = {}
+        app_model_config.dataset_configs = json.dumps({
             'datasets': {'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
                                       dataset_ids]
                          },
@@ -41,12 +42,12 @@ class TarService:
             'top_k': 2,
         })
         # set prompts
-        app_model.pre_prompt = prompt
-        app_model.retriever_resource = json.dumps({
+        app_model_config.pre_prompt = prompt
+        app_model_config.retriever_resource = json.dumps({
             'enabled': True
         })
 
-        args['data'] = app_service.export_app(app_model)
+        args['data'] = app_service.export_app_with_config(app_model, app_model_config)
 
         # app = app_service.create_app(current_user.current_tenant_id, args, current_user)
         app = app_service.import_app(current_user.current_tenant_id, args['data'], args, current_user)

@@ -253,6 +253,39 @@ class AppService:
 
         return yaml.dump(export_data)
 
+    def export_app_with_config(self, app: App, model_config: dict) -> str:
+        """
+        Export app
+        :param model_config:
+        :param app: App instance
+        :return:
+        """
+        app_mode = AppMode.value_of(app.mode)
+
+        export_data = {
+            "app": {
+                "name": app.name,
+                "mode": app.mode,
+                "icon": app.icon,
+                "icon_background": app.icon_background,
+                "description": app.description
+            }
+        }
+
+        if app_mode in [AppMode.ADVANCED_CHAT, AppMode.WORKFLOW]:
+            workflow_service = WorkflowService()
+            workflow = workflow_service.get_draft_workflow(app)
+            export_data['workflow'] = {
+                "graph": workflow.graph_dict,
+                "features": workflow.features_dict
+            }
+        else:
+            app_model_config = app.app_model_config
+            app_model_config.update(model_config)
+            export_data['model_config'] = app_model_config.to_dict()
+
+        return yaml.dump(export_data)
+
     def get_app(self, app: App) -> App:
         """
         Get App
@@ -300,13 +333,14 @@ class AppService:
                 """
                 Modified App class
                 """
+
                 def __init__(self, app):
                     self.__dict__.update(app.__dict__)
 
                 @property
                 def app_model_config(self):
                     return model_config
-                
+
             app = ModifiedApp(app)
 
         return app
