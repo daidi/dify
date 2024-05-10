@@ -93,7 +93,7 @@ class TarService:
         # app_mode = AppMode.value_of(app_model.mode)
         # app_template = default_app_templates[app_mode]
         # default_model_config = app_template.get('model_config')
-        default_model_config = app_model.app_model_config
+        default_model_config = app_model.app_model_config.to_dict()
         # default_model_config = default_model_config.copy() if default_model_config else None
         default_model_config["dataset_configs"] = {
             'datasets': {'datasets': [{"dataset": {"enabled": True, "id": id}} for id in
