@@ -161,6 +161,9 @@ services:
       CODE_MAX_STRING_ARRAY_LENGTH: 30
       CODE_MAX_OBJECT_ARRAY_LENGTH: 30
       CODE_MAX_NUMBER_ARRAY_LENGTH: 1000
+      # SSRF Proxy server
+      SSRF_PROXY_HTTP_URL: 'http://ssrf_proxy:3128'
+      SSRF_PROXY_HTTPS_URL: 'http://ssrf_proxy:3128'
     depends_on:
       - db
       - redis
@@ -172,6 +175,9 @@ services:
     #   - "5001:5001"
     env_file:
       - tar.env # 指定外部环境变量文件
+    networks:
+      - ssrf_proxy_network
+      - default
 
   # worker service
   # The Celery worker for processing the queue.
@@ -179,6 +185,7 @@ services:
     build: ../api
     restart: always
     environment:
+      CONSOLE_WEB_URL: ''
       # Startup mode, 'worker' starts the Celery worker for processing the queue.
       MODE: worker
 
@@ -253,6 +260,11 @@ services:
       MAIL_TYPE: ''
       # default send from email address, if not specified
       MAIL_DEFAULT_SEND_FROM: 'YOUR EMAIL FROM (eg: no-reply <no-reply@dify.ai>)'
+      SMTP_SERVER: ''
+      SMTP_PORT: 587
+      SMTP_USERNAME: ''
+      SMTP_PASSWORD: ''
+      SMTP_USE_TLS: 'true'
       # the api-key for resend (https://resend.com)
       RESEND_API_KEY: ''
       RESEND_API_URL: https://api.resend.com
@@ -281,10 +293,13 @@ services:
       - ./volumes/app/storage:/app/api/storage
     env_file:
       - tar.env # 指定外部环境变量文件
+    networks:
+      - ssrf_proxy_network
+      - default
 
   # Frontend web application.
   web:
-    image: langgenius/dify-web:0.6.7
+    image: langgenius/dify-web:0.6.8
     restart: always
     environment:
       # The base URL of console application api server, refers to the Console base URL of WEB service if console domain is
@@ -365,18 +380,35 @@ services:
 
   # The DifySandbox
   sandbox:
-    image: langgenius/dify-sandbox:0.1.0
+    image: langgenius/dify-sandbox:0.2.0
     restart: always
-    cap_add:
-    # Why is sys_admin permission needed?
-    # https://docs.dify.ai/getting-started/install-self-hosted/install-faq#id-16.-why-is-sys_admin-permission-needed
-      - SYS_ADMIN
     environment:
       # The DifySandbox configurations
+      # Make sure you are changing this key for your deployment with a strong key.
+      # You can generate a strong key using `openssl rand -base64 42`.
       API_KEY: dify-sandbox
-      GIN_MODE: release
+      GIN_MODE: 'release'
       WORKER_TIMEOUT: 15
+      ENABLE_NETWORK: 'true'
+      HTTP_PROXY: 'http://ssrf_proxy:3128'
+      HTTPS_PROXY: 'http://ssrf_proxy:3128'
+    volumes:
+      - ./volumes/sandbox/dependencies:/dependencies
+    networks:
+      - ssrf_proxy_network
 
+  # ssrf_proxy server
+  # for more information, please refer to
+  # https://docs.dify.ai/getting-started/install-self-hosted/install-faq#id-16.-why-is-ssrf_proxy-needed
+  ssrf_proxy:
+    image: ubuntu/squid:latest
+    restart: always
+    volumes:
+      # pls clearly modify the squid.conf file to fit your network environment.
+      - ./volumes/ssrf_proxy/squid.conf:/etc/squid/squid.conf
+    networks:
+      - ssrf_proxy_network
+      - default
   # Qdrant vector store.
   # uncomment to use qdrant as vector store.
   # (if uncommented, you need to comment out the weaviate service above,
@@ -443,3 +475,9 @@ services:
     env_file:
       - webapp.env # 指定外部环境变量文件
 
+      #- "443:443"
+networks:
+  # create a network between sandbox, api and ssrf_proxy, and can not access outside.
+  ssrf_proxy_network:
+    driver: bridge
+    internal: true
