@@ -1,24 +1,24 @@
 'use client'
-import type {FC} from 'react'
-import React, {useEffect, useRef} from 'react'
+import type { FC } from 'react'
+import React, { useEffect, useRef } from 'react'
 import cn from 'classnames'
-import {useTranslation} from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import Textarea from 'rc-textarea'
 import {io} from 'socket.io-client'
 import s from './style.module.css'
 import Answer from './answer'
 import Question from './question'
-import type {FeedbackFunc, Feedbacktype} from './type'
-import type {VisionFile, VisionSettings} from '@/types/app'
-import {TransferMethod} from '@/types/app'
+import type { FeedbackFunc } from './type'
+import type { ChatItem, VisionFile, VisionSettings } from '@/types/app'
+import { TransferMethod } from '@/types/app'
 import Tooltip from '@/app/components/base/tooltip'
 import Toast from '@/app/components/base/toast'
 import ChatImageUploader from '@/app/components/base/image-uploader/chat-image-uploader'
 import ImageList from '@/app/components/base/image-uploader/image-list'
-import {useImageFiles} from '@/app/components/base/image-uploader/hooks'
+import { useImageFiles } from '@/app/components/base/image-uploader/hooks'
 
 export type IChatProps = {
-  chatList: IChatItem[]
+  chatList: ChatItem[]
   /**
    * Whether to display the editing area and rating status
    */
@@ -36,42 +36,20 @@ export type IChatProps = {
   visionConfig?: VisionSettings
 }
 
-export type IChatItem = {
-  id: string
-  content: string
-  /**
-   * Specific message type
-   */
-  isAnswer: boolean
-  /**
-   * The user feedback result of this message
-   */
-  feedback?: Feedbacktype
-  /**
-   * Whether to hide the feedback area
-   */
-  feedbackDisabled?: boolean
-  isIntroduction?: boolean
-  useCurrentUserAvatar?: boolean
-  isOpeningStatement?: boolean
-  message_files?: VisionFile[]
-}
-
 const Chat: FC<IChatProps> = ({
-                                chatList,
-                                feedbackDisabled = false,
-                                isHideSendInput = false,
-                                onFeedback,
-                                checkCanSend,
-                                onSend = () => {
-                                },
-                                useCurrentUserAvatar,
-                                isResponsing,
-                                controlClearQuery,
-                                visionConfig,
-                              }) => {
-  const {t} = useTranslation()
-  const {notify} = Toast
+  chatList,
+  feedbackDisabled = false,
+  isHideSendInput = false,
+  onFeedback,
+  checkCanSend,
+  onSend = () => { },
+  useCurrentUserAvatar,
+  isResponsing,
+  controlClearQuery,
+  visionConfig,
+}) => {
+  const { t } = useTranslation()
+  const { notify } = Toast
   const isUseInputMethod = useRef(false)
 
   const [query, setQuery] = React.useState('')
@@ -81,11 +59,7 @@ const Chat: FC<IChatProps> = ({
   }
 
   const logError = (message: string) => {
-    notify({
-      type: 'error',
-      message,
-      duration: 3000,
-    })
+    notify({ type: 'error', message, duration: 3000 })
   }
 
   const valid = () => {
@@ -97,9 +71,8 @@ const Chat: FC<IChatProps> = ({
   }
 
   useEffect(() => {
-    if (controlClearQuery) {
+    if (controlClearQuery)
       setQuery('')
-    }
   }, [controlClearQuery])
   const {
     files,
@@ -112,10 +85,8 @@ const Chat: FC<IChatProps> = ({
   } = useImageFiles()
 
   const handleSend = () => {
-    if (!valid() || (checkCanSend && !checkCanSend())) {
+    if (!valid() || (checkCanSend && !checkCanSend()))
       return
-    }
-
     onSend(query, files.filter(file => file.progress !== -1).map(fileItem => ({
       type: 'image',
       transfer_method: fileItem.type,
@@ -123,13 +94,10 @@ const Chat: FC<IChatProps> = ({
       upload_file_id: fileItem.fileId,
     })))
     if (!files.find(item => item.type === TransferMethod.local_file && !item.fileId)) {
-      if (files.length) {
+      if (files.length)
         onClear()
-      }
-
-      if (!isResponsing) {
+      if (!isResponsing)
         setQuery('')
-      }
     }
   }
 
@@ -162,9 +130,8 @@ const Chat: FC<IChatProps> = ({
     if (e.code === 'Enter') {
       e.preventDefault()
       // prevent send message when using input method enter
-      if (!e.shiftKey && !isUseInputMethod.current) {
+      if (!e.shiftKey && !isUseInputMethod.current)
         handleSend()
-      }
     }
   }
 
@@ -205,19 +172,19 @@ const Chat: FC<IChatProps> = ({
       {
         !isHideSendInput && (
           <div className={cn(!feedbackDisabled && '!left-3.5 !right-3.5', 'absolute z-10 bottom-0 left-0 right-0')}>
-            <div className="p-[5.5px] max-h-[150px] bg-white border-[1.5px] border-gray-200 rounded-xl overflow-y-auto">
+            <div className='p-[5.5px] max-h-[150px] bg-white border-[1.5px] border-gray-200 rounded-xl overflow-y-auto'>
               {
                 visionConfig?.enabled && (
                   <>
-                    <div className="absolute bottom-2 left-2 flex items-center">
+                    <div className='absolute bottom-2 left-2 flex items-center'>
                       <ChatImageUploader
                         settings={visionConfig}
                         onUpload={onUpload}
                         disabled={files.length >= visionConfig.number_limits}
                       />
-                      <div className="mx-1 w-[1px] h-4 bg-black/5"/>
+                      <div className='mx-1 w-[1px] h-4 bg-black/5' />
                     </div>
-                    <div className="pl-[52px]">
+                    <div className='pl-[52px]'>
                       <ImageList
                         list={files}
                         onRemove={onRemove}
@@ -241,10 +208,9 @@ const Chat: FC<IChatProps> = ({
                 autoSize
               />
               <div className="absolute bottom-2 right-2 flex items-center h-8">
-                <div className={`${s.count} mr-4 h-5 leading-5 text-sm bg-gray-50 text-gray-500`}
-                >{query.trim().length}</div>
+                <div className={`${s.count} mr-4 h-5 leading-5 text-sm bg-gray-50 text-gray-500`}>{query.trim().length}</div>
                 <Tooltip
-                  selector="send-tip"
+                  selector='send-tip'
                   htmlContent={
                     <div>
                       <div>{t('common.operation.send')} Enter</div>
