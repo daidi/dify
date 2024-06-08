@@ -216,6 +216,8 @@ class SubscriptionService:
                 docs_processing=False,
                 can_replace_logo=False,
                 model_load_balancing_enabled=False,
+                start_date=datetime.utcnow().replace(tzinfo=None),
+                end_date=None,
             )
 
         return active_subscription
