@@ -27,7 +27,7 @@ class ResourceType(str, enum.Enum):
 class Subscription(db.Model):
     __tablename__ = 'subscriptions'
     __table_args__ = (
-        db.PrimaryKeyConstraint('id', name='subscription_pkey')
+        db.PrimaryKeyConstraint('id', name='subscription_pkey'),
     )
 
     id = db.Column(StringUUID, server_default=db.text('uuid_generate_v4()'), primary_key=True)
