@@ -59,9 +59,9 @@ class Subscription(Resource):
                 interval=interval,
             )
         except Exception as e:
-            return {'result': False, 'error': str(e)}, 500
+            return {'result': 'fail', 'error': str(e)}, 500
 
-        return {'result': True, 'message': 'Subscription updated successfully',
+        return {'result': 'success', 'message': 'Subscription updated successfully',
                 'subscription_id': new_subscription.id}, 200
 
 
