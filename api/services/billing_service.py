@@ -41,7 +41,7 @@ class BillingService:
             'subscription': {
                 'plan': subscription_info["plan"],  # 'sandbox', 'professional', 'team'
                 'interval': subscription_info["interval"],  # 'month', 'year'
-                'expire_time': subscription_info["end_date"],
+                'end_date': subscription_info["end_date"],
             },
             "members": default_limits["members"],
             "apps": default_limits["apps"],

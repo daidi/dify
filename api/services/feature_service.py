@@ -73,6 +73,7 @@ class FeatureService:
         features.billing.enabled = billing_info['enabled']
         features.billing.subscription.plan = billing_info['subscription']['plan']
         features.billing.subscription.interval = billing_info['subscription']['interval']
+        features.billing.subscription.end_date = billing_info['subscription']['end_date']
 
         if 'members' in billing_info:
             features.members.size = billing_info['members']['size']
@@ -93,6 +94,10 @@ class FeatureService:
         if 'annotation_quota_limit' in billing_info:
             features.annotation_quota_limit.size = billing_info['annotation_quota_limit']['size']
             features.annotation_quota_limit.limit = billing_info['annotation_quota_limit']['limit']
+
+        if 'credits' in billing_info:
+            features.annotation_quota_limit.size = billing_info['credits']['size']
+            features.annotation_quota_limit.limit = billing_info['credits']['limit']
 
         if 'docs_processing' in billing_info:
             features.docs_processing = billing_info['docs_processing']
