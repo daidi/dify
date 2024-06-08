@@ -34,7 +34,7 @@ class Subscription(Resource):
     @login_required
     @account_initialization_required
     @only_edition_cloud
-    def handle_payment_success(self):
+    def post(self):
         tenant_id = current_user.current_tenant_id
         plan = request.args.get('plan', default='', type=str)
         interval = request.args.get('interval', default='', type=str)
