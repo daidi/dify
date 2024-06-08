@@ -6,21 +6,21 @@ from datetime import datetime
 class DataAPIService:
 
     @classmethod
-    def get_all_apis(cls, tenant_id, page=1, limit=10, name=None, price_min=None, price_max=None,
-                     authorization_method=None, status=None):
+    def get_all_apis(cls, tenant_id, page=1, limit=10, name=None, price_min=0, price_max=None,
+                     authorization_method='all', status='all'):
         query = DataAPI.query
 
         # 使用条件来筛选
         if name:
             query = query.filter(DataAPI.name.ilike(f"%{name}%"))
 
-        if price_min is not None:
+        if price_min > 0:
             query = query.filter(DataAPI.price_per_call >= price_min)
 
         if price_max is not None:
             query = query.filter(DataAPI.price_per_call <= price_max)
 
-        if authorization_method:
+        if authorization_method != 'all':
             query = query.filter(DataAPI.authorization_method == authorization_method)
 
         # 获取带筛选状态的API的信息总数

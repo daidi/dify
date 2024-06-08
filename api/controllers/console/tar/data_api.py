@@ -23,7 +23,8 @@ class DataAPIController(Resource):
         parser.add_argument('name', type=str, location='args')
         parser.add_argument('price_min', type=int, default=0, location='args')
         parser.add_argument('price_max', type=int, location='args')
-        parser.add_argument('authorization_method', type=str, choices=['auto', 'manual'], location='args')
+        parser.add_argument('authorization_method', type=str, choices=['auto', 'manual', 'all'], default='all',
+                            location='args')
         parser.add_argument('status', type=str, choices=['pending', 'approved', 'rejected', 'not_applied', 'all'],
                             default='all', location='args')
 
