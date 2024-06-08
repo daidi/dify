@@ -151,7 +151,7 @@ class SubscriptionService:
                     db.session.add(usage_limit)
         elif subscription.interval == 'month':
             month_start_date = subscription.start_date
-            month_end_date = subscription.start_date + timedelta(days=30)
+            month_end_date = subscription.end_date
             for resource_type, limit in limits.items():
                 usage_limit = UsageLimit(
                     tenant_id=subscription.tenant_id,
@@ -246,10 +246,14 @@ class SubscriptionService:
             for resource_type, limit in limits.items():
                 usage_limit = UsageLimit(
                     tenant_id=active_subscription.tenant_id,
+                    subscription_id=active_subscription.id,
                     plan=active_subscription.plan,
                     resource_type=resource_type.value,
                     limit=limit,
                     current_size=0,
+                    is_yearly_monthly_plan=False,
+                    start_date=active_subscription.start_date,
+                    end_date=active_subscription.end_date,
                 )
                 usage_limits.append(usage_limit)
             return usage_limits
