@@ -2,6 +2,8 @@ import logging
 from datetime import datetime, timezone, timedelta
 from typing import List, Optional
 
+from sqlalchemy import desc
+
 from extensions.ext_database import db
 from models.subscription import Subscription, UsageLimit, ResourceType
 from models.account import Tenant
@@ -77,9 +79,9 @@ class SubscriptionService:
         now = datetime.utcnow().replace(tzinfo=None)
         active_subscription = Subscription.query.filter(
             Subscription.tenant_id == tenant_id,
-            Subscription.end_date > now,
-            Subscription.plan != 'sandbox'
-        ).first()
+            Subscription.plan != 'sandbox',  # 排除沙盒计划
+            Subscription.end_date > now  # 确保是有效的订阅
+        ).order_by(desc(Subscription.end_date)).first()
 
         if active_subscription:
             # If there is an active subscription of the same plan, renew its end_date
