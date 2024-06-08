@@ -48,40 +48,6 @@ def upgrade():
                     sa.PrimaryKeyConstraint('id', name='usage_limit_pkey')
                     )
 
-    # 插入初始数据到 usage_limits 表
-    usage_limits_data = [
-        {"plan": "sandbox", "resource_type": "members", "limit": 1, "current_size": 0},
-        {"plan": "sandbox", "resource_type": "apps", "limit": 10, "current_size": 0},
-        {"plan": "sandbox", "resource_type": "vector_space", "limit": 10, "current_size": 0},
-        {"plan": "sandbox", "resource_type": "documents_upload_quota", "limit": 50, "current_size": 0},
-        {"plan": "sandbox", "resource_type": "annotation_quota_limit", "limit": 10, "current_size": 0},
-        {"plan": "sandbox", "resource_type": "credits", "limit": 50, "current_size": 0},
-        {"plan": "professional", "resource_type": "members", "limit": 3, "current_size": 0},
-        {"plan": "professional", "resource_type": "apps", "limit": 50, "current_size": 0},
-        {"plan": "professional", "resource_type": "vector_space", "limit": 200, "current_size": 0},
-        {"plan": "professional", "resource_type": "documents_upload_quota", "limit": 500, "current_size": 0},
-        {"plan": "professional", "resource_type": "annotation_quota_limit", "limit": 2000, "current_size": 0},
-        {"plan": "professional", "resource_type": "credits", "limit": 2000, "current_size": 0},
-        {"plan": "team", "resource_type": "members", "limit": 1000, "current_size": 0},
-        {"plan": "team", "resource_type": "apps", "limit": 1000, "current_size": 0},
-        {"plan": "team", "resource_type": "vector_space", "limit": 1024, "current_size": 0},
-        {"plan": "team", "resource_type": "documents_upload_quota", "limit": 100000, "current_size": 0},
-        {"plan": "team", "resource_type": "annotation_quota_limit", "limit": 10000, "current_size": 0},
-        {"plan": "team", "resource_type": "credits", "limit": 10000, "current_size": 0},
-    ]
-
-    # 执行插入操作
-    op.bulk_insert(
-        sa.table(
-            'usage_limits',
-            sa.column('plan', sa.String(length=50)),
-            sa.column('resource_type', sa.String(length=50)),
-            sa.column('limit', sa.Integer()),
-            sa.column('current_size', sa.Integer())
-        ),
-        usage_limits_data
-    )
-
     # ### end Alembic commands ###
 
 
