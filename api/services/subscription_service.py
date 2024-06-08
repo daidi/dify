@@ -1,9 +1,9 @@
 import logging
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from typing import List, Optional
 
 from extensions.ext_database import db
-from models.subscription import Subscription, UsageLimit
+from models.subscription import Subscription, UsageLimit, ResourceType
 from models.account import Tenant
 
 from services.errors.subscription import (
@@ -18,7 +18,7 @@ class SubscriptionService:
     @staticmethod
     def create_subscription(tenant_id: str, plan: str, interval: str, docs_processing: bool,
                             can_replace_logo: bool, model_load_balancing_enabled: bool) -> Subscription:
-        """Create a new subscription for a tenant"""
+        """Create or renew a subscription for a tenant"""
 
         # Validate tenant existence
         tenant = Tenant.query.get(tenant_id)
@@ -29,18 +29,64 @@ class SubscriptionService:
         if plan not in ['sandbox', 'professional', 'team']:
             raise InvalidSubscriptionPlanError("Invalid subscription plan.")
 
-        subscription = Subscription(
-            tenant_id=tenant_id,
-            plan=plan,
-            interval=interval,
-            docs_processing=docs_processing,
-            can_replace_logo=can_replace_logo,
-            model_load_balancing_enabled=model_load_balancing_enabled
-        )
+        # Handle sandbox plan separately
+        if plan == 'sandbox':
+            # Sandbox plans have no end_date
+            subscription = Subscription(
+                tenant_id=tenant_id,
+                plan=plan,
+                interval=interval,
+                docs_processing=docs_processing,
+                can_replace_logo=can_replace_logo,
+                model_load_balancing_enabled=model_load_balancing_enabled,
+                start_date=datetime.utcnow().replace(tzinfo=None),
+                end_date=None,
+            )
+            Subscription.query.filter_by(tenant_id=tenant_id, plan='sandbox').update({'end_date': None})
+            db.session.add(subscription)
+            db.session.commit()
+            logging.info(f'Created subscription for tenant {tenant_id} with plan {plan}')
+            return subscription
 
-        db.session.add(subscription)
-        db.session.commit()
-        logging.info(f'Created subscription for tenant {tenant_id} with plan {plan}')
+        # Check for active non-sandbox plans
+        active_subscription = Subscription.query.filter_by(
+            tenant_id=tenant_id, end_date=None).filter(Subscription.plan != 'sandbox').first()
+
+        if active_subscription and active_subscription.plan != plan:
+            raise ValueError(f"Cannot upgrade to {plan} while {active_subscription.plan} plan is active.")
+
+        # Determine the start and end dates based on new subscription or renew
+        start_date = datetime.utcnow().replace(tzinfo=None)
+        if active_subscription:
+            start_date = active_subscription.end_date or start_date
+
+        if interval == 'month':
+            end_date = start_date + timedelta(days=31)
+        elif interval == 'year':
+            end_date = start_date + timedelta(days=365)
+        else:
+            raise ValueError("Invalid subscription interval.")
+
+        if active_subscription:
+            active_subscription.end_date = end_date
+            db.session.commit()
+            subscription = active_subscription
+            logging.info(f'Renewed subscription for tenant {tenant_id} with plan {plan} until {end_date}')
+        else:
+            subscription = Subscription(
+                tenant_id=tenant_id,
+                plan=plan,
+                interval=interval,
+                docs_processing=docs_processing,
+                can_replace_logo=can_replace_logo,
+                model_load_balancing_enabled=model_load_balancing_enabled,
+                start_date=start_date,
+                end_date=end_date
+            )
+            db.session.add(subscription)
+            db.session.commit()
+            logging.info(f'Created subscription for tenant {tenant_id} with plan {plan} from {start_date} to {end_date}')
+
         return subscription
 
     @staticmethod
@@ -50,7 +96,7 @@ class SubscriptionService:
         if not subscription:
             raise SubscriptionNotFoundError("Subscription not found.")
 
-        valid_fields = ['plan', 'interval', 'docs_processing', 'can_replace_logo', 'model_load_balancing_enabled']
+        valid_fields = ['plan', 'interval', 'docs_processing', 'can_replace_logo', 'model_load_balancing_enabled', 'end_date']
         for field, value in kwargs.items():
             if field in valid_fields:
                 setattr(subscription, field, value)
@@ -69,6 +115,12 @@ class SubscriptionService:
         if not subscription:
             raise SubscriptionNotFoundError("Subscription not found.")
         return subscription
+
+    @staticmethod
+    def get_all_subscriptions() -> List[Subscription]:
+        """Get all subscription records"""
+        subscriptions = Subscription.query.all()
+        return subscriptions
 
     @staticmethod
     def get_subscriptions_by_tenant(tenant_id: str) -> List[Subscription]:
@@ -158,3 +210,43 @@ class SubscriptionService:
         db.session.delete(usage_limit)
         db.session.commit()
         logging.info(f'Deleted usage limit {usage_limit_id}')
+
+    @staticmethod
+    def refresh_usage_limits():
+        """Refresh usage limits based on subscription plan"""
+        subscriptions = Subscription.query.filter_by(end_date=None).all()
+        for subscription in subscriptions:
+            usage_limits = UsageLimit.query.filter_by(tenant_id=subscription.tenant_id).all()
+
+            if subscription.plan == 'sandbox':
+                new_limits = {
+                    ResourceType.MEMBERS: 50,
+                    ResourceType.APPS: 10,
+                    ResourceType.VECTOR_SPACE: 100,
+                    ResourceType.DOCUMENTS_UPLOAD_QUOTA: 2000,
+                    ResourceType.ANNOTATION_QUOTA: 500,
+                }
+            elif subscription.plan == 'professional':
+                new_limits = {
+                    ResourceType.MEMBERS: 100,
+                    ResourceType.APPS: 20,
+                    ResourceType.VECTOR_SPACE: 500,
+                    ResourceType.DOCUMENTS_UPLOAD_QUOTA: 10000,
+                    ResourceType.ANNOTATION_QUOTA: 2000,
+                }
+            elif subscription.plan == 'team':
+                new_limits = {
+                    ResourceType.MEMBERS: 200,
+                    ResourceType.APPS: 50,
+                    ResourceType.VECTOR_SPACE: 1000,
+                    ResourceType.DOCUMENTS_UPLOAD_QUOTA: 20000,
+                    ResourceType.ANNOTATION_QUOTA: 5000,
+                }
+
+            for usage_limit in usage_limits:
+                if usage_limit.resource_type in new_limits:
+                    usage_limit.limit = new_limits[usage_limit.resource_type]
+                    usage_limit.current_size = 0  # reset the current size
+                    usage_limit.updated_at = datetime.now(timezone.utc).replace(tzinfo=None)
+                    db.session.commit()
+                    logging.info(f'Refreshed usage limit for tenant {subscription.tenant_id} resource {usage_limit.resource_type}')

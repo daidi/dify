@@ -27,7 +27,7 @@ class Subscription(db.Model):
     __tablename__ = 'subscriptions'
     __table_args__ = (
         db.PrimaryKeyConstraint('id', name='subscription_pkey'),
-        db.UniqueConstraint('tenant_id', 'end_date', name='unique_tenant_active_subscription', condition=db.text('end_date IS NULL'))
+        db.UniqueConstraint('tenant_id', name='unique_tenant_active_subscription', condition=db.text("plan != 'sandbox' AND end_date IS NULL"))
     )
 
     id = db.Column(StringUUID, server_default=db.text('uuid_generate_v4()'), primary_key=True)
@@ -38,7 +38,7 @@ class Subscription(db.Model):
     can_replace_logo = db.Column(db.Boolean, nullable=False)
     model_load_balancing_enabled = db.Column(db.Boolean, nullable=False)
     start_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    end_date = db.Column(db.DateTime, nullable=True)  # null 表示当前有效的订阅
+    end_date = db.Column(db.DateTime, nullable=True)  # sandbox 无限制，其他套餐需要设置
     created_at = db.Column(db.DateTime, nullable=False, server_default=db.text('CURRENT_TIMESTAMP(0)'))
     updated_at = db.Column(db.DateTime, nullable=False, server_default=db.text('CURRENT_TIMESTAMP(0)'))
 
