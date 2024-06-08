@@ -17,7 +17,7 @@ class DataAPIService:
         if price_min > 0:
             query = query.filter(DataAPI.price_per_call >= price_min)
 
-        if price_max is not None:
+        if price_max is not None and price_max > 0:
             query = query.filter(DataAPI.price_per_call <= price_max)
 
         if authorization_method != 'all':
