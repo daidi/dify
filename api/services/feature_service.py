@@ -8,6 +8,7 @@ from services.enterprise.enterprise_service import EnterpriseService
 class SubscriptionModel(BaseModel):
     plan: str = 'sandbox'
     interval: str = ''
+    end_date: str = ''
 
 
 class BillingModel(BaseModel):
