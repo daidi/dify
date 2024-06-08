@@ -21,6 +21,7 @@ class ResourceType(str, enum.Enum):
     VECTOR_SPACE = 'vector_space'
     DOCUMENTS_UPLOAD_QUOTA = 'documents_upload_quota'
     ANNOTATION_QUOTA = 'annotation_quota'
+    CREDITS = 'credits'
 
 
 class Subscription(db.Model):
@@ -34,7 +35,7 @@ class Subscription(db.Model):
     tenant_id = db.Column(StringUUID, nullable=False)
     plan = db.Column(db.String(50), nullable=False)
     interval = db.Column(db.String(50), nullable=False)
-    docs_processing = db.Column(db.Boolean, nullable=False)
+    docs_processing = db.Column(db.String(50), nullable=False)
     can_replace_logo = db.Column(db.Boolean, nullable=False)
     model_load_balancing_enabled = db.Column(db.Boolean, nullable=False)
     start_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)

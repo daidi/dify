@@ -18,21 +18,24 @@ limits_map = {
         ResourceType.APPS: 10,
         ResourceType.VECTOR_SPACE: 100,
         ResourceType.DOCUMENTS_UPLOAD_QUOTA: 2000,
-        ResourceType.ANNOTATION_QUOTA: 500
+        ResourceType.ANNOTATION_QUOTA: 500,
+        ResourceType.CREDITS: 50
     },
     'professional': {
         ResourceType.MEMBERS: 100,
         ResourceType.APPS: 20,
         ResourceType.VECTOR_SPACE: 500,
         ResourceType.DOCUMENTS_UPLOAD_QUOTA: 10000,
-        ResourceType.ANNOTATION_QUOTA: 2000
+        ResourceType.ANNOTATION_QUOTA: 2000,
+        ResourceType.CREDITS: 1000
     },
     'team': {
         ResourceType.MEMBERS: 200,
         ResourceType.APPS: 50,
         ResourceType.VECTOR_SPACE: 1000,
         ResourceType.DOCUMENTS_UPLOAD_QUOTA: 20000,
-        ResourceType.ANNOTATION_QUOTA: 5000
+        ResourceType.ANNOTATION_QUOTA: 5000,
+        ResourceType.CREDITS: 5000
     }
 }
 
@@ -59,7 +62,7 @@ class SubscriptionService:
                 tenant_id=tenant_id,
                 plan=plan,
                 interval=interval,
-                docs_processing=False,
+                docs_processing='standard',
                 can_replace_logo=False,
                 model_load_balancing_enabled=False,
                 start_date=datetime.utcnow().replace(tzinfo=None),
@@ -91,7 +94,7 @@ class SubscriptionService:
         if interval == 'month':
             end_date = start_date + timedelta(days=30)
         elif interval == 'year':
-            end_date = start_date + timedelta(days=365)
+            end_date = start_date + timedelta(days=30 * 12)
         else:
             raise ValueError("Invalid subscription interval.")
 
@@ -105,7 +108,7 @@ class SubscriptionService:
                 tenant_id=tenant_id,
                 plan=plan,
                 interval=interval,
-                docs_processing=True,
+                docs_processing='priority',  # top-priority
                 can_replace_logo=True,
                 model_load_balancing_enabled=True,
                 start_date=start_date,
@@ -129,26 +132,37 @@ class SubscriptionService:
         if subscription.interval == 'year':
             for month in range(12):
                 month_start_date = subscription.start_date + timedelta(days=30 * month)
+                month_end_date = month_start_date + timedelta(days=30)
                 for resource_type, limit in limits.items():
                     usage_limit = UsageLimit(
                         tenant_id=subscription.tenant_id,
+                        subscription_id=subscription.id,
                         plan=subscription.plan,
                         resource_type=resource_type.value,
                         limit=limit,
                         current_size=0,
+                        is_yearly_monthly_plan=True,
+                        monthly_cycle=month + 1,
+                        start_date=month_start_date,
+                        end_date=month_end_date,
                         created_at=month_start_date,
                         updated_at=month_start_date
                     )
                     db.session.add(usage_limit)
         elif subscription.interval == 'month':
             month_start_date = subscription.start_date
+            month_end_date = subscription.start_date + timedelta(days=30)
             for resource_type, limit in limits.items():
                 usage_limit = UsageLimit(
                     tenant_id=subscription.tenant_id,
+                    subscription_id=subscription.id,
                     plan=subscription.plan,
                     resource_type=resource_type.value,
                     limit=limit,
                     current_size=0,
+                    is_yearly_monthly_plan=False,
+                    start_date=month_start_date,
+                    end_date=month_end_date,
                     created_at=month_start_date,
                     updated_at=month_start_date
                 )
@@ -213,7 +227,7 @@ class SubscriptionService:
                 tenant_id=tenant_id,
                 plan='sandbox',
                 interval='month',
-                docs_processing=False,
+                docs_processing='standard',
                 can_replace_logo=False,
                 model_load_balancing_enabled=False,
                 start_date=datetime.utcnow().replace(tzinfo=None),

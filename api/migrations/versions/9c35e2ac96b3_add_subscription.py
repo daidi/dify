@@ -23,7 +23,7 @@ def upgrade():
                     sa.Column('tenant_id', models.StringUUID(), nullable=False),
                     sa.Column('plan', sa.String(length=50), nullable=False),
                     sa.Column('interval', sa.String(length=50), nullable=False),
-                    sa.Column('docs_processing', sa.Boolean(), nullable=False),
+                    sa.Column('docs_processing', sa.String(length=50), nullable=False),
                     sa.Column('can_replace_logo', sa.Boolean(), nullable=False),
                     sa.Column('model_load_balancing_enabled', sa.Boolean(), nullable=False),
                     sa.Column('start_date', sa.DateTime(), nullable=False),
