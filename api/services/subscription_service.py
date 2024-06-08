@@ -181,8 +181,8 @@ class SubscriptionService:
             "docs_processing": active_subscription.docs_processing,
             "can_replace_logo": active_subscription.can_replace_logo,
             "model_load_balancing_enabled": active_subscription.model_load_balancing_enabled,
-            "start_date": active_subscription.start_date,
-            "end_date": active_subscription.end_date,
+            "start_date": active_subscription.start_date.strftime('%Y-%m-%d %H:%M:%S'),
+            "end_date": active_subscription.end_date.strftime('%Y-%m-%d %H:%M:%S'),
             "usage_limits": limits_info
         }
 
