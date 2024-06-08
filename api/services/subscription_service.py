@@ -82,9 +82,6 @@ class SubscriptionService:
         ).first()
 
         if active_subscription:
-            if active_subscription.plan != plan:
-                raise ValueError(f"Cannot upgrade to {plan} while {active_subscription.plan} plan is active.")
-
             # If there is an active subscription of the same plan, renew its end_date
             start_date = active_subscription.end_date
         else:
@@ -98,26 +95,20 @@ class SubscriptionService:
         else:
             raise ValueError("Invalid subscription interval.")
 
-        if active_subscription:
-            active_subscription.end_date = end_date
-            db.session.commit()
-            subscription = active_subscription
-            logging.info(f'Renewed subscription for tenant {tenant_id} with plan {plan} until {end_date}')
-        else:
-            subscription = Subscription(
-                tenant_id=tenant_id,
-                plan=plan,
-                interval=interval,
-                docs_processing='priority',  # top-priority
-                can_replace_logo=True,
-                model_load_balancing_enabled=True,
-                start_date=start_date,
-                end_date=end_date
-            )
-            db.session.add(subscription)
-            db.session.commit()
-            logging.info(
-                f'Created subscription for tenant {tenant_id} with plan {plan} from {start_date} to {end_date}')
+        subscription = Subscription(
+            tenant_id=tenant_id,
+            plan=plan,
+            interval=interval,
+            docs_processing='priority',  # top-priority
+            can_replace_logo=True,
+            model_load_balancing_enabled=True,
+            start_date=start_date,
+            end_date=end_date
+        )
+        db.session.add(subscription)
+        db.session.commit()
+        logging.info(
+            f'Created subscription for tenant {tenant_id} with plan {plan} from {start_date} to {end_date}')
 
         # Create usage limits
         SubscriptionService._create_initial_usage_limits(subscription)
