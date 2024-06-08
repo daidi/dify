@@ -41,7 +41,7 @@ class Subscription(Resource):
         payment_status = request.args.get('payment_status', default='', type=str)
 
         if payment_status != 'success':
-            return {'error': 'Invalid payment status'}, 400
+            return {'result': False, 'error': 'Invalid payment status:' + payment_status}, 400
 
         # 验证并更新订阅信息
         try:
@@ -51,9 +51,10 @@ class Subscription(Resource):
                 interval=interval,
             )
         except Exception as e:
-            return {'error': str(e)}, 500
+            return {'result': False, 'error': str(e)}, 500
 
-        return {'message': 'Subscription updated successfully', 'subscription_id': new_subscription.id}, 200
+        return {'result': True, 'message': 'Subscription updated successfully',
+                'subscription_id': new_subscription.id}, 200
 
 
 class Invoices(Resource):
