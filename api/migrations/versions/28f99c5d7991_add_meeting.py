@@ -55,6 +55,20 @@ def upgrade():
                               existing_type=postgresql.JSON(astext_type=sa.Text()),
                               nullable=True)
 
+    with op.batch_alter_table('scenarios', schema=None) as batch_op:
+        batch_op.alter_column('mock_id',
+               existing_type=sa.UUID(),
+               nullable=False)
+        batch_op.alter_column('summary_id',
+               existing_type=sa.UUID(),
+               nullable=False)
+        batch_op.alter_column('mock_key',
+               existing_type=sa.VARCHAR(length=255),
+               nullable=False)
+        batch_op.alter_column('summary_key',
+               existing_type=sa.VARCHAR(length=255),
+               nullable=False)
+
     # ### end Alembic commands ###
 
 
