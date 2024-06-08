@@ -31,7 +31,6 @@ from .app import (
 # Import auth controllers
 from .auth import activate, data_source_oauth, login, oauth, register
 
-
 # Import billing controllers
 from .billing import billing
 
@@ -58,4 +57,4 @@ from .tag import tags
 from .workspace import account, load_balancing_config, members, model_providers, models, tool_providers, workspace
 
 # Import tar app controllers
-from .tar import scenarios, meeting, app
+from .tar import scenarios, meeting, app, data_api
