@@ -16,37 +16,39 @@ class BillingService:
         # params = {'tenant_id': tenant_id}
         # billing_info = cls._send_request('GET', '/subscription/info', params=params)
 
-        subscription_info = SubscriptionService.get_subscriptions_by_tenant(tenant_id)
+        subscription_info = SubscriptionService.get_subscription_with_limits(tenant_id)
+
+        # 初始化默认的限额字典，以防止未定义的资源类型
+        default_limits = {
+            "members": {"limit": 100, "size": 0},
+            "apps": {"limit": 10, "size": 0},
+            "vector_space": {"limit": 5000, "size": 0},
+            "documents_upload_quota": {"limit": 10000, "size": 0},
+            "annotation_quota_limit": {"limit": 1000, "size": 0}
+        }
+
+        for limit in subscription_info["usage_limits"]:
+            resource_type = limit["resource_type"]
+            if resource_type in default_limits:
+                default_limits[resource_type] = {
+                    "limit": limit["limit"],
+                    "size": limit["current_size"]
+                }
 
         billing_info = {
             'enabled': True,
             'subscription': {
-                'plan': 'sandbox',  # 'professional', 'team'
-                'interval': 'month'  # 'month', 'year'
+                'plan': subscription_info["plan"],  # 'sandbox', 'professional', 'team'
+                'interval': subscription_info["interval"]  # 'month', 'year'
             },
-            "members": {
-                "limit": 100,
-                "size": 50
-            },
-            "apps": {
-                "limit": 10,
-                "size": 5
-            },
-            "vector_space": {
-                "limit": 5000,
-                "size": 3000
-            },
-            "documents_upload_quota": {
-                "limit": 10000,
-                "size": 8000
-            },
-            "annotation_quota_limit": {
-                "limit": 1000,
-                "size": 500
-            },
-            'docs_processing': True,
-            'can_replace_logo': False,
-            'model_load_balancing_enabled': True
+            "members": default_limits["members"],
+            "apps": default_limits["apps"],
+            "vector_space": default_limits["vector_space"],
+            "documents_upload_quota": default_limits["documents_upload_quota"],
+            "annotation_quota_limit": default_limits["annotation_quota_limit"],
+            'docs_processing': subscription_info['docs_processing'],
+            'can_replace_logo': subscription_info['can_replace_logo'],
+            'model_load_balancing_enabled': subscription_info['model_load_balancing_enabled']
         }
         return billing_info
 

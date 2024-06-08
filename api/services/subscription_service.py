@@ -148,6 +148,10 @@ class SubscriptionService:
             active_subscription = Subscription(
                 tenant_id=tenant_id,
                 plan='sandbox',
+                interval='month',
+                docs_processing=False,
+                can_replace_logo=False,
+                model_load_balancing_enabled=False,
             )
 
         return active_subscription
