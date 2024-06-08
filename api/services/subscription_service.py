@@ -12,6 +12,7 @@ from services.errors.subscription import (
     InvalidSubscriptionPlanError
 )
 
+
 class SubscriptionService:
 
     @staticmethod
@@ -154,3 +155,77 @@ class SubscriptionService:
 
         db.session.commit()
         logging.info(f'Created initial usage limits for tenant {subscription.tenant_id} for plan {subscription.plan}')
+
+    @staticmethod
+    def get_subscription_with_limits(tenant_id: str) -> dict:
+        """Get the active subscription along with its usage limits for a tenant"""
+        # Get the active subscription
+        active_subscription = SubscriptionService.get_active_subscription_by_tenant(tenant_id)
+
+        if not active_subscription:
+            raise SubscriptionNotFoundError(f"No active subscription found for tenant {tenant_id}")
+
+        # Get the usage limits for the active subscription plan
+        usage_limits = SubscriptionService.get_usage_limits(active_subscription.id)
+
+        # Convert usage limits to dictionary format
+        limits_info = [{
+            "resource_type": limit.resource_type,
+            "limit": limit.limit,
+            "current_size": limit.current_size
+        } for limit in usage_limits]
+
+        # Create the result dictionary
+        subscription_info = {
+            "tenant_id": active_subscription.tenant_id,
+            "plan": active_subscription.plan,
+            "interval": active_subscription.interval,
+            "docs_processing": active_subscription.docs_processing,
+            "can_replace_logo": active_subscription.can_replace_logo,
+            "model_load_balancing_enabled": active_subscription.model_load_balancing_enabled,
+            "start_date": active_subscription.start_date.strftime('%Y-%m-%d %H:%M:%S'),
+            "end_date": active_subscription.end_date.strftime(
+                '%Y-%m-%d %H:%M:%S') if active_subscription.end_date else None,
+            "usage_limits": limits_info
+        }
+
+        return subscription_info
+
+    @staticmethod
+    def get_active_subscription_by_tenant(tenant_id: str) -> Optional[Subscription]:
+        """Get the active subscription for a tenant"""
+        tenant = Tenant.query.get(tenant_id)
+        if not tenant:
+            raise TenantNotFoundError("Tenant not found.")
+
+        now = datetime.utcnow().replace(tzinfo=None)
+
+        # Look for an active subscription
+        active_subscription = Subscription.query.filter(
+            Subscription.tenant_id == tenant_id,
+            Subscription.start_date < now,
+            Subscription.end_date > now
+        ).first()
+
+        if active_subscription is None:
+            active_subscription = Subscription(
+                tenant_id=tenant_id,
+                plan='sandbox',
+                interval='month',
+                docs_processing=False,
+                can_replace_logo=False,
+                model_load_balancing_enabled=False,
+            )
+
+        return active_subscription
+
+    @staticmethod
+    def get_usage_limits(subscription_id: str) -> List[UsageLimit]:
+        """Get all usage limits for a specific plan"""
+        now = datetime.utcnow().replace(tzinfo=None)
+        usage_limits = UsageLimit.query.filter(
+            UsageLimit.subscription_id == subscription_id,
+            UsageLimit.start_date < now,
+            UsageLimit.end_date > now
+        ).all()
+        return usage_limits
