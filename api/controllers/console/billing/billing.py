@@ -40,8 +40,19 @@ class Subscription(Resource):
         interval = request.args.get('interval', default='', type=str)
         payment_status = request.args.get('payment_status', default='', type=str)
 
+        parser = reqparse.RequestParser()
+        parser.add_argument('plan', type=str, choices=['sandbox', 'professional', 'team'], location='json')
+        parser.add_argument('interval', type=str, choices=['month', 'year'], location='json')
+        parser.add_argument('payment_status', type=str, choices=['success', 'error'], location='json')
+
+        args = parser.parse_args()
+
+        plan = args['plan']
+        interval = args['interval']
+        payment_status = args['payment_status']
+
         if payment_status != 'success':
-            return {'result': False, 'error': 'Invalid payment status:' + payment_status}, 400
+            return {'result': False, 'error': 'Invalid payment status'}, 400
 
         # 验证并更新订阅信息
         try:
