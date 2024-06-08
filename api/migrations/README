@@ -2,7 +2,7 @@ Single-database configuration for Flask.
 
 ```cloud
 docker compose exec api /bin/bash
-flask db revision --autogenerate -m "add subscription"
+flask db revision --autogenerate -m "add data_api"
 ```
 
 ```local
