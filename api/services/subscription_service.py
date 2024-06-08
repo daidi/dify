@@ -12,6 +12,30 @@ from services.errors.subscription import (
     InvalidSubscriptionPlanError
 )
 
+limits_map = {
+    'sandbox': {
+        ResourceType.MEMBERS: 50,
+        ResourceType.APPS: 10,
+        ResourceType.VECTOR_SPACE: 100,
+        ResourceType.DOCUMENTS_UPLOAD_QUOTA: 2000,
+        ResourceType.ANNOTATION_QUOTA: 500
+    },
+    'professional': {
+        ResourceType.MEMBERS: 100,
+        ResourceType.APPS: 20,
+        ResourceType.VECTOR_SPACE: 500,
+        ResourceType.DOCUMENTS_UPLOAD_QUOTA: 10000,
+        ResourceType.ANNOTATION_QUOTA: 2000
+    },
+    'team': {
+        ResourceType.MEMBERS: 200,
+        ResourceType.APPS: 50,
+        ResourceType.VECTOR_SPACE: 1000,
+        ResourceType.DOCUMENTS_UPLOAD_QUOTA: 20000,
+        ResourceType.ANNOTATION_QUOTA: 5000
+    }
+}
+
 
 class SubscriptionService:
 
@@ -100,29 +124,6 @@ class SubscriptionService:
     @staticmethod
     def _create_initial_usage_limits(subscription: Subscription):
         """Create initial usage limits for a new subscription"""
-        limits_map = {
-            'sandbox': {
-                ResourceType.MEMBERS: 50,
-                ResourceType.APPS: 10,
-                ResourceType.VECTOR_SPACE: 100,
-                ResourceType.DOCUMENTS_UPLOAD_QUOTA: 2000,
-                ResourceType.ANNOTATION_QUOTA: 500
-            },
-            'professional': {
-                ResourceType.MEMBERS: 100,
-                ResourceType.APPS: 20,
-                ResourceType.VECTOR_SPACE: 500,
-                ResourceType.DOCUMENTS_UPLOAD_QUOTA: 10000,
-                ResourceType.ANNOTATION_QUOTA: 2000
-            },
-            'team': {
-                ResourceType.MEMBERS: 200,
-                ResourceType.APPS: 50,
-                ResourceType.VECTOR_SPACE: 1000,
-                ResourceType.DOCUMENTS_UPLOAD_QUOTA: 20000,
-                ResourceType.ANNOTATION_QUOTA: 5000
-            }
-        }
 
         limits = limits_map.get(subscription.plan, {})
         if subscription.interval == 'year':
@@ -166,7 +167,7 @@ class SubscriptionService:
             raise SubscriptionNotFoundError(f"No active subscription found for tenant {tenant_id}")
 
         # Get the usage limits for the active subscription plan
-        usage_limits = SubscriptionService.get_usage_limits(active_subscription.id)
+        usage_limits = SubscriptionService.get_usage_limits(active_subscription)
 
         # Convert usage limits to dictionary format
         limits_info = [{
@@ -220,8 +221,23 @@ class SubscriptionService:
         return active_subscription
 
     @staticmethod
-    def get_usage_limits(subscription_id: str) -> List[UsageLimit]:
+    def get_usage_limits(active_subscription: Subscription) -> List[UsageLimit]:
         """Get all usage limits for a specific plan"""
+        subscription_id = active_subscription.id
+        if subscription_id is None:
+            limits = limits_map.get('sandbox', {})
+            usage_limits = []
+            for resource_type, limit in limits.items():
+                usage_limit = UsageLimit(
+                    tenant_id=active_subscription.tenant_id,
+                    plan=active_subscription.plan,
+                    resource_type=resource_type.value,
+                    limit=limit,
+                    current_size=0,
+                )
+                usage_limits.append(usage_limit)
+            return usage_limits
+
         now = datetime.utcnow().replace(tzinfo=None)
         usage_limits = UsageLimit.query.filter(
             UsageLimit.subscription_id == subscription_id,
