@@ -24,7 +24,8 @@ class BillingService:
             "apps": {"limit": 10, "size": 0},
             "vector_space": {"limit": 5000, "size": 0},
             "documents_upload_quota": {"limit": 10000, "size": 0},
-            "annotation_quota_limit": {"limit": 1000, "size": 0}
+            "annotation_quota_limit": {"limit": 1000, "size": 0},
+            "credits": {"limit": 50, "size": 0},
         }
 
         for limit in subscription_info["usage_limits"]:
@@ -39,13 +40,15 @@ class BillingService:
             'enabled': True,
             'subscription': {
                 'plan': subscription_info["plan"],  # 'sandbox', 'professional', 'team'
-                'interval': subscription_info["interval"]  # 'month', 'year'
+                'interval': subscription_info["interval"],  # 'month', 'year'
+                'expire_time': subscription_info["end_date"],
             },
             "members": default_limits["members"],
             "apps": default_limits["apps"],
             "vector_space": default_limits["vector_space"],
             "documents_upload_quota": default_limits["documents_upload_quota"],
             "annotation_quota_limit": default_limits["annotation_quota_limit"],
+            "credits": default_limits["credits"],
             'docs_processing': subscription_info['docs_processing'],
             'can_replace_logo': subscription_info['can_replace_logo'],
             'model_load_balancing_enabled': subscription_info['model_load_balancing_enabled']
