@@ -90,7 +90,8 @@ class SubscriptionService:
             )
             db.session.add(subscription)
             db.session.commit()
-            logging.info(f'Created subscription for tenant {tenant_id} with plan {plan} from {start_date} to {end_date}')
+            logging.info(
+                f'Created subscription for tenant {tenant_id} with plan {plan} from {start_date} to {end_date}')
 
         return subscription
 
@@ -101,7 +102,8 @@ class SubscriptionService:
         if not subscription:
             raise SubscriptionNotFoundError("Subscription not found.")
 
-        valid_fields = ['plan', 'interval', 'docs_processing', 'can_replace_logo', 'model_load_balancing_enabled', 'end_date']
+        valid_fields = ['plan', 'interval', 'docs_processing', 'can_replace_logo', 'model_load_balancing_enabled',
+                        'end_date']
         for field, value in kwargs.items():
             if field in valid_fields:
                 setattr(subscription, field, value)
@@ -254,4 +256,5 @@ class SubscriptionService:
                     usage_limit.current_size = 0  # reset the current size
                     usage_limit.updated_at = datetime.now(timezone.utc).replace(tzinfo=None)
                     db.session.commit()
-                    logging.info(f'Refreshed usage limit for tenant {subscription.tenant_id} resource {usage_limit.resource_type}')
+                    logging.info(
+                        f'Refreshed usage limit for tenant {subscription.tenant_id} resource {usage_limit.resource_type}')

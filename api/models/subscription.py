@@ -50,7 +50,7 @@ class UsageLimit(db.Model):
     )
 
     id = db.Column(StringUUID, server_default=db.text('uuid_generate_v4()'), primary_key=True)
-    tenant_id = db.Column(StringUUID, nullable=False)
+    plan = db.Column(db.String(50), nullable=False)
     resource_type = db.Column(db.String(50), nullable=False)
     limit = db.Column(db.Integer, nullable=False)
     current_size = db.Column(db.Integer, nullable=False)
