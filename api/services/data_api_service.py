@@ -23,17 +23,25 @@ class DataAPIService:
         if authorization_method:
             query = query.filter(DataAPI.authorization_method == authorization_method)
 
-        # 获取所有API的信息
-        total_apis = query.count()
-
-        # 分页
-        paginated_apis = query.offset((page - 1) * limit).limit(limit).all()
+        # 获取带筛选状态的API的信息总数
+        all_apis = query.all()
 
         # 获取每个API对应的申请状态
         application_dict = {
             application.data_api_id: application.status
             for application in DataAPIApplication.query.filter_by(tenant_id=tenant_id).all()
         }
+
+        if status != 'all':
+            if status == 'not_applied':
+                all_apis = [api for api in all_apis if api.id not in application_dict]
+            else:
+                all_apis = [api for api in all_apis if application_dict.get(api.id) == status]
+
+        total_apis = len(all_apis)
+
+        # 分页
+        paginated_apis = all_apis[(page - 1) * limit: page * limit]
 
         api_list = []
         for api in paginated_apis:
@@ -43,7 +51,7 @@ class DataAPIService:
                 'image_url': api.image_url,
                 'price_per_call': api.price_per_call,
                 'authorization_method': api.authorization_method,
-                'status': application_dict.get(api.id, '未申请')
+                'status': application_dict.get(api.id, 'not_applied')
             }
             api_list.append(api_dict)
 
