@@ -36,9 +36,6 @@ class Subscription(Resource):
     @only_edition_cloud
     def post(self):
         tenant_id = current_user.current_tenant_id
-        plan = request.args.get('plan', default='', type=str)
-        interval = request.args.get('interval', default='', type=str)
-        payment_status = request.args.get('payment_status', default='', type=str)
 
         parser = reqparse.RequestParser()
         parser.add_argument('plan', type=str, choices=['sandbox', 'professional', 'team'], location='json')
