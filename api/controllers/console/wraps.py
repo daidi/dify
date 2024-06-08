@@ -26,8 +26,8 @@ def account_initialization_required(view):
 def only_edition_cloud(view):
     @wraps(view)
     def decorated(*args, **kwargs):
-        if current_app.config['EDITION'] != 'CLOUD':
-            abort(404)
+        # if current_app.config['EDITION'] != 'CLOUD':
+        #     abort(404)
 
         return view(*args, **kwargs)
 

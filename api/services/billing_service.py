@@ -4,6 +4,7 @@ import requests
 
 from extensions.ext_database import db
 from models.account import TenantAccountJoin, TenantAccountRole
+from services.subscription_service import SubscriptionService
 
 
 class BillingService:
@@ -12,10 +13,41 @@ class BillingService:
 
     @classmethod
     def get_info(cls, tenant_id: str):
-        params = {'tenant_id': tenant_id}
+        # params = {'tenant_id': tenant_id}
+        # billing_info = cls._send_request('GET', '/subscription/info', params=params)
 
-        billing_info = cls._send_request('GET', '/subscription/info', params=params)
+        subscription_info = SubscriptionService.get_subscriptions_by_tenant(tenant_id)
 
+        billing_info = {
+            'enabled': True,
+            'subscription': {
+                'plan': 'sandbox',  # 'professional', 'team'
+                'interval': 'month'  # 'month', 'year'
+            },
+            "members": {
+                "limit": 100,
+                "size": 50
+            },
+            "apps": {
+                "limit": 10,
+                "size": 5
+            },
+            "vector_space": {
+                "limit": 5000,
+                "size": 3000
+            },
+            "documents_upload_quota": {
+                "limit": 10000,
+                "size": 8000
+            },
+            "annotation_quota_limit": {
+                "limit": 1000,
+                "size": 500
+            },
+            'docs_processing': True,
+            'can_replace_logo': False,
+            'model_load_balancing_enabled': True
+        }
         return billing_info
 
     @classmethod
