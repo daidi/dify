@@ -27,7 +27,7 @@ class Subscription(db.Model):
     __tablename__ = 'subscriptions'
     __table_args__ = (
         db.PrimaryKeyConstraint('id', name='subscription_pkey'),
-        db.UniqueConstraint('tenant_id', name='unique_tenant_active_subscription', condition=db.text("plan != 'sandbox' AND end_date IS NULL"))
+        db.UniqueConstraint('tenant_id', name='unique_tenant_active_subscription')
     )
 
     id = db.Column(StringUUID, server_default=db.text('uuid_generate_v4()'), primary_key=True)
