@@ -42,26 +42,31 @@ class SubscriptionService:
                 start_date=datetime.utcnow().replace(tzinfo=None),
                 end_date=None,
             )
-            Subscription.query.filter_by(tenant_id=tenant_id, plan='sandbox').update({'end_date': None})
             db.session.add(subscription)
             db.session.commit()
             logging.info(f'Created subscription for tenant {tenant_id} with plan {plan}')
             return subscription
 
         # Check for active non-sandbox plans
-        active_subscription = Subscription.query.filter_by(
-            tenant_id=tenant_id, end_date=None).filter(Subscription.plan != 'sandbox').first()
+        now = datetime.utcnow().replace(tzinfo=None)
+        active_subscription = Subscription.query.filter(
+            Subscription.tenant_id == tenant_id,
+            Subscription.end_date > now,
+            Subscription.plan != 'sandbox'
+        ).first()
 
-        if active_subscription and active_subscription.plan != plan:
-            raise ValueError(f"Cannot upgrade to {plan} while {active_subscription.plan} plan is active.")
-
-        # Determine the start and end dates based on new subscription or renew
-        start_date = datetime.utcnow().replace(tzinfo=None)
         if active_subscription:
-            start_date = active_subscription.end_date or start_date
+            if active_subscription.plan != plan:
+                raise ValueError(f"Cannot upgrade to {plan} while {active_subscription.plan} plan is active.")
+
+            # If there is an active subscription of the same plan, renew its end_date
+            start_date = active_subscription.end_date
+        else:
+            # If there is no active subscription, create a new one
+            start_date = now
 
         if interval == 'month':
-            end_date = start_date + timedelta(days=31)
+            end_date = start_date + timedelta(days=30)
         elif interval == 'year':
             end_date = start_date + timedelta(days=365)
         else:
