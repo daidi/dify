@@ -16,8 +16,7 @@ from services.errors.subscription import (
 class SubscriptionService:
 
     @staticmethod
-    def create_subscription(tenant_id: str, plan: str, interval: str, docs_processing: bool,
-                            can_replace_logo: bool, model_load_balancing_enabled: bool) -> Subscription:
+    def create_subscription(tenant_id: str, plan: str, interval: str) -> Subscription:
         """Create or renew a subscription for a tenant"""
 
         # Validate tenant existence
@@ -36,9 +35,9 @@ class SubscriptionService:
                 tenant_id=tenant_id,
                 plan=plan,
                 interval=interval,
-                docs_processing=docs_processing,
-                can_replace_logo=can_replace_logo,
-                model_load_balancing_enabled=model_load_balancing_enabled,
+                docs_processing=False,
+                can_replace_logo=False,
+                model_load_balancing_enabled=False,
                 start_date=datetime.utcnow().replace(tzinfo=None),
                 end_date=None,
             )
@@ -82,9 +81,9 @@ class SubscriptionService:
                 tenant_id=tenant_id,
                 plan=plan,
                 interval=interval,
-                docs_processing=docs_processing,
-                can_replace_logo=can_replace_logo,
-                model_load_balancing_enabled=model_load_balancing_enabled,
+                docs_processing=True,
+                can_replace_logo=True,
+                model_load_balancing_enabled=True,
                 start_date=start_date,
                 end_date=end_date
             )

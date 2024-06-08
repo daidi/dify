@@ -20,7 +20,7 @@ class BillingService:
 
         # 初始化默认的限额字典，以防止未定义的资源类型
         default_limits = {
-            "members": {"limit": 100, "size": 0},
+            "members": {"limit": 1, "size": 0},
             "apps": {"limit": 10, "size": 0},
             "vector_space": {"limit": 5000, "size": 0},
             "documents_upload_quota": {"limit": 10000, "size": 0},

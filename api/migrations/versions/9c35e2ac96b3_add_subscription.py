@@ -47,7 +47,7 @@ def upgrade():
     usage_limits_data = [
         {"plan": "sandbox", "resource_type": "members", "limit": 1, "current_size": 0},
         {"plan": "sandbox", "resource_type": "apps", "limit": 10, "current_size": 0},
-        {"plan": "sandbox", "resource_type": "vector_space", "limit": 50*1024, "current_size": 0},
+        {"plan": "sandbox", "resource_type": "vector_space", "limit": 10, "current_size": 0},
         {"plan": "sandbox", "resource_type": "documents_upload_quota", "limit": 50, "current_size": 0},
         {"plan": "sandbox", "resource_type": "annotation_quota_limit", "limit": 10, "current_size": 0},
         {"plan": "professional", "resource_type": "members", "limit": 3, "current_size": 0},
