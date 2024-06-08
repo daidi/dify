@@ -204,8 +204,8 @@ class SubscriptionService:
         # Look for an active subscription
         active_subscription = Subscription.query.filter(
             Subscription.tenant_id == tenant_id,
-            Subscription.start_date < now,
-            Subscription.end_date > now
+            Subscription.start_date <= now,
+            Subscription.end_date >= now
         ).first()
 
         if active_subscription is None:
