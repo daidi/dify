@@ -12,7 +12,6 @@ from services.errors.subscription import (
     InvalidSubscriptionPlanError
 )
 
-
 class SubscriptionService:
 
     @staticmethod
@@ -92,244 +91,66 @@ class SubscriptionService:
             logging.info(
                 f'Created subscription for tenant {tenant_id} with plan {plan} from {start_date} to {end_date}')
 
+        # Create usage limits
+        SubscriptionService._create_initial_usage_limits(subscription)
+
         return subscription
 
     @staticmethod
-    def update_subscription(subscription_id: str, **kwargs) -> Subscription:
-        """Update an existing subscription"""
-        subscription = Subscription.query.get(subscription_id)
-        if not subscription:
-            raise SubscriptionNotFoundError("Subscription not found.")
-
-        valid_fields = ['plan', 'interval', 'docs_processing', 'can_replace_logo', 'model_load_balancing_enabled',
-                        'end_date']
-        for field, value in kwargs.items():
-            if field in valid_fields:
-                setattr(subscription, field, value)
-            else:
-                raise AttributeError(f"Invalid field: {field}")
-
-        subscription.updated_at = datetime.now(timezone.utc).replace(tzinfo=None)
-        db.session.commit()
-        logging.info(f'Updated subscription {subscription_id}')
-        return subscription
-
-    @staticmethod
-    def get_subscription(subscription_id: str) -> Subscription:
-        """Get a subscription by its ID"""
-        subscription = Subscription.query.get(subscription_id)
-        if not subscription:
-            raise SubscriptionNotFoundError("Subscription not found.")
-        return subscription
-
-    @staticmethod
-    def get_all_subscriptions() -> List[Subscription]:
-        """Get all subscription records"""
-        subscriptions = Subscription.query.all()
-        return subscriptions
-
-    @staticmethod
-    def get_active_subscription_by_tenant(tenant_id: str) -> Optional[Subscription]:
-        """Get the active subscription for a tenant"""
-        tenant = Tenant.query.get(tenant_id)
-        if not tenant:
-            raise TenantNotFoundError("Tenant not found.")
-
-        now = datetime.utcnow().replace(tzinfo=None)
-
-        # Look for an active subscription
-        active_subscription = Subscription.query.filter(
-            Subscription.tenant_id == tenant_id,
-            Subscription.end_date > now
-        ).first()
-
-        if active_subscription is None:
-            active_subscription = Subscription(
-                tenant_id=tenant_id,
-                plan='sandbox',
-                interval='month',
-                docs_processing=False,
-                can_replace_logo=False,
-                model_load_balancing_enabled=False,
-            )
-
-        return active_subscription
-
-    @staticmethod
-    def get_usage_limits(plan: str) -> List[UsageLimit]:
-        """Get all usage limits for a specific plan"""
-        usage_limits = UsageLimit.query.filter_by(plan=plan).all()
-        return usage_limits
-
-    @staticmethod
-    def get_subscription_with_limits(tenant_id: str) -> dict:
-        """Get the active subscription along with its usage limits for a tenant"""
-        active_subscription = SubscriptionService.get_active_subscription_by_tenant(tenant_id)
-
-        usage_limits = SubscriptionService.get_usage_limits(active_subscription.plan)
-
-        limits_info = [{
-            "resource_type": limit.resource_type,
-            "limit": limit.limit,
-            "current_size": limit.current_size
-        } for limit in usage_limits]
-
-        subscription_info = {
-            "tenant_id": active_subscription.tenant_id,
-            "plan": active_subscription.plan,
-            "interval": active_subscription.interval,
-            "docs_processing": active_subscription.docs_processing,
-            "can_replace_logo": active_subscription.can_replace_logo,
-            "model_load_balancing_enabled": active_subscription.model_load_balancing_enabled,
-            "start_date": active_subscription.start_date.strftime('%Y-%m-%d %H:%M:%S'),
-            "end_date": active_subscription.end_date.strftime('%Y-%m-%d %H:%M:%S'),
-            "usage_limits": limits_info
+    def _create_initial_usage_limits(subscription: Subscription):
+        """Create initial usage limits for a new subscription"""
+        limits_map = {
+            'sandbox': {
+                ResourceType.MEMBERS: 50,
+                ResourceType.APPS: 10,
+                ResourceType.VECTOR_SPACE: 100,
+                ResourceType.DOCUMENTS_UPLOAD_QUOTA: 2000,
+                ResourceType.ANNOTATION_QUOTA: 500
+            },
+            'professional': {
+                ResourceType.MEMBERS: 100,
+                ResourceType.APPS: 20,
+                ResourceType.VECTOR_SPACE: 500,
+                ResourceType.DOCUMENTS_UPLOAD_QUOTA: 10000,
+                ResourceType.ANNOTATION_QUOTA: 2000
+            },
+            'team': {
+                ResourceType.MEMBERS: 200,
+                ResourceType.APPS: 50,
+                ResourceType.VECTOR_SPACE: 1000,
+                ResourceType.DOCUMENTS_UPLOAD_QUOTA: 20000,
+                ResourceType.ANNOTATION_QUOTA: 5000
+            }
         }
 
-        return subscription_info
+        limits = limits_map.get(subscription.plan, {})
+        if subscription.interval == 'year':
+            for month in range(12):
+                month_start_date = subscription.start_date + timedelta(days=30 * month)
+                for resource_type, limit in limits.items():
+                    usage_limit = UsageLimit(
+                        tenant_id=subscription.tenant_id,
+                        plan=subscription.plan,
+                        resource_type=resource_type.value,
+                        limit=limit,
+                        current_size=0,
+                        created_at=month_start_date,
+                        updated_at=month_start_date
+                    )
+                    db.session.add(usage_limit)
+        elif subscription.interval == 'month':
+            month_start_date = subscription.start_date
+            for resource_type, limit in limits.items():
+                usage_limit = UsageLimit(
+                    tenant_id=subscription.tenant_id,
+                    plan=subscription.plan,
+                    resource_type=resource_type.value,
+                    limit=limit,
+                    current_size=0,
+                    created_at=month_start_date,
+                    updated_at=month_start_date
+                )
+                db.session.add(usage_limit)
 
-    @staticmethod
-    def get_subscriptions_by_tenant(tenant_id: str) -> Optional[Subscription]:
-        """Get the active subscription for a tenant"""
-        tenant = Tenant.query.get(tenant_id)
-        if not tenant:
-            raise TenantNotFoundError("Tenant not found.")
-
-        now = datetime.utcnow().replace(tzinfo=None)
-
-        # First, look for an active non-sandbox subscription
-        active_subscription = Subscription.query.filter(
-            Subscription.tenant_id == tenant_id,
-            Subscription.end_date > now,
-            Subscription.plan != 'sandbox'
-        ).first()
-
-        if active_subscription:
-            return active_subscription
-
-        # If no active non-sandbox subscription, check for sandbox subscription
-        sandbox_subscription = Subscription.query.filter_by(
-            tenant_id=tenant_id, plan='sandbox'
-        ).first()
-
-        return sandbox_subscription
-
-    @staticmethod
-    def delete_subscription(subscription_id: str) -> None:
-        """Delete a subscription by its ID"""
-        subscription = Subscription.query.get(subscription_id)
-        if not subscription:
-            raise SubscriptionNotFoundError("Subscription not found.")
-
-        db.session.delete(subscription)
         db.session.commit()
-        logging.info(f'Deleted subscription {subscription_id}')
-
-    @staticmethod
-    def create_usage_limit(tenant_id: str, resource_type: str, limit: int, current_size: int) -> UsageLimit:
-        """Create a new usage limit for a tenant"""
-        # Validate tenant existence
-        tenant = Tenant.query.get(tenant_id)
-        if not tenant:
-            raise TenantNotFoundError("Tenant not found.")
-
-        usage_limit = UsageLimit(
-            tenant_id=tenant_id,
-            resource_type=resource_type,
-            limit=limit,
-            current_size=current_size
-        )
-
-        db.session.add(usage_limit)
-        db.session.commit()
-        logging.info(f'Created usage limit for tenant {tenant_id} with resource type {resource_type}')
-        return usage_limit
-
-    @staticmethod
-    def update_usage_limit(usage_limit_id: str, **kwargs) -> UsageLimit:
-        """Update an existing usage limit"""
-        usage_limit = UsageLimit.query.get(usage_limit_id)
-        if not usage_limit:
-            raise SubscriptionNotFoundError("Usage limit not found.")
-
-        valid_fields = ['resource_type', 'limit', 'current_size']
-        for field, value in kwargs.items():
-            if field in valid_fields:
-                setattr(usage_limit, field, value)
-            else:
-                raise AttributeError(f"Invalid field: {field}")
-
-        usage_limit.updated_at = datetime.now(timezone.utc).replace(tzinfo=None)
-        db.session.commit()
-        logging.info(f'Updated usage limit {usage_limit_id}')
-        return usage_limit
-
-    @staticmethod
-    def get_usage_limit(usage_limit_id: str) -> UsageLimit:
-        """Get a usage limit by its ID"""
-        usage_limit = UsageLimit.query.get(usage_limit_id)
-        if not usage_limit:
-            raise SubscriptionNotFoundError("Usage limit not found.")
-        return usage_limit
-
-    @staticmethod
-    def get_usage_limits_by_tenant(tenant_id: str) -> List[UsageLimit]:
-        """Get all usage limits for a tenant"""
-        tenant = Tenant.query.get(tenant_id)
-        if not tenant:
-            raise TenantNotFoundError("Tenant not found.")
-
-        usage_limits = UsageLimit.query.filter_by(tenant_id=tenant_id).all()
-        return usage_limits
-
-    @staticmethod
-    def delete_usage_limit(usage_limit_id: str) -> None:
-        """Delete a usage limit by its ID"""
-        usage_limit = UsageLimit.query.get(usage_limit_id)
-        if not usage_limit:
-            raise SubscriptionNotFoundError("Usage limit not found.")
-
-        db.session.delete(usage_limit)
-        db.session.commit()
-        logging.info(f'Deleted usage limit {usage_limit_id}')
-
-    @staticmethod
-    def refresh_usage_limits():
-        """Refresh usage limits based on subscription plan"""
-        subscriptions = Subscription.query.filter_by(end_date=None).all()
-        for subscription in subscriptions:
-            usage_limits = UsageLimit.query.filter_by(tenant_id=subscription.tenant_id).all()
-
-            if subscription.plan == 'sandbox':
-                new_limits = {
-                    ResourceType.MEMBERS: 50,
-                    ResourceType.APPS: 10,
-                    ResourceType.VECTOR_SPACE: 100,
-                    ResourceType.DOCUMENTS_UPLOAD_QUOTA: 2000,
-                    ResourceType.ANNOTATION_QUOTA: 500,
-                }
-            elif subscription.plan == 'professional':
-                new_limits = {
-                    ResourceType.MEMBERS: 100,
-                    ResourceType.APPS: 20,
-                    ResourceType.VECTOR_SPACE: 500,
-                    ResourceType.DOCUMENTS_UPLOAD_QUOTA: 10000,
-                    ResourceType.ANNOTATION_QUOTA: 2000,
-                }
-            elif subscription.plan == 'team':
-                new_limits = {
-                    ResourceType.MEMBERS: 200,
-                    ResourceType.APPS: 50,
-                    ResourceType.VECTOR_SPACE: 1000,
-                    ResourceType.DOCUMENTS_UPLOAD_QUOTA: 20000,
-                    ResourceType.ANNOTATION_QUOTA: 5000,
-                }
-
-            for usage_limit in usage_limits:
-                if usage_limit.resource_type in new_limits:
-                    usage_limit.limit = new_limits[usage_limit.resource_type]
-                    usage_limit.current_size = 0  # reset the current size
-                    usage_limit.updated_at = datetime.now(timezone.utc).replace(tzinfo=None)
-                    db.session.commit()
-                    logging.info(
-                        f'Refreshed usage limit for tenant {subscription.tenant_id} resource {usage_limit.resource_type}')
+        logging.info(f'Created initial usage limits for tenant {subscription.tenant_id} for plan {subscription.plan}')

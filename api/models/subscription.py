@@ -50,10 +50,16 @@ class UsageLimit(db.Model):
     )
 
     id = db.Column(StringUUID, server_default=db.text('uuid_generate_v4()'), primary_key=True)
+    tenant_id = db.Column(StringUUID, nullable=False)
+    subscription_id = db.Column(StringUUID, nullable=False)
     plan = db.Column(db.String(50), nullable=False)
     resource_type = db.Column(db.String(50), nullable=False)
     limit = db.Column(db.Integer, nullable=False)
     current_size = db.Column(db.Integer, nullable=False)
+    is_yearly_monthly_plan = db.Column(db.Boolean, nullable=False, default=False)
+    monthly_cycle = db.Column(db.Integer, nullable=True)  # 如果是年度订阅分拆成的月度记录
+    start_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    end_date = db.Column(db.DateTime, nullable=True)  # sandbox 无限制，其他套餐需要设置
     created_at = db.Column(db.DateTime, nullable=False, server_default=db.text('CURRENT_TIMESTAMP(0)'))
     updated_at = db.Column(db.DateTime, nullable=False, server_default=db.text('CURRENT_TIMESTAMP(0)'))
 
