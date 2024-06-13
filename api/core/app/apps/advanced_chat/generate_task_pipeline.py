@@ -302,7 +302,10 @@ class AdvancedChatAppGenerateTaskPipeline(BasedGenerateTaskPipeline, WorkflowCyc
                     continue
 
                 self._task_state.answer += delta_text
-                yield self._message_to_stream_response(delta_text, self._message.id)
+                extras = {}
+                if self._task_state.metadata:
+                    extras['metadata'] = self._task_state.metadata
+                yield self._message_to_stream_response(delta_text, self._message.id,extras)
             elif isinstance(event, QueueMessageReplaceEvent):
                 yield self._message_replace_to_stream_response(answer=event.text)
             elif isinstance(event, QueuePingEvent):

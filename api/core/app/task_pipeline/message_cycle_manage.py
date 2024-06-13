@@ -180,7 +180,7 @@ class MessageCycleManage:
 
         return None
 
-    def _message_to_stream_response(self, answer: str, message_id: str) -> MessageStreamResponse:
+    def _message_to_stream_response(self, answer: str, message_id: str, extras: dict = {}) -> MessageStreamResponse:
         """
         Message to stream response.
         :param answer: answer
@@ -190,7 +190,8 @@ class MessageCycleManage:
         return MessageStreamResponse(
             task_id=self._application_generate_entity.task_id,
             id=message_id,
-            answer=answer
+            answer=answer,
+            **extras
         )
 
     def _message_replace_to_stream_response(self, answer: str) -> MessageReplaceStreamResponse:

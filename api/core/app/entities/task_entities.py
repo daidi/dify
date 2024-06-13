@@ -130,6 +130,7 @@ class MessageStreamResponse(StreamResponse):
     event: StreamEvent = StreamEvent.MESSAGE
     id: str
     answer: str
+    metadata: dict = {}
 
 
 class MessageEndStreamResponse(StreamResponse):
