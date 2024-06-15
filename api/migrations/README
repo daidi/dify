@@ -14,3 +14,4 @@ merge confilct
 flask db heads
 flask db merge xxx xxx
 ```
+
